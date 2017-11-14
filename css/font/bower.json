@@ -1,0 +1,26 @@
+{
+  "name": "learning-curve-pro-webfont",
+  "version": "1.0.0",
+  "authors": [
+    "Guilherme Taschetto <gtaschetto@gmail.com>"
+  ],
+  "description": "The Learning Curve Pro web font, packaged for Bower",
+  "main": "font.css",
+  "keywords": [
+    "learning curve pro",
+    "webfont"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/taschetto/learning-curve-pro-webfont",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.png",
+    "index.html",
+    "readme.txt",
+    "README.md"
+  ]
+}

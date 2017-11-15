@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'LearningCurveProRegular';
+    src: url('fonts/learningcurve_ot-webfont.eot');
+    src: url('learningcurve_ot-webfont.woff2') format('woff2'),
+         url('learningcurve_ot-webfont.woff') format('woff'),
+         url('learningcurve_ot-webfont.ttf') format('truetype'),
+         url('learningcurve_ot-webfont.svg#learning_curve_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

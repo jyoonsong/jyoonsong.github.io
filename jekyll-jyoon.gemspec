@@ -3,8 +3,8 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-jyoon"
   spec.version       = "0.1.0"
-  spec.authors       = ["jaeyo_on"]
-  spec.email         = ["jyo3on@gmail.com"]
+  spec.authors       = ["JaeYoon"]
+  spec.email         = ["song@jaeyoon.io"]
 
   spec.summary       = %q{Jekyll Theme created by JaeYoon Song}
   spec.homepage      = "https://github.com/jyoonsong"

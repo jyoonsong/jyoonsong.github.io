@@ -2,26 +2,30 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-
+//  min-height: $spacing-unit * 1.865;
   // Positioning context for the mobile navigation icon
-  position: relative;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $grey-color-light;
+  padding: $spacing-unit/3 0;
+  transition: all .5s ease-in-out;
+  background: $background-color;
+  &.sticky {
+    padding: 0;
+  }
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+//  @include relative-font-size(1.625);
   line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
+//  letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
+  width: 24px;
+//  &,
+//  &:visited {
+//    color: $grey-color-dark;
+//  }
 }
 
 .site-nav {
@@ -106,6 +110,9 @@
  * Site footer
  */
 .site-footer {
+  background: $grey-color-dark;
+  color: $background-color;
+  font-weight: 300;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
@@ -123,7 +130,6 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -170,26 +176,17 @@
   }
 }
 
-
-
 /**
- * Page content
+ * Common heading & content
  */
-.page-content {
-  padding: $spacing-unit 0;
-}
-
 .page-heading {
-  @include relative-font-size(1.25);
+  border-bottom: 1px solid $grey-color-light;
+  padding: $spacing-unit+72 0 $spacing-unit;
 }
 
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-  }
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .post-meta {
@@ -197,29 +194,37 @@
   color: $grey-color;
 }
 
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
+.page-content {
+  padding: $spacing-unit+5 0;
+  background: #f7f7f9;
 }
 
+/**
+ * Home
+ */
 
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    width: 30%;
+    margin-right: 3%;
+    background: $background-color;
+    box-shadow: 0px 0px 20px #DFDFDF;
+    transition: transform .5s ease-in-out;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    > a {
+      display: block;
+      padding: $spacing-unit;
+    }
+  }
+}
 
 /**
  * Posts
  */
-.post-header {
-  margin-bottom: $spacing-unit;
-}
-
-.post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
-}
 
 .post-content {
   margin-bottom: $spacing-unit;

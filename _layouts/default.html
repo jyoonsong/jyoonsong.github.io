@@ -7,14 +7,18 @@
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+    {{ content }}
 
     {% include footer.html %}
 
   </body>
-
+  
+  <script>
+    var header = document.querySelector(".site-header");
+    window.onscroll = function() {
+      if( document.body.scrollTop+document.documentElement.scrollTop > 0)
+          header.classList.add("sticky");
+      else header.classList.remove("sticky");
+    };
+  </script>
 </html>

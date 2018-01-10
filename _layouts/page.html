@@ -3,12 +3,18 @@ layout: default
 ---
 <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title">{{ page.title | escape }}</h1>
+    </div>
+  </section>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+    </div>
+  </main>
 
 </article>

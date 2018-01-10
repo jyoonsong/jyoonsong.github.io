@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<div class="home">
+<div class="category">
+
+  {{ content }}
   
   <section class="page-heading">
     <div class="wrapper">
@@ -13,23 +15,22 @@ layout: default
   
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      {{ content }}
-      
       <ul class="post-list col-wrapper">
         {% for post in site.posts %}
           <li class="col col-12 col-md-6 col-lg-4">
             <a href="{{ post.url | relative_url }}">
 <!--              {% assign date_format = site.jyoon.date_format | default: "%Y. %m. %d" %}-->
               <span class="post-meta">{{ post.categories }}</span>
+
               <h2 class="post-title">
                 <strong>{{ post.title | escape }}</strong>
               </h2>
+              
               <span class="post-subtitle">{{ post.subtitle | escape }}</span>
             </a>
           </li>
         {% endfor %}
       </ul>
-      
     </div>
   </main>
   

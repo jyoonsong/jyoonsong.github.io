@@ -9,23 +9,36 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# accessed via {{ site.title }}, {{ site.email }}
+
 title: 재윤 블로그
-author: JaeYoon Song
-email: song@jaeyoon.io
 description: >- # this means to ignore newlines until "baseurl:"
   개발/디자인에 관심 많은 대학생이 공부한 것, 생각한 것, 경험한 것들을 기록하고 정리하는 공간입니다.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.jaeyoon.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+author:
+  name:   JaeYoon Song
+  url:    http://jaeyoon.io
+  email:  song@jaeyoon.io
+lang: ko_KR
+email: song@jaeyoon.io
+
 twitter_username: song_jaeyoon
 github_username:  jyoonsong
 
-# jyoon date format
+color-scheme: black
+
+# Set encoding to UTF-8
+encoding: utf-8
+
+# Date format
 jyoon:
   date_format: "%Y.%m.%d"
+  
+# Collections for Category
+collections:
+  category:
+    output: true
 
 # Build settings
 markdown: kramdown
@@ -36,9 +49,6 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-collections:
-  category:
-    output: true
     
 # Add a default layout
 defaults:

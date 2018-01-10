@@ -1,11 +1,13 @@
 @charset "utf-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size:   0.9rem !default;
+$base-font-family: 'Spoqa Han Sans', '나눔고딕', NanumGothic, '맑은 고딕', Malgun Gothic, '애플 SD 산돌고딕 Neo', Apple SD Gothic Neo, '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif !default;
+$code-font-family:  Menlo, Monaco, 'Courier New', monospace !important;
+$base-font-size:   15px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size:  $base-font-size * 0.85 !default;
 $base-line-height: 1.6 !default;
 
 $spacing-unit:     30px !default;
@@ -23,8 +25,8 @@ $table-text-align: left !default;
 // Width of the content area
 $content-width:    960px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm:          575px !default;
+$on-tablet:        767px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {

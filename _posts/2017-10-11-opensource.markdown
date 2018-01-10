@@ -1,19 +1,24 @@
 ---
 layout: post
 title:  "오픈소스와 집단지성의 경이로움에 대하여"
-subtitle: "Day-Night Switch에 담긴 이야기"
+subtitle: "드리블(Dribbble)에서 깃헙(Github)까지: Day-Night Switch에 담긴 이야기"
 date:   2017-10-11 03:15:30
 author: jae
-categories: 생각
+categories: "생각/관심사"
 ---
 
-지난 학기 김창희 교수님 경영과학 시간에 냈던 과제물 [DEA를 통한 OSS의 효율성 분석]()에서 내렸던 결론은 *오픈소스와 집단지성이 효율성 측면에서는 긍정적인 것만은 아니다* 였지만, 여전히 나는 오픈소스의 팬이며 그 경이로움은 끝이 없다고 믿는다.
+**드리블(Dribbble)에서 깃헙(Github)까지: Day-Night Switch에 담긴 이야기**
+
+지난 학기 김창희 교수님 경영과학 시간에 냈던 과제물 [DEA를 통한 OSS의 효율성 분석](http://jaeyoon.io/lab)에서 내렸던 결론은 *오픈소스와 집단지성이 효율성 측면에서는 긍정적인 것만은 아니다* 였지만, 여전히 나는 오픈소스의 팬이며 그 경이로움은 끝이 없다고 믿는다.
 
 StackOverFlow, GitHub, Linux 등등 오픈소스의 대단함을 엿볼 수 있는 멋진 것들이 참 많지만, 오늘은 그 중에서도 디자이너 포트폴리오 사이트인 [Dribbble](https://dribbble.com)과 짤막한 소스코드 공유 사이트 [Codepen](https://codepen.io)에 중점을 두고 벌어진 이야기를 하나 해보려 한다.
 
-이야기는 2015년 1월 30일, 인도의 한 디자이너 [Ramakrishna V]()가 [Day-Night Toggle Button]()이라는 제목의 일러스트레이션을 Dribbble에 업로드하는 데서부터 시작된다.
+이야기는 2015년 1월 30일, 인도의 한 디자이너 [Ramakrishna V](http://www.ramakrish.in)가 [Day-Night Toggle Button](https://dribbble.com/shots/1907553-Day-Night-Toggle-Button)이라는 제목의 일러스트레이션을 Dribbble에 업로드하는 데서부터 시작된다.
 
-![1](https://cdn.dribbble.com/users/484057/screenshots/1907553/day-night-toggle_1x.jpg)
+<figure>
+  <img src="https://cdn.dribbble.com/users/484057/screenshots/1907553/day-night-toggle_1x.jpg" alt="Static한 Day-Night Toggle Button"/>
+  <figcaption> Static한 Day-Night Toggle Button </figcaption>
+</figure>
 
 iOS 토글 버튼에 낮과 밤이라는 컨셉을 입힌 귀여운 아이디어이다. 이는 순식간에 드리블 사이트 Popular 코너에 이름을 올리며 많은 사람들로부터 뜨거운 반응을 얻는다.
 
@@ -21,7 +26,7 @@ iOS 토글 버튼에 낮과 밤이라는 컨셉을 입힌 귀여운 아이디어
 
 ![2](https://cdn.dribbble.com/users/470545/screenshots/1909289/switch_02.gif) 
 
-또 이번에는 미국 Minnesota 주에 사는 [Jason Dicks]()는 이를 Pure CSS로 구현한 Codepen을 만들어 올린다.
+또 이번에는 미국 Minnesota 주에 사는 [Jason Dicks](https://twitter.com/In_finiteloop)는 이를 Pure CSS로 구현한 Codepen을 만들어 올린다.
 
 [코드 넣기](https://codepen.io/jsndks/pen/qEXzOQ)
 

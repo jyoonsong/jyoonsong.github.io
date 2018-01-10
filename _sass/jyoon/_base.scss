@@ -41,7 +41,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 3;
+  margin-bottom: $spacing-unit * 0.7;
 }
 
 
@@ -59,11 +59,14 @@ img {
 /**
  * Figures
  */
-figure > img {
-  display: block;
+figure:not(.highlight) {
+  text-align: center;
+  padding: $spacing-unit/2 0;
 }
 
 figcaption {
+  margin-top: $spacing-unit/4;
+  color: $grey-color;
   font-size: $small-font-size;
 }
 
@@ -100,9 +103,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
 
   .social-media-list &:hover {
     text-decoration: none;
@@ -110,6 +110,13 @@ a {
     .username {
       text-decoration: underline;
     }
+  }
+}
+.post a {
+  border-bottom: 1px solid lighten($grey-color, 35%);
+  transition: border-color .5s ease-in-out;
+  &:hover {
+    border-color: $grey-color;
   }
 }
 
@@ -172,11 +179,11 @@ pre {
   padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
+  @include media-query($on-tablet) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit * 0.7;
+    padding-left: $spacing-unit * 0.7;
   }
 }
 
@@ -242,5 +249,41 @@ table {
   }
   td {
     border: 1px solid $grey-color-light;
+  }
+}
+
+
+/**
+ * Grid
+ */
+.col-wrapper {
+  margin-left: -$spacing-unit / 2;
+  margin-right: -$spacing-unit / 2;
+  @extend %clearfix;
+}
+
+.col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.col-lg-4 {
+  width: -webkit-calc(33.33% - (#{$spacing-unit} / 4));
+  width:         calc(33.33% - (#{$spacing-unit} / 4));
+}
+
+@include media-query($on-tablet) {
+  .col-md-6 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 4));
+    width:         calc(50% - (#{$spacing-unit} / 4));
+  }
+}
+
+@include media-query($on-palm) {
+  .col-12 {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
   }
 }

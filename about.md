@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 태그
+title: 공부
 permalink: /about/
 ---
 

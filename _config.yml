@@ -16,10 +16,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   개발/디자인에 관심 많은 대학생이 공부한 것, 생각한 것, 경험한 것들을 기록하고 정리하는 공간입니다.
 url: "http://blog.jaeyoon.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-author:
-  name:   JaeYoon Song
-  url:    http://jaeyoon.io
-  email:  song@jaeyoon.io
+author: JaeYoon Song
 lang: ko_KR
 email: song@jaeyoon.io
 
@@ -42,13 +39,16 @@ collections:
 
 # Build settings
 markdown: kramdown
-theme: jekyll-jyoon
+#theme: jekyll-jyoon
 exclude:
   - Gemfile
   - Gemfile.lock
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-minifier
+#sass:
+#  style: compressed
     
 # Add a default layout
 defaults:

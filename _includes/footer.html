@@ -2,41 +2,18 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {{ site.author | escape }}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
+    <div class="post-subtitle">
+      {{ site.title | escape }}
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp;|&nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-      
-      <div class="footer-col footer-col-3">
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-        <p>{{ site.description | escape }}</p>
-      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></div>-->
     </div>
+    <div class="post-meta">{{ site.description | escape }}</div>
 
   </div>
 

@@ -10,6 +10,7 @@
   padding: $spacing-unit/3 0;
   transition: all .5s ease-in-out;
   background: $background-color;
+  @include relative-font-size(0.95);
   &.sticky {
     padding: 0;
   }
@@ -54,7 +55,7 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
@@ -112,7 +113,8 @@
   color: $background-color;
   font-weight: 300;
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: $spacing-unit*1.5 0;
+  line-height: 2.0;
 }
 
 .contact-list,
@@ -137,7 +139,6 @@
 
 .page-content {
   padding: $spacing-unit+5 0;
-  background: #f7f7f9;
 }
 
 /**
@@ -161,13 +162,12 @@
 
 .post-title {
   display: block;
-  margin-top: $spacing-unit/3;
+  margin: $spacing-unit/3 0;
   @include relative-font-size(1.1);
 }
 
 .post-subtitle {
   font-size: $small-font-size;
-  color: $text-color;
 }
 
 .post-meta {
@@ -207,9 +207,60 @@
   }
 }
 
+.post-share {
+  @include media-query($on-tablet) {
+    color: $grey-color;
+  }
+  .post-share-content {
+    margin-bottom: $spacing-unit/2;
+    h4 {
+      margin: $spacing-unit/6 0;
+    }
+    .tag {
+      display: inline-block;
+      font-size: $small-font-size;
+      border: 1px solid $grey-color;
+      padding: 3px 10px;
+      margin: 3px 1px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.fa-facebook-square {
+  color: #3b5998
+}
+.fa-twitter-square {
+  color: #55acee
+}
+.fa-google-plus-square {
+  color: #dd4b39
+}
+.fa-pinterest-square {
+  color: #cb2027
+}
+.fa-tumblr-square {
+  color: #32506d
+}
+.fa-linkedin-square {
+  color: #007bb5
+}
+
 @media screen and (min-width: 768px) {
+  .page-content {
+    background: #f7f7f9;
+  }
   .post-content {
-    padding: $spacing-unit*1.5;
+    padding: $spacing-unit $spacing-unit*1.5;
     background: $background-color;
+    width: 70%;
+    float: left;
+  }
+  .post-share {
+    width: 30%;
+    padding: $spacing-unit $spacing-unit*1.5;
+    float: left;
+    position: sticky;
+    top: 70px;
   }
 }

@@ -11,14 +11,14 @@
     </div>
     {% include footer.html %}
 
+<!--    <script src="{{ '/js/fa-brands.min.js' | absolute_url }}"></script>-->
+    <script>
+      var header = document.querySelector(".site-header");
+      window.onscroll = function() {
+        if( document.body.scrollTop+document.documentElement.scrollTop > 0)
+            header.classList.add("sticky");
+        else header.classList.remove("sticky");
+      };
+    </script>
   </body>
-  
-  <script>
-    var header = document.querySelector(".site-header");
-    window.onscroll = function() {
-      if( document.body.scrollTop+document.documentElement.scrollTop > 0)
-          header.classList.add("sticky");
-      else header.classList.remove("sticky");
-    };
-  </script>
 </html>

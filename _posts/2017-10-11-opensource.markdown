@@ -48,7 +48,7 @@ iOS 토글 버튼에 낮과 밤이라는 컨셉을 입힌 귀여운 아이디어
 
 1년이 훌쩍 지나고, 2016년 9월, 독일 북부에 사는 iOS 개발자 [Finn Gaida](https://github.com/finngaida/DayNightSwitch)는 이를 실제 iOS에 적용할 수 있도록 짠 Swift 프로젝트를 GitHub에 오픈소스로 공개했다.
 
-![My helpful screenshot]({{ "/img/171011/finn.png" | absolute_url }})
+![My helpful screenshot]({{ "/assets/171011/finn.png" | absolute_url }})
 
 또 런던의 디자이너 [Juliana Martinhago](juliana)가 Dribbble과 [Uplabs](https://uplabs.com) 에 약간 수정된 버전의 애니메이션을 포스팅했고,
 
@@ -56,7 +56,7 @@ iOS 토글 버튼에 낮과 밤이라는 컨셉을 입힌 귀여운 아이디어
 
 이를 본 이란의 Android 개발자 [Mahfa](mahfa)는 불과 네 달 전, Android 버전 스위치를 GitHub에 공유했다.
 
-![캡처]({{ "/img/171011/mahfa.png" | absolute_url }})
+![캡처]({{ "/assets/171011/mahfa.png" | absolute_url }})
 
 이렇게 디자이너의 영감이 담긴 Static한 이미지 한 장이 실제 iOS, Android의 스위치로 사용되기까지, 아무런 경제적 유인도 면대면으로 이루어지는 팀워크도 없었다. 3년 전에 올라온 일러스트레이션 하나가 세계 곳곳의 디자이너와 개발자에게 영감이 되어 여러 가지 오픈소스 작품을 생성해낸 것이다.
 

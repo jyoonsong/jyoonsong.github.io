@@ -19,6 +19,15 @@
             header.classList.add("sticky");
         else header.classList.remove("sticky");
       };
+      var mobileNav = document.querySelector("#nav-trigger");
+      mobileNav.addEventListener("click",function() {
+        if (mobileNav.checked) {
+          document.body.style.overflow = "hidden";
+        }
+        else {
+          document.body.style.overflow = "";
+        }
+      });
     </script>
   </body>
 </html>

@@ -10,7 +10,11 @@
   padding: $spacing-unit/3 0;
   transition: all .5s ease-in-out;
   background: $background-color;
+  z-index: 999;
   @include relative-font-size(0.95);
+  @include media-query($on-palm) {
+    padding: 0;
+  }
   &.sticky {
     padding: 0;
   }
@@ -30,36 +34,46 @@
 }
 
 .site-nav {
-  float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
+  float: right;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
     display: none;
   }
 
-  .page-link {
-    color: $text-color;
+  .page-link:not(:last-child) {
     line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+  }
+  
+  .page-link:last-child {
+    line-height: $base-line-height;
+    margin-left: $spacing-unit;
+    border-bottom: 1px solid $grey-color;
+    transition: opacity .5s ease;
+    &:hover {
+      opacity: 0.5
+    }
+  }
+  
+  .dropdown-wrapper {
+    .dropdown {
+      list-style: none;
+      margin: 0;
+      line-height: 2;
+      font-weight: 300;
+      padding-left: $spacing-unit * 1.5;
     }
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
-    background: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
-
     label[for="nav-trigger"] {
       display: block;
       float: right;
@@ -71,11 +85,9 @@
 
     .menu-icon {
       display: block;
-      float: right;
       width: 36px;
-      height: 26px;
       line-height: 0;
-      padding-top: 10px;
+      margin: auto;
       text-align: center;
 
       > svg path {
@@ -84,23 +96,23 @@
     }
 
     input ~ .trigger {
-      clear: both;
-      display: none;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      overflow: hidden;
+      transition: all .5s ease-in-out;
     }
 
     input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
+      height: calc(100vh - 55px);
+      background: #f7f7f9;
     }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-      margin-left: 20px;
+    
+    .page-link:not(:last-child) {
+      margin-left: $spacing-unit*0.7 $spacing-unit 0;
+      text-align: left;
     }
   }
 }
@@ -129,6 +141,9 @@
 .page-heading {
   border-bottom: 1px solid $grey-color-light;
   padding: $spacing-unit+72 0 $spacing-unit;
+  @include media-query($on-palm) {
+    padding: $spacing-unit+55 0 $spacing-unit;
+  }
 }
 
 .page-title {
@@ -139,6 +154,13 @@
 
 .page-content {
   padding: $spacing-unit+5 0;
+  background: #f7f7f9;
+}
+
+@include media-query($on-tablet) {
+  .post .page-content {
+    background: transparent;
+  }
 }
 
 /**
@@ -146,7 +168,9 @@
  */
 .post-list {
   list-style: none;
-  > li {
+  padding: 0;
+  li {
+    margin-bottom: $spacing-unit/2;
     transition: transform .5s ease-in-out;
     &:hover {
       transform: translateY(-5px);
@@ -181,6 +205,7 @@
 .post-content {
   margin-bottom: $spacing-unit;
   line-height: 2.0;
+  text-align: justify;
 
   h2 {
     @include relative-font-size(2);
@@ -247,14 +272,14 @@
 }
 
 @media screen and (min-width: 768px) {
-  .page-content {
-    background: #f7f7f9;
-  }
   .post-content {
     padding: $spacing-unit $spacing-unit*1.5;
     background: $background-color;
     width: 70%;
     float: left;
+  }
+  .post-comment {
+    width: 70%;
   }
   .post-share {
     width: 30%;
@@ -262,5 +287,37 @@
     float: left;
     position: sticky;
     top: 70px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .site-nav .dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    &:hover .dropdown {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .dropdown {
+      position: absolute;
+      top: 85%;
+      left: 0;
+      width: 80px;
+      padding: 10px 0px;
+      border-radius: 5px;
+      background: $grey-color-dark;
+      color: $background-color;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .5s ease-in-out;
+      li {
+        transition: opacity .3s linear;
+      }
+      &:hover li:not(:hover) {
+        opacity: 0.5;
+      }
+    }
   }
 }

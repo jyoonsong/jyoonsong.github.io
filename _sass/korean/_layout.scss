@@ -9,7 +9,7 @@
   border-bottom: 1px solid $grey-color-light;
   padding: $spacing-unit/3 0;
   transition: all .5s ease-in-out;
-  background: $background-color;
+  background: rgba(255,255,255,0.95);
   z-index: 999;
   @include relative-font-size(0.95);
   @include media-query($on-palm) {
@@ -21,16 +21,11 @@
 }
 
 .site-title {
-//  @include relative-font-size(1.625);
   line-height: $base-line-height * $base-font-size * 2.25;
-//  letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-  width: 24px;
-//  &,
-//  &:visited {
-//    color: $grey-color-dark;
-//  }
+  width: 64px;
+  padding: 0 20px;
 }
 
 .site-nav {
@@ -55,7 +50,7 @@
   
   .page-link:last-child {
     line-height: $base-line-height;
-    margin-left: $spacing-unit;
+    margin: 0 $spacing-unit;
     border-bottom: 1px solid $grey-color;
     transition: opacity .5s ease;
     &:hover {
@@ -77,19 +72,20 @@
     label[for="nav-trigger"] {
       display: block;
       position: relative;
-      width: $spacing-unit;
+      width: 54px;
       height: 54px;
       cursor: pointer;
     }
 
     .menu-icon {
       display: block;
-      width: 64%;
+      width: 35%;
       height: 1px;
       position: absolute;
       margin: auto;
       top: 14px;
       right: 0;
+      left: 0;
       bottom: 0;
       background: $grey-color;
       &:before, &:after {
@@ -108,6 +104,7 @@
       left: 0;
       width: 100%;
       height: 1px;
+      min-height: 1px;
       overflow: hidden;
       background: #f7f7f9;
       transition: all .5s ease-in-out;
@@ -116,6 +113,7 @@
 
     input:checked ~ .trigger {
       height: calc(100vh - 55px);
+      min-height: 550px;
       .nav-footer {
         opacity: 1;
         transition-delay: .5s;
@@ -273,6 +271,9 @@
       padding: 3px 10px;
       margin: 3px 1px;
       border-radius: 4px;
+    }
+    .post-share-btns {
+      display: inline-block;
     }
   }
 }

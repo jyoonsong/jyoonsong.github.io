@@ -28,8 +28,8 @@ StackOverFlow에 질문을 할 때, Preview 코드를 첨부하지 않으면 -1�
 그래서 StackOverFlow에 질문글을 올리기로 결심했고, 방대한 양의 코드를 전부 첨부할 수는 없으니 질문의 핵심이 되는 코드만 남겨두고 다른 코드를 하나씩 정리하기 시작했다. 그런데 웬걸, `animation-play-state: paused` 가 있던 줄을 삭제하니 완벽하게 워킹하는 것이다. 처음에는 SCSS 컴파일러를 없앤 타이밍에 제대로 작동하기 시작해서 SCSS 컴파일러 문제인 줄 알았다. 하지만 조금 더 코드를 살펴보니 Safari에서는 `transform: rotateY()` 값과 `animation-play-state: paused` 가 conflict를 일으키는 모양이다. 또 `.getComputedStyle` 과 `.getPropertyValue` 로 리턴되는 transform matrix가 keyframes animation으로 바뀐 transform 값이 아닌 element에 적용된 본래의 transform 값이다. 이때문에 결국 safari에선 animation이 smooth하지 않지만 (하려면 할 수 있겠으나 코드를 더럽히기도 싫고 귀찮다…) 어찌 됐든 전혀 다른 position을 가지게 되던 큰 문제는 해결되었다.
 
 <figure>
-  <img src="https://postfiles.pstatic.net/MjAxNzExMjBfMjUg/MDAxNTExMTg0NTcwMzE4.Wf7wAaUaJxCIs6OinIL1nfrHvACdyItO3tkZQpJHTqUg.fu5Hu7ynbHJ10vHvB1wHRoRq0ANIozfeKn3ogXprnRog.PNG.jaeyo_on/Screen_Shot_2017-11-20_at_5.20.09_AM.png?type=w1" alt="Safari Animation-play-state 버그"/>
-  <img src="https://postfiles.pstatic.net/MjAxNzExMjBfOTIg/MDAxNTExMTg0NTcwOTAz.IvBfbe5xTm2Au01F2PAqCWBHvca6eSJnp3ot7nHZCE4g.P1pIYQeEXZ_R0A_VuwFGf23_pfzKiUGi7rHWjdOERMkg.PNG.jaeyo_on/Screen_Shot_2017-11-20_at_5.20.51_AM.png?type=w1" alt="Safari Animation-play-state 버그 - 콘솔"/>
+  <img src="{{ '/assets/img/171121/bug1                                   .png' | absolute_url }}" alt="Safari Animation-play-state 버그"/>
+  <img src="{{ '/assets/img/171121/bug2.png' | absolute_url }}" alt="Safari Animation-play-state 버그 - 콘솔"/>
   <figcaption> Safari에서 발생하는 Animation-play-state 버그 (Console에 뜨는 위치값과 브라우저 상에 렌더링되는 위치가 전혀 다른 것을 확인할 수 있다.) </figcaption>
 </figure>
 

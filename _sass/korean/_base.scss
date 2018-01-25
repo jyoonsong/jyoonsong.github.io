@@ -31,6 +31,9 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  @include media-query($on-tablet) {
+    font-size: $mobile-font-size;
+  }
 }
 ::selection {
   background: #ffb7b7;

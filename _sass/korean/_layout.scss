@@ -220,6 +220,23 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+  &:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: right;
+  }
+  &.공부:before {
+    background: pink;
+  }
+  &.생각:before {
+    background: #f791a3;
+  }
+  &.경험:before {
+    background: #ca4a60;
+  }
 }
 
 /**

@@ -84,9 +84,7 @@ tags:
 
 **참조**
 
-[The Explosive Growth of Influencer Marketing and What It Means For You](https://www.forbes.com/sites/kylewong/2014/09/10/the-explosive-growth-of-influencer-marketing-and-what-it-means-for-you/#1146199252ac), Forbes, 2014.09.10.
-[인플루언서에 대한 몇 가지 정의들](https://brunch.co.kr/@yogathumb/18), 네안데르탈인, 2017.02.01.
-그리고 미나언니
+[The Explosive Growth of Influencer Marketing and What It Means For You](https://www.forbes.com/sites/kylewong/2014/09/10/the-explosive-growth-of-influencer-marketing-and-what-it-means-for-you/#1146199252ac), Forbes, 2014.09.10.<br>[인플루언서에 대한 몇 가지 정의들](https://brunch.co.kr/@yogathumb/18), 네안데르탈인, 2017.02.01.<br>그리고 미나언니
 
 
 

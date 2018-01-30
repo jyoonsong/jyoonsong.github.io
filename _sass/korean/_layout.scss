@@ -229,13 +229,13 @@
     float: right;
   }
   &.공부:before {
-    background: pink;
+    background: $secondary-color//#ffd6dc;
   }
   &.생각:before {
-    background: #f791a3;
+    background: $tertiary-color//#f791a3;
   }
   &.경험:before {
-    background: #ca4a60;
+    background: $primary-color//#ca4a60;
   }
 }
 

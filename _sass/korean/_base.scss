@@ -36,11 +36,11 @@ body {
   }
 }
 ::selection {
-  background: #ffb7b7;
+  background: $secondary-color;
   color: $background-color;
 }
 ::-moz-selection {
-  background: #ffb7b7;
+  background: $secondary-color;
   color: $background-color;
 }
 hr {
@@ -94,7 +94,7 @@ ul {
 }
 
 li {
-  > p:not(:last-child) {
+  > p:not(:last-of-type) {
     margin-bottom: 0;
   }
 }

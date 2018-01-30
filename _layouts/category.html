@@ -24,7 +24,7 @@ layout: default
           <li class="grid-item">
             <a href="{{ post.url | relative_url }}">
 <!--              {% assign date_format = site.jyoon.date_format | default: "%Y. %m. %d" %}-->
-              <span class="post-meta">{{ post.categories | join: '/' }}</span>
+              <span class="post-meta {{ post.categories | first }}">{{ post.categories | join: '/' }}</span>
               <h2 class="post-title">
                 <strong>{{ post.title | escape }}</strong>
               </h2>

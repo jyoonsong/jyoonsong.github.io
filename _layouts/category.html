@@ -14,11 +14,10 @@ layout: default
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       {{ content }}
-      <ul class="post-list grid" data-colcade="columns: .grid-col, items: .grid-item">
-        <!-- columns -->
-        <div class="grid-col grid-col--1"></div>
-        <div class="grid-col grid-col--2"></div>
-        <div class="grid-col grid-col--3"></div>
+      <ul class="post-list grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".grid-gutter-sizer", "percentPosition": true }'>
+        <!-- Sizers -->
+        <div class="grid-sizer"></div>
+        <div class="grid-gutter-sizer"></div>
         <!-- items -->
         {% for post in site.categories[page.title] %}
           <li class="grid-item">
@@ -37,4 +36,3 @@ layout: default
   </main>
   
 </div>
-

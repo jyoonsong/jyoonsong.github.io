@@ -268,33 +268,31 @@ table {
  * Grid
  */
 
-.grid {
+.col {
   margin-left: -$spacing-unit / 2;
   margin-right: -$spacing-unit / 2;
-  @extend %clearfix;
 }
 
-.grid-col {
-  float: left;
-  padding-left: $spacing-unit / 2;
-  width: -webkit-calc(33.33% - (#{$spacing-unit} / 4));
-  width:         calc(33.33% - (#{$spacing-unit} / 4));
+.grid-item,
+.grid-sizer {
+  width: 32%
+}
+.grid-gutter-sizer {
+  width: 2%
 }
 
 @include media-query($on-tablet) {
-  .grid-col {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 4));
-    width:         calc(50% - (#{$spacing-unit} / 4));
+  .grid-item,
+  .grid-sizer {
+    width: 49%;
   }
-  .grid-col--2 { display: none; }
 }
 
 @include media-query($on-palm) {
-  .grid-col {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+  .grid-item,
+  .grid-sizer {
+    width: 100%;
   }
-  .grid-col--2, .grid-col--3 { display: none; }
 }
 
 .hidden-tablet {
@@ -308,7 +306,3 @@ table {
     display: none !important;
   }
 }
-
-/**
- * Multi Column Layout
- */

@@ -47,7 +47,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-minifier
-
 #sass:
 #  style: compressed
     

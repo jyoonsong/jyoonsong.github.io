@@ -4,7 +4,7 @@
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 <!--    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>-->
-    <div class="grid">
+    <div class="col">
       <a class="site-title" href="{{ '/' | relative_url }}">
         <img src='{{ "/assets/img/logo.png" | relative_url }}'/>
       </a>

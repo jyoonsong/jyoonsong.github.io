@@ -3,7 +3,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: 'Spoqa Han Sans', '나눔고딕', NanumGothic, '맑은 고딕', Malgun Gothic, '애플 SD 산돌고딕 Neo', Apple SD Gothic Neo, '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif !default;
+$base-font-family: 'Spoqa Han Sans', '나눔고딕', NanumGothic, '맑은 고딕', Malgun Gothic, '애플 SD 산돌고딕 Neo', Apple SD Gothic Neo, Helvetica, sans-serif !default;
 $code-font-family:  Menlo, Monaco, 'Courier New', monospace !important;
 $base-font-size:   14.4px !default;
 $mobile-font-size: 15px !default;
@@ -51,6 +51,7 @@ $on-tablet:        767px !default;
 
 // Import partials.
 @import
+  "korean/fonts",
   "korean/base",
   "korean/layout",
   "korean/syntax-highlighting"

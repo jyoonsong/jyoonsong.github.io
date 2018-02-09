@@ -1,10 +1,12 @@
-.infinite-scroll-last, .infinite-scroll-error {
+.infinite-scroll-last {
   display: none;
+}
+.page-load-status {
   color: $grey-color;
+  display: none;
 }
 
 .infinite-scroll-request {
-  display: none;
   span{
     display: inline-block;
     width: $spacing-unit / 2;

@@ -31,6 +31,7 @@ layout: default
           </li>
         {% endfor %}
       </ul>
+      {% if paginator.total_pages > 1 %}
       <div class="page-load-status">
         <div class="infinite-scroll-request center-inline">
           <span></span>
@@ -40,7 +41,7 @@ layout: default
         <p class="infinite-scroll-last center-inline">마지막입니다</p>
         <p class="infinite-scroll-error center-inline">에러가 발생했습니다</p>
       </div>
-      {% if paginator.total_pages > 1 %}
+      <!-- <p class="center-inline"><a class="view-more-button"><u>더보기</u></a></p> -->
       <ul class="pager">
         {% if paginator.previous_page %}
         <li>

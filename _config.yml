@@ -40,14 +40,13 @@ jyoon:
 # Build settings
 markdown: kramdown
 #theme: jekyll-jyoon
-exclude: ["vendor",
-          "_assets",
-          "Gemfile",
-          "Gemfile.lock",
-          "README.md",
-          "gulpfile.js",
-          "node_modules",
-          "package.json"]
+exclude: 
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - package.json
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
@@ -60,7 +59,7 @@ permalink: /:year/:month/:title.html
 
 pagination:
   enabled: true
-  per_page: 9
+  per_page: 7
   title: ':title'
   permalink: '/:num/'
   limit: 0

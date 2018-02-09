@@ -51,7 +51,6 @@
   .page-link:last-child {
     line-height: $base-line-height;
     margin: 0 $spacing-unit;
-    border-bottom: 1px solid $grey-color;
     transition: opacity .5s ease;
     &:hover {
       opacity: 0.5

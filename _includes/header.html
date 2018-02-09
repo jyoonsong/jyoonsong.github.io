@@ -1,15 +1,12 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
-    {% assign default_paths = site.pages | map: "path" %}
-    {% assign page_paths = site.header_pages | default: default_paths %}
 <!--    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>-->
     <div class="col">
       <a class="site-title" href="{{ '/' | relative_url }}">
         <img src='{{ "/assets/img/logo.png" | relative_url }}'/>
       </a>
 
-      {% if page_paths %}
         <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
           <label for="nav-trigger">
@@ -40,7 +37,7 @@
                   <li><a href="/교환학생">교환학생</a></li>
                 </ul>
               </div>
-              <a class="page-link" href="http://jaeyoon.io">about</a>
+              <a class="page-link" href="http://jaeyoon.io"><u>about</u></a>
             </section>
             <section class="nav-footer hidden-desktop">
               <div class="post-subtitle">
@@ -58,7 +55,6 @@
             </section>
           </div>
         </nav>
-      {% endif %}
     </div>
   </div>
 </header>

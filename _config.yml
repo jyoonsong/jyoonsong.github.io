@@ -54,7 +54,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-minifier
-  - github-pages
 
 #sass:
 #  style: compressed

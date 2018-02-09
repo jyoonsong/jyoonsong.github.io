@@ -40,15 +40,14 @@ jyoon:
 # Build settings
 markdown: kramdown
 #theme: jekyll-jyoon
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+exclude: ["vendor",
+          "_assets",
+          "Gemfile",
+          "Gemfile.lock",
+          "README.md",
+          "gulpfile.js",
+          "node_modules",
+          "package.json"]
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed

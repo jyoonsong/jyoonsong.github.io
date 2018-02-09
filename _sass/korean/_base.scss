@@ -100,14 +100,6 @@ li {
 }
 
 
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
-}
-
-
 
 /**
  * Links
@@ -234,7 +226,6 @@ pre {
 }
 
 
-
 /**
  * Tables
  */
@@ -293,6 +284,14 @@ table {
   .grid-sizer {
     width: 100%;
   }
+}
+
+/**
+ * Helper Classes
+ */
+
+.center-inline {
+  text-align: center;
 }
 
 .hidden-tablet {

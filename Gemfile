@@ -19,6 +19,7 @@ gem "jekyll", "~> 3.6.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-paginate-v2"
   gem "jekyll-seo-tag"
   gem "jekyll-minifier"
   gem "jekyll-feed", "~> 0.6"

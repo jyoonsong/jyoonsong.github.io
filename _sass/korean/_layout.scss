@@ -244,7 +244,7 @@
  */
 .post-content {
   margin-bottom: $spacing-unit;
-  line-height: 2.0;
+  line-height: $content-line-height;
   text-align: justify;
 
   h2 {

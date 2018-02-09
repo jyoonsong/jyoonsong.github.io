@@ -10,6 +10,7 @@ $mobile-font-size: 15px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.85 !default;
 $base-line-height: 1.6 !default;
+$content-line-height: 2.2 !default;
 
 $spacing-unit:     30px !default;
 
@@ -54,5 +55,6 @@ $on-tablet:        767px !default;
   "korean/fonts",
   "korean/base",
   "korean/layout",
+  "korean/loader",
   "korean/syntax-highlighting"
 ;

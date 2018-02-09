@@ -33,9 +33,9 @@ jyoon:
   date_format: "%Y.%m.%d"
   
 # Collections for Category
-collections:
-  category:
-    output: true
+# collections:
+#   category:
+#     output: true
 
 # Build settings
 markdown: kramdown
@@ -43,29 +43,37 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 plugins:
+  - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-minifier
+  - github-pages
+
 #sass:
 #  style: compressed
+permalink: /:year/:month/:title.html
+
+pagination:
+  enabled: true
+  per_page: 9
+  title: ':title'
+  permalink: '/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
     
 # Add a default layout
-defaults:
-  -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "category"
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: category
+#     values:
+#       layout: "category"

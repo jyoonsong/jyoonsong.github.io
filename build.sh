@@ -29,4 +29,4 @@ git config user.name "jyoonsong"
 git config core.quotepath false
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin master > /dev/null 2>&1
+git push --force origin master

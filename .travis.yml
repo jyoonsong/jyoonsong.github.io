@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.3.3
+before_script:
+- chmod +x "./build.sh"
+script: "./build.sh"
+branches:
+  except:
+  - master
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: cB2EiBdnmuJ3GFSQpm6OHty0ijHcxhclrZDcOJeaZK0D+EYnqvRY50L/frgiKqqW4BeU6m3jhp9y/HgHUpXRPOCP0vqMB8PWUbVH5tbrdpj7Q0z6XQlFW1SIRwIYwvz4PeZk+F3inONhQEUsYveGNqrMCDH7baqleeHjsW6uUN+RWHJ+eslix5W4uW47EsOnhJeS0kaTzBB8SB2R8jHq2G0JZ7iPSxFMduAjBLGWIQkDJOeqGwc8C0iT01J2ZbvPolCV92ANQkmus+XzuZsAS6zRyqDNLJiKd7clX7LWHjgh2BhXdOdWhLefpEAWVYHgLJ7/JzDa5QzJODjifdOE+2JCIeAR6/dPJ6WJNYL0PRmS04vpqWID8eOytR/EwcLjLNJTOrgGfImbA9HoSdf9l1Q7Lzdfj/CETbs14Qs7GiOqh1Gx4gSUunWZBCEIY/ZyZUJNoJTlIZxK9+4XtHzegwDrnP0Nn6VnXrmq6JN4Y6v4j7WXeKYp426jFn+1AYGB5gVNF12rdk1dCnsxrKp1fMf6xPw1KtVNCDiYzkBFxmPzLPjaIrbQpPRzAqECrsIrViqpd+hrIhOlBtU1+ZZR8M8XvbgDLdAOClFjyDwt89SZBwX4/x+s44Sxsm1yWI+XZ9i6JL6wkm4dPtkpGn6mG0Z2lOn0Ygl4pOh9w1QKShQ=
+exclude:
+- vendor
+sudo: false

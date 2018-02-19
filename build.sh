@@ -14,6 +14,7 @@ bundle exec jekyll build
 
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/jyoonsong/jyoonsong.github.io.git ../jyoonsong.github.io.master
+cd ../jyoonsong.github.io.master
 git checkout master
 rm -rf *
 

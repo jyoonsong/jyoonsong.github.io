@@ -31,4 +31,4 @@ git status
 git add -A .
 git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet --force origin master > /dev/null 2>&1
+git push --force origin master

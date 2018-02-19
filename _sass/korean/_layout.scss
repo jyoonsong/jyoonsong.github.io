@@ -40,24 +40,40 @@
     display: none;
   }
 
-  .page-link:not(:last-child) {
+  .util-link {
     line-height: $base-line-height;
-    display: inline-block;
-    width: 70px;
-    text-align: center;
-    transition: all .5s ease-in-out;
-  }
-  
-  .page-link:last-child {
-    line-height: $base-line-height;
-    margin: 0 $spacing-unit;
+    margin: 0 25px;
     transition: opacity .5s ease;
     &:hover {
       opacity: 0.5
     }
   }
   
+  .page-link {
+    line-height: $base-line-height;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-left: 6px;
+      transition: transform .5s .2s ease-out;
+      background: $secondary-color
+    }
+  }
+  
   .dropdown-wrapper {
+    &:nth-child(2) .page-link:after {
+      background: $tertiary-color;
+    }
+    &:nth-child(3) .page-link:after {
+      background: $primary-color;
+    }
     .dropdown {
       list-style: none;
       margin: 0;
@@ -228,13 +244,13 @@
     float: right;
   }
   &.공부:before {
-    background: $secondary-color//#ffd6dc;
+    background: $secondary-color
   }
   &.생각:before {
-    background: $tertiary-color//#f791a3;
+    background: $tertiary-color
   }
   &.경험:before {
-    background: $primary-color//#ca4a60;
+    background: $primary-color
   }
 }
 
@@ -244,7 +260,6 @@
 .post-content {
   margin-bottom: $spacing-unit;
   line-height: $content-line-height;
-  text-align: justify;
 
   h2 {
     @include relative-font-size(2);
@@ -333,13 +348,21 @@
 }
 
 @media screen and (min-width: 576px) {
+  .page-link:after {
+    transform: rotateY(90deg);
+  }
   .site-nav .dropdown-wrapper {
     position: relative;
     display: inline-block;
     padding: 0 5px;
-    &:hover .dropdown {
-      opacity: 1;
-      pointer-events: auto;
+    &:hover {
+      .dropdown {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .page-link:after {
+        transform: rotateX(0)
+      }
     }
     .dropdown {
       position: absolute;

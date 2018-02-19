@@ -60,8 +60,8 @@ tags:
 
 아래는 본격적으로 제가 교환학생 기간 동안 경험했던 것들을 기록한 포스팅들입니다. 전체적으로 앞에서 언급했던 네 가지 이정표가 모든 이야기에 조금씩 다 녹아 있지만, 특별히 관련이 깊은 것을 고르자면, 여행편은 두 번째 목표, 수업편은 세 번째 목표, 요리/운동편은 네 번째 목표, 인턴편은 두세 번째 목표와 특히 연결지을 수 있습니다.
 
-- [[**여행편**] 살면서 한 번쯤 꼭 살아보고 싶은 곳: Bay Area]({{ '/경험/교환학생/2017/11/26/exchange-travel.html' | absolute_url }})
-- [[**인턴편**] 실리콘밸리 스타트업 '차트메트릭'에서 인턴을 하다]({{ '/경험/교환학생/2017/11/27/exchange-internship.html' | absolute_url }})
-- [[**수업편**] USC에서 들은 최고의 강의: Interactive Web Development]({{ '/경험/교환학생/2017/12/27/exchange-class.html' | absolute_url }})
-- [[**요리/운동편**] 미국에서의 다이어트 도전과 실패]({{ '/경험/교환학생/2017/12/16/exchange-diet.html' | absolute_url }})
-- [[**번외편**] 기숙사, 동아리, 친구들 등 이야기 조각들]({{ '/경험/교환학생/2017/12/16/exchange-club.html' | absolute_url }})
+- [[**여행편**] 살면서 한 번쯤 꼭 살아보고 싶은 곳: Bay Area]({{ '/경험/교환학생/2017/11/26/exchange-travel.html' | relative_url }})
+- [[**인턴편**] 실리콘밸리 스타트업 '차트메트릭'에서 인턴을 하다]({{ '/경험/교환학생/2017/11/27/exchange-internship.html' | relative_url }})
+- [[**수업편**] USC에서 들은 최고의 강의: Interactive Web Development]({{ '/경험/교환학생/2017/12/27/exchange-class.html' | relative_url }})
+- [[**요리/운동편**] 미국에서의 다이어트 도전과 실패]({{ '/경험/교환학생/2017/12/16/exchange-diet.html' | relative_url }})
+- [[**번외편**] 기숙사, 동아리, 친구들 등 이야기 조각들]({{ '/경험/교환학생/2017/12/16/exchange-club.html' | relative_url }})

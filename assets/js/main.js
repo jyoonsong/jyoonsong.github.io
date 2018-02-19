@@ -13,16 +13,18 @@ mobileNav.addEventListener("click",function() {
     document.body.style.overflow = "";
   }
 });
-var grid = document.querySelector('.grid');
-var msnry = new Masonry( grid, {
-  itemSelector: '.grid-item', // select none at first
-  columnWidth: '.grid-sizer',
-  gutter: '.grid-gutter-sizer',
-  percentPosition: true,
-  stagger: 30,
-  visibleStyle: { transform: 'translateY(0)', opacity: 1 },
-  hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
-});
+if ( document.querySelector('.grid') ) {
+  var grid = document.querySelector('.grid');
+  var msnry = new Masonry( grid, {
+    itemSelector: '.grid-item', // select none at first
+    columnWidth: '.grid-sizer',
+    gutter: '.grid-gutter-sizer',
+    percentPosition: true,
+    stagger: 30,
+    visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+    hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
+  }); 
+}
 if ( document.querySelector('.pager') ) {
   var infScroll = new InfiniteScroll( grid, {
     path: '.next',
@@ -30,6 +32,7 @@ if ( document.querySelector('.pager') ) {
     outlayer: msnry,
     status: '.page-load-status',
     hideNav: '.pager',
+    scrollThreshold: 200,
     history: false
     // button: '.view-more-button',
   });

@@ -4,7 +4,7 @@
 <!--    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>-->
     <div class="col">
       <a class="site-title" href="{{ '/' | relative_url }}">
-        <img src='{{ "/assets/img/logo.png" | relative_url }}'/>
+        <img src='{{ "/assets/img/logo.png" | relative_url }}' alt="logo"/>
       </a>
 
         <nav class="site-nav">
@@ -37,7 +37,10 @@
                   <li><a href="/교환학생">교환학생</a></li>
                 </ul>
               </div>
-              <a class="page-link" href="http://jaeyoon.io"><u>about</u></a>
+              <a class="util-link" href="http://jaeyoon.io"><u>about</u></a>
+              <a class="util-link" href="/search">
+                 <img src='{{ "/assets/img/search.svg" | relative_url }}' width="15" alt="search"/>
+              </a>
             </section>
             <section class="nav-footer hidden-desktop">
               <div class="post-subtitle">

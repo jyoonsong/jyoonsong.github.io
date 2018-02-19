@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "스크롤은 유지한 채 스크롤바만 깔끔하게 없애기"
-subtitle:  "브라우저별 CSS로 Scroll Bar 숨기는 법"
+title: "CSS 스크롤바에 대한 거의 모든 것"
+subtitle:  "스크롤은 유지한 채 스크롤바만 깔끔하게 없애는 법을 알아보자"
 date:   2017-10-09 03:15:30
 author: jaeyoon
 categories: ["공부", "개발"]
@@ -9,11 +9,14 @@ tags:
   - "css"
 ---
 
-**브라우저별 CSS로 Scroll Bar 숨기는 법**
+**스크롤은 유지한 채 스크롤바만 깔끔하게 없애는 법을 알아보자**
 
 윈도우 혹은 특정 브라우저에서 스크롤바가 걸리적거리는 경우가 있다. 특히 table의 경우에는 다음과 같이 더욱 난장판이다:
 
-![스크롤바 난장판](https://jandi-box.com/files-thumb/13597036/fe8868e9eca403a9d326e1ed41bdc3c3.png?size=640)
+<figure>
+	<img data-action="zoom" src="https://jandi-box.com/files-thumb/13597036/fe8868e9eca403a9d326e1ed41bdc3c3.png?size=640" alt="스크롤바 난장판">
+	<figcaption>난장판이 된 스크롤바</figcaption>
+</figure>
 
 이는 간단한 CSS 코드로 쉽게 해결 가능한 문제이다.
 
@@ -44,6 +47,25 @@ th, td {
   }
 }
 ```
+
+**4. 보너스로 커스텀 스타일 적용하기**
+
+```scss
+.scrollbar {
+	&::-webkit-scrollbar {
+		width: 3px;
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb {
+	    background: #f8f7fb;
+	    opacity: .4;
+	}
+	&::-webkit-scrollbar-track {
+	    background: none;
+	}
+}
+```
+
 <br>
 
 

@@ -23,7 +23,7 @@ StackOverFlow, GitHub, Linux 등등 오픈소스의 대단함을 엿볼 수 있�
 이야기는 2015년 1월 30일, 인도의 한 디자이너 [Ramakrishna V](http://www.ramakrish.in)가 [Day-Night Toggle Button](https://dribbble.com/shots/1907553-Day-Night-Toggle-Button)이라는 제목의 일러스트레이션을 Dribbble에 업로드하는 데서부터 시작된다.
 
 <figure>
-  <img src="https://cdn.dribbble.com/users/484057/screenshots/1907553/day-night-toggle_1x.jpg" alt="Static한 Day-Night Toggle Button"/>
+  <img data-action="zoom" src="https://cdn.dribbble.com/users/484057/screenshots/1907553/day-night-toggle_1x.jpg" alt="Static한 Day-Night Toggle Button"/>
   <figcaption> Static한 Day-Night Toggle Button </figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ iOS 토글 버튼에 낮과 밤이라는 컨셉을 입힌 귀여운 아이디어
 이 애니메이션 역시 뜨거운 반응을 얻었고, 지금은 Day Night Switch를 검색했을 때 Ramakrishna V가 작업한 최초 게시물보다도 오히려 먼저 나온다.
 
 <figure>
-  <img src="https://cdn.dribbble.com/users/470545/screenshots/1909289/switch_02.gif" alt="Ramakrishna V의 애니메이션"/>
+  <img data-action="zoom" src="https://cdn.dribbble.com/users/470545/screenshots/1909289/switch_02.gif" alt="Ramakrishna V의 애니메이션"/>
   <figcaption> Ramakrishna V의 애니메이션 </figcaption>
 </figure>
 
@@ -52,21 +52,21 @@ iOS 토글 버튼에 낮과 밤이라는 컨셉을 입힌 귀여운 아이디어
 1년이 훌쩍 지나고, 2016년 9월, 독일 북부에 사는 iOS 개발자 [Finn Gaida](https://github.com/finngaida/DayNightSwitch)는 이를 실제 iOS에 적용할 수 있도록 짠 Swift 프로젝트를 GitHub에 오픈소스로 공개했다.
 
 <figure>
-  <img src="{{ '/assets/img/171011/finn.png' | absolute_url }}" alt="iOS용 Day-Night Toggle Button"/>
+  <img data-action="zoom" src="{{ '/assets/img/171011/finn.png' | relative_url }}" alt="iOS용 Day-Night Toggle Button"/>
   <figcaption> iOS용 Day-Night Toggle Button </figcaption>
 </figure>
 
 또 런던의 디자이너 [Juliana Martinhago](https://dribbble.com/shots/3617536-Daily-UI-Challenge-015)가 Dribbble과 [Uplabs](https://uplabs.com) 에 약간 수정된 버전의 애니메이션을 포스팅했고,
 
 <figure>
-  <img src="https://cdn.dribbble.com/users/396527/screenshots/3617536/switch-final.gif" alt="Juliana Martinhago가 수정한 버전"/>
+  <img data-action="zoom" src="https://cdn.dribbble.com/users/396527/screenshots/3617536/switch-final.gif" alt="Juliana Martinhago가 수정한 버전"/>
   <figcaption> Juliana Martinhago가 수정한 버전 </figcaption>
 </figure>
 
 이를 본 이란의 Android 개발자 [Mahfa](https://github.com/Mahfa/DayNightSwitch)는 불과 네 달 전, Android 버전 스위치를 GitHub에 공유했다.
 
 <figure>
-  <img src="{{ '/assets/img/171011/mahfa.png' | absolute_url }}" alt="Android용 Day-Night Toggle Button"/>
+  <img data-action="zoom" src="{{ '/assets/img/171011/mahfa.png' | relative_url }}" alt="Android용 Day-Night Toggle Button"/>
   <figcaption> Android용 Day-Night Toggle Button </figcaption>
 </figure>
 

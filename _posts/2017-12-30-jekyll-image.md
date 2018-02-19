@@ -45,7 +45,7 @@ Absolute URL (절대 경로) - `url`과 `baseurl`을 앞에 붙여준다.
 
 {% raw %}
 ```html
-<img src='{{ "/assets/img/image.png" | absolute_url }}' alt='absolute'>
+<img data-action="zoom" src='{{ "/assets/img/image.png" | relative_url }}' alt='absolute'>
 <!-- result : http://blog.jaeyoon.io/my-baseurl/assets/img/image.png -->
 ```
 {% endraw %}
@@ -54,7 +54,7 @@ Relative URL (상대 경로) - `baseurl`을 앞에 붙여준다.
 
 {% raw %}
 ```html
-<img src='{{ "/assets/img/image.png" | relative_url }}' alt='relative'>
+<img data-action="zoom" src='{{ "/assets/img/image.png" | relative_url }}' alt='relative'>
 <!-- result : /my-baseurl/assets/img/image.png -->
 ```
 {% endraw %}
@@ -68,7 +68,7 @@ Jekyll이 사용하는 마크다운-HTML 컨버터인 `kramdown` 하에서는 �
 ```markdown
 - ![Image Alt 텍스트]({{site.url}}/assets/img/image.png )
 - ![Image Alt 텍스트](http://blog.jaeyoon.io/assets/img/image.png)
-- ![Image Alt 텍스트]({{"/assets/img/image.png"| absolute_url}})
+- ![Image Alt 텍스트]({{"/assets/img/image.png"| relative_url}})
 - ![Image Alt 텍스트](/assets/img/image.png)
 ```
 {% endraw %}
@@ -140,7 +140,7 @@ defaults:
 {% raw %}
 ```html
 <figure>
-  <img src='{{ "/assets/img/image.png" | absolute_url }}' alt='absolute'>
+  <img data-action="zoom" src='{{ "/assets/img/image.png" | relative_url }}' alt='absolute'>
   <figcaption>여기에 캡션을 작성합니다.</figcaption>
 </figure>
 ```
@@ -154,7 +154,7 @@ defaults:
 
 {% raw %}
 ```markdown
-![Image Alt 텍스트]({{"/assets/img/image.png"| absolute_url}})
+![Image Alt 텍스트]({{"/assets/img/image.png"| relative_url}})
 *여기에 캡션을 작성합니다.*
 ```
 {% endraw %}
@@ -163,7 +163,7 @@ defaults:
 
 ```html
 <p>
-  <img src="http://blog.jaeyoon.io/assets/img/image.png" alt="Image Alt 텍스트">
+  <img data-action="zoom" src="http://blog.jaeyoon.io/assets/img/image.png" alt="Image Alt 텍스트">
   <em>여기에 캡션을 작성합니다.</em>
 </p>
 ```
@@ -186,7 +186,7 @@ img + em {
 
 {% raw %}
 ```markdown
-| ![Image Alt 텍스트]({{"/assets/img/image.png"| absolute_url}}) | 
+| ![Image Alt 텍스트]({{"/assets/img/image.png"| relative_url}}) | 
 |:--:| 
 | 여기에 캡션을 작성합니다. |
 ```
@@ -206,7 +206,7 @@ Liquid가 제공하는 기능을 가장 full로 이용하는 방법인데, `_inc
 ```html
 <!-- _includes/image.html -->
 <figure>
-  <img src='{{ include.url }}' alt='{{ include.alt }}'>
+  <img data-action="zoom" src='{{ include.url }}' alt='{{ include.alt }}'>
   <figcaption>{{ include.description }}</figcaption>
 </figure>
 ```
@@ -216,7 +216,7 @@ Liquid가 제공하는 기능을 가장 full로 이용하는 방법인데, `_inc
 
 {% raw %}
 ```markdown
-{% include image.html url='{{"/assets/img/logo.png"| absolute_url}}' description='여기에 캡션을 작성합니다.' alt='Image Alt 텍스트' %}
+{% include image.html url='{{"/assets/img/logo.png"| relative_url}}' description='여기에 캡션을 작성합니다.' alt='Image Alt 텍스트' %}
 ```
 {% endraw %}
 

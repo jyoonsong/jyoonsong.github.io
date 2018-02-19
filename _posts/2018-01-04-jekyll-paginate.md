@@ -15,7 +15,7 @@ Jekyll은 버전 2에서 버전 3으로 대대적인 업데이트를 했는데, 
 
 같은 이유로 [jekyll-pagination 젬](https://github.com/jekyll/jekyll-paginate)도 버전 3과 호환이 되기는 하지만 더이상 업데이트하지 않겠다고 선언하여 여러 가지 문제점이 많다. 레포지토리 description에 `NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll` 라고 써있고, 최근 이슈들에도 대부분 '이제 얜 버렸다'는 답변이 달려 있다.
 
-더 이상 업데이트가 안 되는 대신, [jekyll-pagination-v2 젬](https://github.com/sverrirs/jekyll-paginate-v2)이 새로이 나왔는데, 문제는 이 녀석이 [github-pages 젬](https://github.com/github/pages-gem)과 호환이 안된다는 점이다. 그래서 [Travis Ci](https://travis-ci.org)를 적용해줘야만 하는데, 여간 골치아픈 일이 아니었다. Hexo로 갈아탈까 몇 번이고 생각했지만 테마 직접 만들어야 성에 차는 내 성격상 새로 파는 일이 더 귀찮았다. 아무튼 이 글에서는 우선 `jekyll-pagination-v2` 젬 및 내 개인적 취향인 `infinite scroll` 적용 방법을 알아보고, 다음 글에서 `travis CI`를 통해 `github pages`로 디플로이 시키는 방법을 알아보도록 하겠다.
+더 이상 업데이트가 안 되는 대신, [jekyll-pagination-v2 젬](https://github.com/sverrirs/jekyll-paginate-v2)이 새로이 나왔는데, 문제는 이 녀석이 [github-pages 젬](https://github.com/github/pages-gem)과 호환이 안된다는 점이다. 그래서 [Travis Ci](https://travis-ci.org)를 적용해줘야만 하는데, 여간 골치아픈 일이 아니었다. Hexo로 갈아탈까 몇 번이고 생각했지만 테마 직접 만들어야 성에 차는 내 성격상 새로 파는 일이 더 귀찮았다. 아무튼 이 글에서는 우선 `jekyll-pagination-v2` 젬 및 내 개인적 취향인 `infinite scroll` 적용 방법을 알아보고, 다음 글에서 `travis CI`를 통해 디플로이 시키는 방법을 알아보도록 하겠다.
 
 <br>
 
@@ -132,6 +132,5 @@ if ( document.querySelector('.pager') ) {
 
 #### Ref
 
-https://github.com/sverrirs/jekyll-paginate-v2/tree/master/examples
-
+https://github.com/sverrirs/jekyll-paginate-v2/tree/master/examples<br>
 https://infinite-scroll.com/api.html

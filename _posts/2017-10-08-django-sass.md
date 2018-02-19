@@ -16,7 +16,7 @@ SASS/SCSS는 스타일시트 언어인 CSS를 조금이나마 프로그래밍 �
 
 <figure>
 
-​	<img src="https://image.slidesharecdn.com/preprocessor-100427070152-phpapp02/95/preprocessor-3-728.jpg?cb=1319966096" alt="프리프로세서의 개념">
+​	<img data-action="zoom" data-action="zoom" src="https://image.slidesharecdn.com/preprocessor-100427070152-phpapp02/95/preprocessor-3-728.jpg?cb=1319966096" alt="프리프로세서의 개념">
 
 ​	<figcaption>프리프로세서의 개념</figcaption>
 

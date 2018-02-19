@@ -1,0 +1,17 @@
+.ais-search-box {
+  max-width: 450px;
+  margin: $spacing-unit*0.7 0;
+	input {
+		&::placeholder,
+		&::-webkit-placeholder {
+	    color: #c3c3de;
+	    font-weight: 300;
+		}
+	}
+}
+
+.ais-Highlight {
+  font-style: normal;
+  background: #FF746F;
+  color: white;
+}

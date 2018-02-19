@@ -52,7 +52,7 @@ tags:
 
 <figure>
 
-​	<img src="{{ '/assets/img/171222/influencer.png' | absolute_url }}" alt="인플루언서">
+​	<img data-action="zoom" src="{{ '/assets/img/171222/influencer.png' | relative_url }}" alt="인플루언서">
 
 ​	<figcaption>인플루언서는 기존 광고 시장 주체들의 경계를 허문다.</figcaption>
 

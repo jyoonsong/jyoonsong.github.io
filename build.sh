@@ -12,21 +12,22 @@ set -e
 # build site with jekyll, by default to `_site' folder
 bundle exec jekyll build
 
-# cleanup
-rm -rf ../jyoonsong.github.io.master
-
-#clone `master' branch of the repository using encrypted GH_TOKEN for authentification
+# Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/jyoonsong/jyoonsong.github.io.git ../jyoonsong.github.io.master
+git checkout master
+rm -rf *
 
-# copy generated HTML site to `master' branch
-cp -R _site/* ../jyoonsong.github.io.master
+# Copy generated HTML site from source branch in original repository
+cp -R ../jyoonsong.github.io/_site/* .
 
-# commit and push generated content to `master' branch
-# since repository was cloned in write mode with token auth - we can push there
-cd ../jyoonsong.github.io.master
+# Make sure we have the updated .travis.yml file so tests won't run on master.
+cp ../jyoonsong.github.io/.travis.yml .
 git config user.email "jyo3on@gmail.com"
 git config user.name "jyoonsong"
-git config core.quotepath false
+
+# Commit and push generated content to `master` branch.
+git status
 git add -A .
+git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 git push --force origin master

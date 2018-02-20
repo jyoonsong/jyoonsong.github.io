@@ -34,7 +34,21 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: '#search-hits',
     templates: {
-      item: hitTemplate
+      item: hitTemplate,
+      empty: function() {
+        return "검색 결과가 없습니다."
+      }      
+    }
+  })
+);
+search.addWidget(
+  instantsearch.widgets.stats({
+    container: '#search-stats',
+    autoHideContainer: false,
+    templates: {
+      body: function(data) {
+        return data.nbHits + '개의 검색 결과 (' + data.processingTimeMS + 'ms)'
+      }
     }
   })
 );

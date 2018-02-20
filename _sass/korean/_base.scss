@@ -273,8 +273,7 @@ table {
 }
 
 .grid-item,
-.grid-sizer,
-.ais-hits--item {
+.grid-sizer {
   width: 32%
 }
 .grid-gutter-sizer {
@@ -283,16 +282,14 @@ table {
 
 @include media-query($on-tablet) {
   .grid-item,
-  .grid-sizer,
-  .ais-hits--item {
+  .grid-sizer {
     width: 49%;
   }
 }
 
 @include media-query($on-palm) {
   .grid-item,
-  .grid-sizer,
-  .ais-hits--item {
+  .grid-sizer {
     width: 100%;
   }
 }

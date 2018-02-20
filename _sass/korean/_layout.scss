@@ -295,18 +295,19 @@
     h4 {
       margin: $spacing-unit/6 0;
     }
-    .tag {
-      display: inline-block;
-      font-size: $small-font-size;
-      border: 1px solid $grey-color;
-      padding: 3px 10px;
-      margin: 3px 1px;
-      border-radius: 4px;
-    }
     .post-share-btns {
       display: inline-block;
     }
   }
+}
+
+.tag {
+  display: inline-block;
+  font-size: $small-font-size;
+  border: 1px solid $grey-color;
+  padding: 3px 10px;
+  margin: 3px 1px;
+  border-radius: 4px;
 }
 
 .fa-facebook-square {

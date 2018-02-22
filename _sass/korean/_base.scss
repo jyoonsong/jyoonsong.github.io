@@ -31,6 +31,7 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
   @include media-query($on-tablet) {
     font-size: $mobile-font-size;
   }
@@ -112,8 +113,9 @@ a {
   color: inherit;
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     cursor: pointer;
+    text-decoration: none;
   }
 
   .social-media-list:hover {
@@ -125,10 +127,12 @@ a {
   }
 }
 .post-content a {
-  border-bottom: 1px solid $grey-color-dark;
-  transition: border-color .5s ease-in-out;
+  border-bottom: 2px solid $grey-color-light;
+  padding-bottom: 1px;
+  transition: all .3s;
   &:hover {
-    border-color: $text-color
+    color: $secondary-color;
+    border-color: $secondary-color
   }
 }
 

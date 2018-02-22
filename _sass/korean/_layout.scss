@@ -44,8 +44,18 @@
     line-height: $base-line-height;
     margin: 0 25px;
     transition: opacity .5s ease;
+    @include media-query($on-palm) {
+      display: block;
+      margin-top: 25px;
+    }
     &:hover {
       opacity: 0.5
+    }
+    u {
+      @include media-query($on-palm) {
+        margin: 0 5px;
+        display: inline-block;
+      }
     }
   }
   

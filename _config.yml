@@ -46,11 +46,9 @@ exclude:
   - Gemfile.lock
   - README.md
   - package.json
-  - build.sh
-  - .travis.yml
-  - CNAME
   - jekyll-korean.gemspec
   - LICENSE.txt
+
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed

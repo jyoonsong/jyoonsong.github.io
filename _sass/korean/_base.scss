@@ -113,9 +113,8 @@ a {
   color: inherit;
   text-decoration: none;
 
-  &:hover, &:active, &:focus {
+  &:hover {
     cursor: pointer;
-    text-decoration: none;
   }
 
   .social-media-list:hover {

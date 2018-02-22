@@ -46,6 +46,7 @@
     transition: opacity .5s ease;
     @include media-query($on-palm) {
       display: block;
+      width: 30%;
       margin-top: 25px;
     }
     &:hover {
@@ -142,6 +143,10 @@
       .nav-footer {
         opacity: 1;
         transition-delay: .5s;
+        pointer-events: none;
+        a {
+          pointer-events: all;
+        }
       }
     }
     

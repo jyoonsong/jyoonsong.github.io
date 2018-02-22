@@ -41,12 +41,12 @@ jyoon:
 markdown: kramdown
 #theme: jekyll-jyoon
 exclude: 
+  - vendor
   - node_modules
   - Gemfile
   - Gemfile.lock
   - README.md
   - package.json
-  - jekyll-korean.gemspec
   - LICENSE.txt
 
 plugins:

@@ -24,8 +24,13 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   margin-bottom: 0;
   float: left;
-  width: 64px;
+  width: 62px;
+  opacity: .8;
   padding: 0 20px;
+  transition: opacity .5s;
+  &:hover {
+    opacity: 1
+  }
 }
 
 .site-nav {
@@ -176,7 +181,6 @@
 .site-footer {
   background: $grey-color-dark;
   color: $background-color;
-  font-weight: 300;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit*1.5 0;
   line-height: 2.0;
@@ -207,7 +211,7 @@
 
 .page-content {
   padding: $spacing-unit+5 0;
-  background: #f7f7f9;
+  background: $grey-color-light;
 }
 
 @include media-query($on-tablet) {

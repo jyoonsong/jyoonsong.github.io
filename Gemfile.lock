@@ -16,9 +16,13 @@ GEM
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
     colorator (1.1.0)
+    concurrent-ruby (1.1.6)
     cssminify2 (2.0.1)
     execjs (2.7.0)
     ffi (1.9.21)
+    ffi (1.9.21-java)
+    ffi (1.9.21-x64-mingw32)
+    ffi (1.9.21-x86-mingw32)
     filesize (0.1.1)
     forwardable-extended (2.6.0)
     htmlcompressor (0.4.0)
@@ -60,6 +64,7 @@ GEM
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     json (2.1.0)
+    json (2.1.0-java)
     kramdown (1.16.2)
     liquid (4.0.0)
     listen (3.1.5)
@@ -69,6 +74,11 @@ GEM
     mercenary (0.3.6)
     mini_portile2 (2.3.0)
     nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-java)
+    nokogiri (1.8.2-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
@@ -84,12 +94,20 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    tzinfo (2.0.2)
+      concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2020.1)
+      tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     verbal_expressions (0.1.5)
 
 PLATFORMS
+  java
   ruby
+  x64-mingw32
+  x86-mingw32
+  x86-mswin32
 
 DEPENDENCIES
   jekyll (~> 3.6.0)

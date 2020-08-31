@@ -4,7 +4,7 @@ title:  "미국 유학 준비과정"
 subtitle: "별 거 없지만 그래도 써보는 미국 박사유학 준비과정"
 date:   2020-08-30 19:11:20
 author: jaeyoon
-categories: ["유학", "유학준비"]
+categories: ["HCI", "유학준비"]
 tags:
 - "미국"
 - "유학"

@@ -56,7 +56,7 @@ tags:
 
 - *[0] 어드미션 결과와 타임라인 (현재 글)*
 - [1] 왜 박사유학을 가고 싶은가
-- [2] [대학원 유학의 종류]({{ '/2020/08/grad-abroad.html' | relative_url }})
+- [2] [대학원 유학의 종류]({{ '/2020/09/grad-abroad.html' | relative_url }})
 - [3] 연구실 인턴 경험
 - [4] [GRE 준비]({{ '/2020/09/gre.html' | relative_url }})
 - [5] 포트폴리오 사이트 및 CV 준비

@@ -63,7 +63,7 @@ tags:
 - [1] 왜 박사유학을 가고 싶은가
 - *[2] 대학원 유학의 종류 (현재 글)* 
 - [3] 연구실 인턴 경험
-- [4] GRE 준비 
+- [4] [GRE 준비]({{ '/2020/09/gre.html' | relative_url }})
 - [5] 포트폴리오 사이트 및 CV 준비
 - [6] 서류 준비: SOP/Personal statement/추천서
 - [7-1] [인터뷰 준비과정]({{ '/2020/01/interview-1.html' | relative_url }})

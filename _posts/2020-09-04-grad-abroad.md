@@ -15,8 +15,7 @@ tags:
 
 유학을 막 시작할 무렵 열심히 찾아보고 정리한 해외 유학 테크에 대한 자료이다. 당시 나를 돌이켜보면 석사와 박사의 차이도 한국석사와 미국석사의 차이도 제대로 몰랐다. 이에 이렇게 정리된 글이 있다면 나와 같은 학생들에게 큰 도움이 되리라 생각되어 업로드한다. (자세한 사항은 분야마다 다르므로 general한 것만 기입했습니다. 혹시 잘못된 정보가 있으면 댓글로 꼭 남겨주십시오.)
 
-<figure><img data-action="zoom" src="https://www.gradschools.com/sites/all/files/public/images/MastersvsPh.D.%281%29.JPG"><figcaption> Masters vs Phd (출처: <a href="https://www.gradschools.com/get-informed/before-you-apply/choosing-graduate-program/masters-vs-phd" target="_blank">GradSchools.com</a>) </figcaption></figure>
-
+<figure><img data-action="zoom" src="https://qph.fs.quoracdn.net/main-qimg-b027686dba426c68e73ac21ea0446856"><figcaption> Masters vs Phd (출처: <a href="https://www.quora.com/Is-it-easier-to-be-admitted-to-a-master-s-or-a-PhD-program-in-US-universities" target="_blank">Quora</a>) </figcaption></figure>
 
 ### 1. 석사유학 (Masters)
 

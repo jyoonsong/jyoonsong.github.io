@@ -9,6 +9,7 @@ tags:
   - "javascript"
   - "jQuery"
   - "vanillaJS"
+  - "published"
 ---
 
 **끊임없는 변화 속에서 중요한 것은 변하지 않는 것**

@@ -7,6 +7,7 @@ author: jaeyoon
 categories: ["배움", "개발"]
 tags:
   - "css"
+  - "published"
 ---
 
 **스크롤은 유지한 채 스크롤바만 깔끔하게 없애는 법을 알아보자**

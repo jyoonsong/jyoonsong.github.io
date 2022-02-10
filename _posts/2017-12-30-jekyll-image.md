@@ -10,6 +10,7 @@ tags:
   - "HTML"
   - "Jekyll"
   - "Markdown"
+  - "published"
 ---
 
 <h4><b>경로 설정하기</b></h4>

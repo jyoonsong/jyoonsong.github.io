@@ -8,6 +8,7 @@ categories: ["배움", "개발"]
 tags:
   - "javascript"
   - "regex"
+  - "published"
 ---
 
 **데이트피커 사용 시 Date 타입 형식에 맞게 String 저장하는 방법**

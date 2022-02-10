@@ -8,6 +8,7 @@ categories: ["배움", "개발"]
 tags:
   - "django"
   - "sass/scss"
+  - "published"
 ---
 
 #### CSS 프리프로세서에 대하여

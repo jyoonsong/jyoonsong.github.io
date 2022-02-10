@@ -10,6 +10,7 @@ tags:
   - "미국"
   - "미서부"
   - "USC"
+  - "published"
 ---
 
 

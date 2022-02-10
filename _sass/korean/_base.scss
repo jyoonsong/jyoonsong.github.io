@@ -313,3 +313,9 @@ table {
     display: none !important;
   }
 }
+
+.search-keywords {
+  height: 0;
+  color: white;
+  pointer-events: none;
+}

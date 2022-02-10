@@ -12,6 +12,7 @@ tags:
   - "Github"
   - "Dribbble"
   - "Codepen"
+  - "published"
 ---
 
 **드리블(Dribbble)에서 깃헙(Github)까지: Day-Night Switch에 담긴 이야기**

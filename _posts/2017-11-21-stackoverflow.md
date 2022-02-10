@@ -9,6 +9,7 @@ tags:
   - "StackOverFlow"
   - "커뮤니티"
   - "브라우저호환성"
+  - "published"
 ---
 
 **Safari에서 animation-play-state 버그 디버깅하기**

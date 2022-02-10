@@ -7,6 +7,7 @@ author: jaeyoon
 categories: ["배움", "개발"]
 tags:
 - "react"
+- "published"
 ---
 
 > 이 글은 현재 가장 최신인 16.2.0버전의 React를 기준으로 작성되었습니다. 

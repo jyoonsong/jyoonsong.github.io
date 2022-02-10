@@ -7,6 +7,7 @@ author: jaeyoon
 categories: ["배움", "개발"]
 tags:
 - "jekyll"
+- "published"
 ---
 
 **jekyll-pagination-v2 젬을 이용하여 블로그를 페이징해보자**

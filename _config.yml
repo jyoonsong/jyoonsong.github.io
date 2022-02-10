@@ -13,12 +13,12 @@
 
 title: 재윤 블로그
 description: >- # this means to ignore newlines until "baseurl:"
-  HCI 학도가 생각과 경험을 기록하고 정리하는 공간입니다.
+  다양한 생각과 경험을 기록하고 정리하는 공간입니다.
 url: "http://blog.jaeyoon.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 author: Jaeyoon Song
 lang: ko_KR
-email: song@jaeyoon.io
+email: jaeyoons@mit.edu
 
 twitter_username: song_jaeyoon
 github_username:  jyoonsong

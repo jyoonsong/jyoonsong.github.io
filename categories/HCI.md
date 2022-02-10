@@ -1,10 +1,10 @@
 ---
 layout: home
-title: "HCI"
-description: "HCI 학도의 HCI 이야기"
-permalink: "/HCI"
+title: "연구"
+description: "대학원생의 연구 이야기"
+permalink: "/연구"
 pagination: 
   enabled: true
-  category: "HCI"
+  category: "연구"
   permalink: /:num/
 ---

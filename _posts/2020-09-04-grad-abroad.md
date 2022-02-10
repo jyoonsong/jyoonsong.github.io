@@ -4,7 +4,7 @@ title:  "미국 대학원 유학: 석사유학과 박사유학의 차이"
 subtitle: "미국 대학원 유학의 종류와 장단점"
 date:   2020-09-04 19:11:20
 author: jaeyoon
-categories: ["HCI", "유학"]
+categories: ["연구", "유학"]
 tags:
 - "미국"
 - "유학"

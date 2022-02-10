@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  deploy:
+    docker:
+      - image: circleci/ruby:latest
+        environment:
+          USER_NAME: jyoonsong
+          USER_EMAIL: jaeyoons@mit.edu
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            gem update --system
+            gem install bundler
+      - restore_cache:
+          keys:
+            - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - v1-gem-cache-{{ arch }}-{{ .Branch }}-
+            - v1-gem-cache-{{ arch }}-
+      - run: bundle install --path=vendor/bundle && bundle clean
+      - save_cache:
+          paths:
+            - vendor/bundle
+          key: v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+
+      - run: JEKYLL_ENV=production bundle exec jekyll build
+      - run:
+          name: Test
+          command: bundle exec htmlproofer ./_site --check-html --disable-external --empty-alt-ignore
+      - deploy:
+          name: Deploy Release to GitHub
+          command: |
+            if [ $CIRCLE_BRANCH == 'jekyll' ]; then
+              bash .circleci/deploy.sh
+            fi
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: 
+                - source

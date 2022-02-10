@@ -315,7 +315,14 @@ table {
 }
 
 .search-keywords {
+  display: inline-block;
   height: 0;
-  color: white;
+  color: #fefefe;
   pointer-events: none;
+  user-select: none;
+  font-size: 1px;
+}
+
+video {
+  max-width: 100%;
 }

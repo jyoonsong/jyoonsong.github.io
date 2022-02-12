@@ -5,7 +5,6 @@ jobs:
       - image: circleci/ruby:2.6-node-browsers-legacy
     steps:
       - checkout
-      - run: npm install
       - run: gem install bundler
       - run: bundle install
       - run: bundle exec jekyll build

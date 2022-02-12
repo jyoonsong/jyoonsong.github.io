@@ -2,7 +2,7 @@ version: 2
 jobs:
   deploy:
     docker:
-      - image: cimg/ruby:2.6-node-browsers
+      - image: circleci/ruby:2.6-node-browsers-legacy
     steps:
       - checkout
       - run: npm install

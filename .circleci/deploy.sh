@@ -1,6 +1,3 @@
-ls
-ls ..
-
 # Checkout `master` and remove everything.
 git clone https://$GH_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git ../jyoonsong.github.io.master
 cd ../jyoonsong.github.io.master
@@ -8,7 +5,7 @@ git checkout master
 rm -rf *
 
 # Copy generated HTML site from jekyll branch in original repository
-cp -R ../jyoonsong.github.io/_site/* .
+cp -R ../project/_site/* .
 
 # Make sure we have the updated .travis.yml file so tests won't run on master.
 git config user.name "$USER_NAME"

@@ -6,6 +6,8 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: gem update --system
+      - run: gem install bundler
       - run: bundle install
       - run: bundle exec jekyll build
       - deploy:

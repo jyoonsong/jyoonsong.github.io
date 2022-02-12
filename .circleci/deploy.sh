@@ -1,15 +1,21 @@
+# Checkout `master` and remove everything.
+git clone https://$GH_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git ../jyoonsong.github.io.master
+cd ../jyoonsong.github.io.master
+git checkout master
+rm -rf *
+
+# Copy generated HTML site from jekyll branch in original repository
+cp -R ../jyoonsong.github.io/_site/* .
+
+# Make sure we have the updated .travis.yml file so tests won't run on master.
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
-git checkout master
-git pull origin master --allow-unrelated-histories
-
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
-mv _site/* .
-rm -R _site/
-
-git add -fA
+# Commit and push generated content to `master` branch.
+git status
+git add -A .
+git status
 git commit --allow-empty -m "$(git log jekyll -1 --pretty=%B)"
-git push -f origin master
+git push --force origin master
 
 echo "deployed successfully"

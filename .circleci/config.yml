@@ -7,7 +7,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "4e:9b:48:14:77:b5:38:67:7a:1e:28:ee:bd:22:0d:91"
+            - "fc:56:53:6d:93:27:3b:71:87:15:19:de:50:8d:8c:f6"
       - run: gem install bundler
       - run: bundle install
       - run: bundle exec jekyll build

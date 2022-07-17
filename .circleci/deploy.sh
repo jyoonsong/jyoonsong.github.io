@@ -1,5 +1,5 @@
 # Checkout `master` and remove everything.
-git clone https://$GH_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git ../jyoonsong.github.io.master
+git clone https://$GITHUB_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git ../jyoonsong.github.io.master
 cd ../jyoonsong.github.io.master
 git checkout master
 rm -rf *
@@ -17,7 +17,7 @@ git status
 git add -A .
 git status
 git commit --allow-empty -m "$(git log jekyll -1 --pretty=%B)"
-git push -q --force https://$GH_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git master
+git push -q --force https://$GITHUB_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git master
 
 echo "deployed successfully"
 

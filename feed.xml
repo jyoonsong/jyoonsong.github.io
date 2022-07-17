@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2022-07-17T21:46:55+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos</title><link href="http://blog.jaeyoon.io/2022/02/dance-en.html" rel="alternate" type="text/html" title="How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos" /><published>2022-02-09T20:11:20+00:00</published><updated>2022-02-09T20:11:20+00:00</updated><id>http://blog.jaeyoon.io/2022/02/dance-en</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/02/dance-en.html">&lt;p&gt;&lt;span class=&quot;search-keywords&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2022-07-17T23:27:06+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법</title><link href="http://blog.jaeyoon.io/2022/05/port.html" rel="alternate" type="text/html" title="Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/port</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/port.html">&lt;p&gt;&lt;strong&gt;Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;포트 5000 또는 3000이 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] Error: listen EADDRINUSE: address already &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;use :::5000
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.setupListenHandle &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;as _listen2] &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1330:16&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at listenInCluster &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1378:12&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.listen &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1465:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at READ_WRITE &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3215:23&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at new Promise &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&amp;lt;anonymous&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.start &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3213:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/@webpack-cli/serve/lib/index.js:242:25&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Promise.all &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;index 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-cli/lib/webpack-cli.js:1672:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   code: &lt;span class=&quot;s1&quot;&gt;'EADDRINUSE'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   errno: &lt;span class=&quot;nt&quot;&gt;-48&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   syscall: &lt;span class=&quot;s1&quot;&gt;'listen'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   address: &lt;span class=&quot;s1&quot;&gt;'::'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   port: 5000
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이때 포트를 사용중인 프로세스는 다음 커맨드로 확인 가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;lsof &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; :5000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;해당 프로세스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 PID&lt;/code&gt;로 제거하면 해결된다.
+그런데 맥 Monterey OS에서는 Command Center 프로세스가 뜨는 경우가 있는데, 이 프로세스는 OS에 의해 계속해서 재시작된다.
+이는 System Preferences - Sharing - AirPlay Receiver 에서 On 체크를 지워주면 해결된다.&lt;/p&gt;
+
+&lt;h4 id=&quot;ref&quot;&gt;Ref&lt;/h4&gt;
+
+&lt;p&gt;https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server&lt;/p&gt;
+
+&lt;p&gt;https://nono.ma/port-5000-used-by-control-center-in-macos-controlce&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="javascript" /><category term="regex" /><category term="published" /><summary type="html">**Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법** 포트 5000 또는 3000이 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다. ```shell [0] Error: listen EADDRINUSE: address alrea</summary></entry><entry><title type="html">How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos</title><link href="http://blog.jaeyoon.io/2022/02/dance-en.html" rel="alternate" type="text/html" title="How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos" /><published>2022-02-09T20:11:20+00:00</published><updated>2022-02-09T20:11:20+00:00</updated><id>http://blog.jaeyoon.io/2022/02/dance-en</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/02/dance-en.html">&lt;p&gt;&lt;span class=&quot;search-keywords&quot;&gt;
 youtube mirrored video flip 
 Twice blackpink bts bangtan aespa jyp bigbang missa wonder girls 
 girl groups boy groups exo super junior
@@ -487,50 +522,4 @@ dance practice kpop idol choreography cover tempo flip horizontally video youtub
 
 &lt;p&gt;우선 첫 번째 페이퍼는 스탠포드 HCI랩에서 지난 해 HCOMP에 퍼블리시한 &lt;a href=&quot;https://www.aaai.org/ojs/index.php/HCOMP/article/view/5282&quot; target=&quot;_blank&quot;&gt;AI-Based Request Augmentation to Increase Crowdsourcing Participation&lt;/a&gt;이다. 기존 연구에서는 머신러닝 데이터셋을 마련할 때 퍼포먼스 자체에만 초점을 두고 “어떤 데이터가 필요한가”에만 집중하곤 한다. 하지만 이 연구는 인간과의 인터랙션에도 동등한 비중을 두고 “어떻게 데이터를 얻을 것인가”에 대해서도 고민한 페이퍼이다.&lt;/p&gt;
 
-&lt;p&gt;두 번째는 카이스트 김주호 교수님 연구실의 &lt;a href=&quot;https://kixlab.github.io/website-files/2020/chi2020-SolutionChat-paper.pdf&quot; target=&quot;_blank&quot;&gt;SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion&lt;/a&gt;이다. 이 연구는 온라인 채팅에서 디스커션을 이끄는 진행자와 NLP를 통한 메시지 추천 시스템의 인터랙션을 다룬다. 사실 이 연구는 내가 참여했던 프로젝트라 할 말이 참 많은데, 더 자세한 것은 나중에 포스팅에 쓰기로!&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="HCI" /><category term="연구" /><category term="인간-컴퓨터 상호작용" /><category term="Human-AI collaboration" /><category term="published" /><summary type="html">### 들어가기 전에 이 글은 [카이스트 김주호 교수님의 워크숍 영상](https://www.youtube.com/watch?index=2&amp;fbclid=IwAR3PjFRhwmXlVNGTArRRn3o8ExTf3Gk0-8BZF3SjZ90q9VTa8afYz7sSgAk&amp;lis</summary></entry><entry><title type="html">첫 인터뷰 Part 2: 인터뷰 내용</title><link href="http://blog.jaeyoon.io/2020/01/interview-2.html" rel="alternate" type="text/html" title="첫 인터뷰 Part 2: 인터뷰 내용" /><published>2020-01-08T22:11:20+00:00</published><updated>2020-01-08T22:11:20+00:00</updated><id>http://blog.jaeyoon.io/2020/01/interview-2</id><content type="html" xml:base="http://blog.jaeyoon.io/2020/01/interview-2.html">&lt;p&gt;인터뷰 내용 중 기억에 남는 부분을 여기 남긴다. 내가 한국어로 두뇌가 돌아가는 사람이라 뒤늦게 영어로 복기하는 데 애먹었다. 군데군데 표현이 어설플 수 있으니 이해 바란다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A: Hi, Jaeyoon. I found your application very interesting. Am I pronouncing your name correctly?&lt;/strong&gt;&lt;br /&gt;
-나: Yes, your pronunciation is perfect.&lt;br /&gt;
-A: Great, I am A. I study xx and publish at conferences like yy.  I know that you didn’t mention my name in your SOP, and that’s totally fine. Even if you don’t get to work with me, I can make a reference to B you mentioned in the essay, or you getting co-advised by me and B is also a possibility.&lt;br /&gt;
-나: I see. That is an answer to my first question, so thank you. My research interest is ~~, which I think has an overlap with your research area to some extent. It’s an honor to get this kind of opportunity.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;제일 많이 연습한 게 초반부에 말할 자기소개였는데, 초반부에는 내가 준비한 걸 말할 기회가 없을 정도로 A교수님이 먼저 말씀을 많이 하시며 긴장을 풀어주셨다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;A: Okay then, let’s start from the first question I gave you. Tell me your “why.” Why do you want to pursue a PhD?&lt;/strong&gt;&lt;br /&gt;
-나: I guess it’s because doing HCI research aligns with my vision of the future. I believe increasingly more and more social challenges need to be addressed in groups, in teams, and in organizations. And we struggle to make this really work because we are not so great at working together to get things done. Particularly when the size of the team scales up. That’s where I see an opportunity for research. We can ask, how might computing help us overcome the kinds of heuristics and biases that might lead us astray and how we design our collaborations. 
-Ultimately, I envision a world where computational systems orchestrate an organization with complex and open-ended goals from an online labor market. In fact, it’s already happening, considering mTurk as a workplace or collaboration on open source projects. With such a vision in mind, I aspire to become one of the many researchers who will shape the future of work and collaboration.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A: What are your plans after getting a PhD?&lt;/strong&gt;&lt;br /&gt;
-나: To be honest, I’m not sure. Because I think things are gonna change anyway. First of all, as I mentioned before, what I want to do right now is “research.” But since I don’t know how my thoughts are gonna change as I continue my PhD, I haven’t published a specific plan in the far future. Maybe I would end up in the industry, or I could be working at Adobe or Microsoft Research. Anyway, one thing I am certain about is the direction. I have pretty much confidence that I would be doing something related to my current research interests no matter what specific profession I end up with.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A: What made you have such confidence? That is, why are you so certain about the relation between you and this field?&lt;/strong&gt;&lt;br /&gt;
-나: You know, there is an expression “connect the dots.” I literally connected the dots, things that I have been interested in or been good at, and this led me to the field of HCI. For instance, many thoughts that I have gone through while working as a front-end engineer in a lot of web projects were related to HCI: my interests in web accessibility led me to do the SoundGlance project. Moreover, my assignment at a class I took as a freshman was related to open source software projects, and I realized that a similar topic was being studied in the field. After all this, I could not help but fall in love with HCI. Plus, I got more confidence as I did an intern at two labs.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;여기서부터는 &lt;strong&gt;내가 그간 해온 연구와 앞으로 하고 싶은 연구&lt;/strong&gt;에 대한 이야기가 오갔다. 대부분 특정 프로젝트나 domain-specific한 내용이라 생략&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;A: Okay, now that we have only 2 mins left, do you have any questions for me?&lt;/strong&gt;&lt;br /&gt;
-나: Yes, I do have a lot of questions. First of all, I wonder what kind of working style or advising style you have.&lt;br /&gt;
-A: Well, good question. To be honest, I am closer to hands-off rather than hands-on. Not entirely hands-off, cuz I do hold weekly meetings with my students, and my office is right in front of the lab. But I wish my student to be independent while I only suggest a direction, not interfering in every way.
-나: Great! I also think that making my own is more enjoyable and meaningful compared to being spoon-fed.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이후 인사말 생략&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;더-자세한-이야기&quot;&gt;더 자세한 이야기&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[0] &lt;a href=&quot;/2020/08/study-abroad.html&quot;&gt;어드미션 결과와 타임라인&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;[1] 왜 박사유학을 가고 싶은가&lt;/li&gt;
-  &lt;li&gt;[2] &lt;a href=&quot;/2020/09/grad-abroad.html&quot;&gt;대학원 유학의 종류&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;[3] 연구실 인턴 경험&lt;/li&gt;
-  &lt;li&gt;[4] &lt;a href=&quot;/2020/09/gre.html&quot;&gt;GRE 준비&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;[5] 포트폴리오 사이트 및 CV 준비&lt;/li&gt;
-  &lt;li&gt;[6] 서류 준비: SOP/Personal statement/추천서&lt;/li&gt;
-  &lt;li&gt;[7-1] &lt;a href=&quot;/2020/01/interview-1.html&quot;&gt;인터뷰 준비과정&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;[7-2] 인터뷰 스크립트 (현재 글)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaeyoon</name></author><category term="미국" /><category term="인터뷰" /><category term="PhD" /><category term="published" /><summary type="html">인터뷰 내용 중 기억에 남는 부분을 여기 남긴다. 내가 한국어로 두뇌가 돌아가는 사람이라 뒤늦게 영어로 복기하는 데 애먹었다. 군데군데 표현이 어설플 수 있으니 이해 바란다. **A: Hi, Jaeyoon. I found your application very inte</summary></entry></feed>
+&lt;p&gt;두 번째는 카이스트 김주호 교수님 연구실의 &lt;a href=&quot;https://kixlab.github.io/website-files/2020/chi2020-SolutionChat-paper.pdf&quot; target=&quot;_blank&quot;&gt;SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion&lt;/a&gt;이다. 이 연구는 온라인 채팅에서 디스커션을 이끄는 진행자와 NLP를 통한 메시지 추천 시스템의 인터랙션을 다룬다. 사실 이 연구는 내가 참여했던 프로젝트라 할 말이 참 많은데, 더 자세한 것은 나중에 포스팅에 쓰기로!&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="HCI" /><category term="연구" /><category term="인간-컴퓨터 상호작용" /><category term="Human-AI collaboration" /><category term="published" /><summary type="html">### 들어가기 전에 이 글은 [카이스트 김주호 교수님의 워크숍 영상](https://www.youtube.com/watch?index=2&amp;fbclid=IwAR3PjFRhwmXlVNGTArRRn3o8ExTf3Gk0-8BZF3SjZ90q9VTa8afYz7sSgAk&amp;lis</summary></entry></feed>

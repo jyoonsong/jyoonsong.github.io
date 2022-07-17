@@ -16,6 +16,7 @@ git status
 git add -A .
 git status
 git commit --allow-empty -m "$(git log jekyll -1 --pretty=%B)"
-git push --force origin master
+git push --force -q https://$GH_TOKEN@github.com/jyoonsong/jyoonsong.github.io.git master
 
 echo "deployed successfully"
+

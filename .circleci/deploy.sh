@@ -8,6 +8,7 @@ rm -rf *
 cp -R ../project/_site/* .
 
 # Make sure we have the updated .travis.yml file so tests won't run on master.
+git config credential.helper 'cache --timeout=120'
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2022-07-18T16:23:45+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법</title><link href="http://blog.jaeyoon.io/2022/05/port.html" rel="alternate" type="text/html" title="Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/port</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/port.html">&lt;p&gt;&lt;strong&gt;Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2022-07-18T16:29:01+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법</title><link href="http://blog.jaeyoon.io/2022/05/port.html" rel="alternate" type="text/html" title="Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/port</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/port.html">&lt;p&gt;&lt;strong&gt;Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다.&lt;/p&gt;
 
@@ -25,9 +25,10 @@
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;lsof &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; :5000
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;해당 프로세스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 PID&lt;/code&gt;로 제거하면 해결된다.
-그런데 맥 Monterey OS에서는 Command Center 프로세스가 뜨는 경우가 있는데, 이 프로세스는 OS에 의해 계속해서 재시작된다.
-이는 System Preferences - Sharing - AirPlay Receiver 에서 On 체크를 지워주면 해결된다.&lt;/p&gt;
+&lt;p&gt;해당 프로세스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 PID&lt;/code&gt;로 제거하면 해결된다.&lt;/p&gt;
+
+&lt;p&gt;그런데 맥 Monterey OS에서는 Command Center 프로세스가 뜨는 경우가 있는데, 이 프로세스는 OS에 의해 계속해서 재시작된다.
+이는 &lt;strong&gt;System Preferences - Sharing - AirPlay Receiver 에서 On 체크를 지워주면 해결&lt;/strong&gt;된다.&lt;/p&gt;
 
 &lt;h4 id=&quot;ref&quot;&gt;Ref&lt;/h4&gt;
 

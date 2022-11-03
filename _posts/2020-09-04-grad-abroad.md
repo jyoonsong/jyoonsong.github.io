@@ -34,7 +34,6 @@ tags:
 * Recommended for... 
   * Case 1. 미국 현지 취업을 생각하는 경우
   * Case 2. 해외 박사를 준비하는 경우
-  * Case 3. (일부 소수) 부자인 경우
 
 
 

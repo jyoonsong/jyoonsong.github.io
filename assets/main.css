@@ -1577,3 +1577,5 @@ img.zoom-img {
 .table-wrapper {
   width: 100%;
   overflow-x: scroll; }
+  .table-wrapper th, .table-wrapper td {
+    min-width: 120px; }

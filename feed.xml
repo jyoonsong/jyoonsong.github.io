@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2022-11-04T01:15:35+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">보스턴 캠브릿지 지역 필라테스 및 요가 스튜디오 정리</title><link href="http://blog.jaeyoon.io/2022/10/pilates.html" rel="alternate" type="text/html" title="보스턴 캠브릿지 지역 필라테스 및 요가 스튜디오 정리" /><published>2022-10-28T22:15:30+00:00</published><updated>2022-10-28T22:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/10/pilates</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/10/pilates.html">&lt;p&gt;보스턴/캠브릿지에서 산지 어느새 1년이 넘었다. 그동안 다양한 운동을 시도해봤는데 그중 괜찮았던 것들을 여기에 정리해보려 한다. 모두 내가 갔을 때 기준이고 작년에 간 곳도 많아서 outdated된 정보가 있을 수 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2022-11-05T16:48:30+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">보스턴 캠브릿지 지역 필라테스 및 요가 스튜디오 정리</title><link href="http://blog.jaeyoon.io/2022/10/pilates.html" rel="alternate" type="text/html" title="보스턴 캠브릿지 지역 필라테스 및 요가 스튜디오 정리" /><published>2022-10-28T22:15:30+00:00</published><updated>2022-10-28T22:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/10/pilates</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/10/pilates.html">&lt;p&gt;보스턴/캠브릿지에서 산지 어느새 1년이 넘었다. 그동안 다양한 운동을 시도해봤는데 그중 괜찮았던 것들을 여기에 정리해보려 한다. 모두 내가 갔을 때 기준이고 작년에 간 곳도 많아서 outdated된 정보가 있을 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;mind-body-online&quot;&gt;Mind Body Online&lt;/h3&gt;
 
@@ -203,43 +203,7 @@
   &lt;li&gt;시설 ★★☆&lt;/li&gt;
   &lt;li&gt;운동 강도 ★☆☆&lt;/li&gt;
   &lt;li&gt;가격 ★★★&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaeyoon</name></author><category term="필라테스" /><category term="요가" /><category term="운동" /><category term="published" /><summary type="html">보스턴/캠브릿지에서 산지 어느새 1년이 넘었다. 그동안 다양한 운동을 시도해봤는데 그중 괜찮았던 것들을 여기에 정리해보려 한다. 모두 내가 갔을 때 기준이고 작년에 간 곳도 많아서 outdated된 정보가 있을 수 있다. ### Mind Body Online 들어</summary></entry><entry><title type="html">Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법</title><link href="http://blog.jaeyoon.io/2022/05/port.html" rel="alternate" type="text/html" title="Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/port</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/port.html">&lt;p&gt;&lt;strong&gt;Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] Error: listen EADDRINUSE: address already &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;use :::5000
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.setupListenHandle &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;as _listen2] &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1330:16&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at listenInCluster &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1378:12&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.listen &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1465:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at READ_WRITE &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3215:23&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at new Promise &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&amp;lt;anonymous&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.start &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3213:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/@webpack-cli/serve/lib/index.js:242:25&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Promise.all &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;index 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-cli/lib/webpack-cli.js:1672:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   code: &lt;span class=&quot;s1&quot;&gt;'EADDRINUSE'&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   errno: &lt;span class=&quot;nt&quot;&gt;-48&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   syscall: &lt;span class=&quot;s1&quot;&gt;'listen'&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   address: &lt;span class=&quot;s1&quot;&gt;'::'&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   port: 5000
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이때 포트를 사용중인 프로세스는 다음 커맨드로 확인 가능하다.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;lsof &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; :5000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;해당 프로세스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 PID&lt;/code&gt;로 제거하면 해결된다.&lt;/p&gt;
-
-&lt;p&gt;그런데 맥 Monterey OS에서는 Command Center 프로세스가 뜨는 경우가 있는데, 이 프로세스는 OS에 의해 계속해서 재시작된다.
-이는 &lt;strong&gt;System Preferences - Sharing - AirPlay Receiver 에서 On 체크를 지워주면 해결&lt;/strong&gt;된다.&lt;/p&gt;
-
-&lt;h4 id=&quot;ref&quot;&gt;Ref&lt;/h4&gt;
-
-&lt;p&gt;https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server&lt;/p&gt;
-
-&lt;p&gt;https://nono.ma/port-5000-used-by-control-center-in-macos-controlce&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="javascript" /><category term="regex" /><category term="published" /><summary type="html">**Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법** 해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다. ```shell [0] Error: listen EADDRINUSE: address al</summary></entry><entry><title type="html">How to auto import and delete assignment comments on Canvas</title><link href="http://blog.jaeyoon.io/2022/05/canvas.html" rel="alternate" type="text/html" title="How to auto import and delete assignment comments on Canvas" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/canvas</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/canvas.html">&lt;p&gt;Canvas does have a built-in feature to import numeric grades from a csv file, but &lt;a href=&quot;[https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7#comments](https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7?fbclid=IwAR1NE57lo_2uUJ5KgCH4OCSI0mR1G4joaZiKqyeOOkbebohkPfXhVOx3AD4#comments)&quot;&gt;it does not yet support importing the textual comments&lt;/a&gt;. This is one of the common difficulties that TAs and instructors face when using Canvas to report the grades.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>jaeyoon</name></author><category term="필라테스" /><category term="요가" /><category term="운동" /><category term="published" /><summary type="html">보스턴/캠브릿지에서 산지 어느새 1년이 넘었다. 그동안 다양한 운동을 시도해봤는데 그중 괜찮았던 것들을 여기에 정리해보려 한다. 모두 내가 갔을 때 기준이고 작년에 간 곳도 많아서 outdated된 정보가 있을 수 있다. ### Mind Body Online 들어</summary></entry><entry><title type="html">How to auto import and delete assignment comments on Canvas</title><link href="http://blog.jaeyoon.io/2022/09/canvas.html" rel="alternate" type="text/html" title="How to auto import and delete assignment comments on Canvas" /><published>2022-09-26T03:15:30+00:00</published><updated>2022-09-26T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/09/canvas</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/09/canvas.html">&lt;p&gt;Canvas does have a built-in feature to import numeric grades from a csv file, but &lt;a href=&quot;[https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7#comments](https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7?fbclid=IwAR1NE57lo_2uUJ5KgCH4OCSI0mR1G4joaZiKqyeOOkbebohkPfXhVOx3AD4#comments)&quot;&gt;it does not yet support importing the textual comments&lt;/a&gt;. This is one of the common difficulties that TAs and instructors face when using Canvas to report the grades.&lt;/p&gt;
 
 &lt;p&gt;Still, there is a workaround to use the &lt;a href=&quot;https://canvas.instructure.com/doc/api/index.html&quot;&gt;Canvas API&lt;/a&gt; to avoid manually copy-and-pasting the comments. In this post, I’ll walk you through this workaround.&lt;/p&gt;
 
@@ -703,7 +667,43 @@
 
 &lt;p&gt;Canvas Userscripts by UCBoulder &lt;a href=&quot;https://github.com/UCBoulder/canvas-userscripts&quot;&gt;https://github.com/UCBoulder/canvas-userscripts&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Canvas API documentation &lt;a href=&quot;https://canvas.instructure.com/doc/api/index.html&quot;&gt;https://canvas.instructure.com/doc/api/index.html&lt;/a&gt;&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="canvas" /><category term="TA" /><category term="published" /><summary type="html">Canvas does have a built-in feature to import numeric grades from a csv file, but [it does not yet support importing the textual comments]([https://com</summary></entry><entry><title type="html">How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos</title><link href="http://blog.jaeyoon.io/2022/02/dance-en.html" rel="alternate" type="text/html" title="How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos" /><published>2022-02-09T20:11:20+00:00</published><updated>2022-02-09T20:11:20+00:00</updated><id>http://blog.jaeyoon.io/2022/02/dance-en</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/02/dance-en.html">&lt;p&gt;&lt;span class=&quot;search-keywords&quot;&gt;
+&lt;p&gt;Canvas API documentation &lt;a href=&quot;https://canvas.instructure.com/doc/api/index.html&quot;&gt;https://canvas.instructure.com/doc/api/index.html&lt;/a&gt;&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="canvas" /><category term="TA" /><category term="published" /><summary type="html">Canvas does have a built-in feature to import numeric grades from a csv file, but [it does not yet support importing the textual comments]([https://com</summary></entry><entry><title type="html">Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법</title><link href="http://blog.jaeyoon.io/2022/05/port.html" rel="alternate" type="text/html" title="Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/port</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/port.html">&lt;p&gt;&lt;strong&gt;Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] Error: listen EADDRINUSE: address already &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;use :::5000
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.setupListenHandle &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;as _listen2] &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1330:16&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at listenInCluster &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1378:12&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.listen &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1465:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at READ_WRITE &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3215:23&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at new Promise &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&amp;lt;anonymous&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.start &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3213:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/@webpack-cli/serve/lib/index.js:242:25&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Promise.all &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;index 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-cli/lib/webpack-cli.js:1672:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   code: &lt;span class=&quot;s1&quot;&gt;'EADDRINUSE'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   errno: &lt;span class=&quot;nt&quot;&gt;-48&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   syscall: &lt;span class=&quot;s1&quot;&gt;'listen'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   address: &lt;span class=&quot;s1&quot;&gt;'::'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   port: 5000
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이때 포트를 사용중인 프로세스는 다음 커맨드로 확인 가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;lsof &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; :5000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;해당 프로세스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 PID&lt;/code&gt;로 제거하면 해결된다.&lt;/p&gt;
+
+&lt;p&gt;그런데 맥 Monterey OS에서는 Command Center 프로세스가 뜨는 경우가 있는데, 이 프로세스는 OS에 의해 계속해서 재시작된다.
+이는 &lt;strong&gt;System Preferences - Sharing - AirPlay Receiver 에서 On 체크를 지워주면 해결&lt;/strong&gt;된다.&lt;/p&gt;
+
+&lt;h4 id=&quot;ref&quot;&gt;Ref&lt;/h4&gt;
+
+&lt;p&gt;https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server&lt;/p&gt;
+
+&lt;p&gt;https://nono.ma/port-5000-used-by-control-center-in-macos-controlce&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="javascript" /><category term="regex" /><category term="published" /><summary type="html">**Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법** 해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다. ```shell [0] Error: listen EADDRINUSE: address al</summary></entry><entry><title type="html">How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos</title><link href="http://blog.jaeyoon.io/2022/02/dance-en.html" rel="alternate" type="text/html" title="How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos" /><published>2022-02-09T20:11:20+00:00</published><updated>2022-02-09T20:11:20+00:00</updated><id>http://blog.jaeyoon.io/2022/02/dance-en</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/02/dance-en.html">&lt;p&gt;&lt;span class=&quot;search-keywords&quot;&gt;
 youtube mirrored video flip 
 Twice blackpink bts bangtan aespa jyp bigbang missa wonder girls 
 girl groups boy groups exo super junior

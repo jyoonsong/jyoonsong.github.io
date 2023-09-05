@@ -32,7 +32,7 @@ encoding: utf-8
 limit_posts         : 0
 future              : true
 unpublished         : false
-publised            : true
+published           : true
 
 # Date format
 jyoon:

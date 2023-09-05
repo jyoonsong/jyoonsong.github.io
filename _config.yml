@@ -25,7 +25,7 @@ github_username:  nicolenahyun
 
 color-scheme: black
 
-timezone: Asia/Seoul
+#timezone: Asia/Seoul
 
 # Set encoding to UTF-8
 encoding: utf-8

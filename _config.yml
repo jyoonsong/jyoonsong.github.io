@@ -33,7 +33,7 @@ encoding: utf-8
 # future post
 limit_posts         : 0
 future              : true
-#unpublished         : false
+unpublished         : false
 
 # Date format
 jyoon:

@@ -6,8 +6,20 @@ layout: default
   
   <section class="page-heading">
     <div class="wrapper">
-      <h1 class="page-title">{{ page.title | default: "나현 블로그" }}</h1>
-      <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ paginator.total_posts | default: 0 }}개의 글</div>
+      <h1 class="page-title">{{ page.title | default: "Hello Stranger :)" }}</h1>
+      {% if page.url == '/' %}
+        <!-- 메인 페이지일 때 출력할 코드 -->
+        <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ site.posts.size | default: 0 }}개의 글</div>
+      {% else %}
+        <!-- 각종 Category를 눌럴을 때 출력할 코드 -->
+        {% assign num_posts = 0 %}
+        {% for post in site.posts %}
+            {% if post.categories contains page.title %}
+                {% assign num_posts = num_posts | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+        <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ num_posts | default: 0 }}개의 글</div>
+      {% endif %}
     </div>
   </section>
   <main class="page-content" aria-label="Content">
@@ -19,7 +31,8 @@ layout: default
         <div class="grid-sizer"></div>
         <div class="grid-gutter-sizer"></div>
         <!-- items -->
-        {% for post in paginator.posts %}
+        {% for post in site.posts %}
+          {% if page.url == '/' or post.categories contains page.title %}
           <li class="grid-item">
             <a href="{{ post.url | relative_url }}">
               <span class="post-meta {{ post.categories | first }}">{{ post.categories | join: '/' }}</span>
@@ -29,6 +42,7 @@ layout: default
               <span class="post-subtitle">{{ post.subtitle | escape }}</span>
             </a>
           </li>
+          {% endif %}
         {% endfor %}
       </ul>
       {% if paginator.total_pages > 1 %}

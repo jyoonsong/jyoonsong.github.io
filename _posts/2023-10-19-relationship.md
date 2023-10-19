@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "test"
-subtitle: "시절인연에 대하여"
+title:  "시절인연에 대하여"
+subtitle: "관계에서 스트레스 받지 않는 법"
 date:   2023-10-19 10:19:30
 author: nahyun
 categories: ["기록", "생각"]

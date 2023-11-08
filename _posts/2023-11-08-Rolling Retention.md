@@ -6,7 +6,7 @@ date:   2023-11-08 17:00:30
 author: nahyun
 categories: ["배움", "데이터분석"]
 tags:
-  - "Rolling Retension"
+  - "Rolling Retention"
   - "Unbounded Retention"
   - "분석 프레임워크"
   - "published"

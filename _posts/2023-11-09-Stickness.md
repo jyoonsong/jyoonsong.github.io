@@ -17,7 +17,9 @@ tags:
 
 **사용자 고착도라고 부르는 Stickiness**라는 지표에 대해 살펴보자. Stickiness는 DAU를 MAU 또는 WAU로 나누어 계산한다.
 
-> *Stickiness* = $\frac{DAU}{MAU}$
+
+*Stickiness* = $\frac{DAU}{MAU}$
+
 
 
 ### DAU, WAU, MAU

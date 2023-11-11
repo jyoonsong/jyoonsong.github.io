@@ -21,7 +21,6 @@ tags:
 *Stickiness* = $\frac{DAU}{MAU}$
 
 
-
 ### DAU, WAU, MAU
 - DAU(Daily Active User): 일간 활성 사용자 수
 - WAU(Weekly Active User): 주간 활성 사용자 수

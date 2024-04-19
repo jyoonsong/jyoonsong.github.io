@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2024-04-19T16:49:11+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">개발자가 영어를 잘 해야 하는 이유</title><link href="http://blog.jaeyoon.io/2024/04/english.html" rel="alternate" type="text/html" title="개발자가 영어를 잘 해야 하는 이유" /><published>2024-04-02T03:15:30+00:00</published><updated>2024-04-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/04/english</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/04/english.html">&lt;p&gt;프레임워크, 라이브러리, API, OS 등 기존 소프트웨어의 힘을 전혀 빌리지 않는 개발자는 없다. 현존하는 소프트웨어를 이용하지 않는 것은 자랑스러운 것이 아니라 바보같은 짓이라고 생각한다. 물론 때로는 기존 소프트웨어를 사용하는 것보다 직접 만드는 것이 효과적인 경우가 있다. 예컨대 거대한 라이브러리의 일부분만 필요한데 모든 것을 import 해야만 할 때, 차라리 일부분에 해당하는 코딩을 직접 하는 것이 나을 수 있다. 하지만 현존하는 소프트웨어의 힘을 빌리는 것이 효율적일 때도 많다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2024-04-19T16:52:52+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">개발자가 영어를 잘 해야 하는 이유</title><link href="http://blog.jaeyoon.io/2024/04/english.html" rel="alternate" type="text/html" title="개발자가 영어를 잘 해야 하는 이유" /><published>2024-04-02T03:15:30+00:00</published><updated>2024-04-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/04/english</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/04/english.html">&lt;p&gt;프레임워크, 라이브러리, API, OS 등 기존 소프트웨어의 힘을 전혀 빌리지 않는 개발자는 없다. 현존하는 소프트웨어를 이용하지 않는 것은 자랑스러운 것이 아니라 바보같은 짓이라고 생각한다. 물론 때로는 기존 소프트웨어를 사용하는 것보다 직접 만드는 것이 효과적인 경우가 있다. 예컨대 거대한 라이브러리의 일부분만 필요한데 모든 것을 import 해야만 할 때, 차라리 일부분에 해당하는 코딩을 직접 하는 것이 나을 수 있다. 하지만 현존하는 소프트웨어의 힘을 빌리는 것이 효율적일 때도 많다.&lt;/p&gt;
 
 &lt;p&gt;이렇게 현존하는 소프트웨어를 사용할 때 가장 필수적인 리소스는 무엇일까? 챗GPT? StackOverFlow? 개발 블로그? 나는 가장 기본이 되는 것은 무엇보다도 해당 소프트웨어를 만든 사람이 직접 작성한 공식 문서라고 생각한다. 예를 들어 React Native 개발환경을 설치할 때 어떤 자료를 참고해야 할까? 챗GPT나 StackOverflow, 또는 개발 블로그 글을 참고할 수도 있다. 하지만 이런 자료들은 원본이 아니라 다른 사람에 의해 한 번 processing 된 가공식품과도 같다. React Native 공식 홈페이지 문서는 반드시 확인해야 하는 기본적인 “원재료”이다. 원재료를 알지 못하면 요리가 실패할 확률이 높다.&lt;/p&gt;
 
@@ -9,17 +9,13 @@
 &lt;p&gt;그렇다면 이 글의 제목은 왜 뜬끔없이 “개발자가 영어를 잘 해야 하는 이유”일까? 이는 원재료에 해당하는 공식 documentation 들이 대부분 영어로 작성되어 있기 때문이다. 사실 원재료 뿐만 아니라 가공된 컨텐츠도 마찬가지이다. 챗GPT도 영어로 쓸 때 더 양질의 정보를 제공한다. StackOverFlow와 블로그 글도 영어로 된 컨텐츠의 양이 한글로 된 컨텐츠의 양을 훌쩍 뛰어넘는다. 따라서 영어를 잘 하면 개발을 할 때 굉장한 메리트가 있다.&lt;/p&gt;
 
 &lt;p&gt;사실 개발 뿐만 아니라 다른 영역에서도 비슷한 것을 느끼곤 한다. &lt;strong&gt;남이 가꾸어 놓은 가공된 정보를 소비하는 것은 편하고 효율적이지만 때로는 한계에 부딪힌다. 이러한 한계를 뛰어넘으려면 언제든 필요할 때마다 원본 자료를 직접 습득하고 스스로 가공할 수 있는 능력을 길러 놓아야 한다&lt;/strong&gt;. 그리고 그 원본에 해당하는 자료는 많은 경우 영어로 되어 있다는 사실. 영어 공부 열심히 하자!&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="영어" /><category term="개발자" /><category term="published" /><summary type="html">프레임워크, 라이브러리, API, OS 등 기존 소프트웨어의 힘을 전혀 빌리지 않는 개발자는 없다. 현존하는 소프트웨어를 이용하지 않는 것은 자랑스러운 것이 아니라 바보같은 짓이라고 생각한다. 물론 때로는 기존 소프트웨어를 사용하는 것보다 직접 만드는 것이 효과적인 경우</summary></entry><entry><title type="html">뉴스레터 추천 - 내가 구독한 세 개의 보석같은 뉴스레터</title><link href="http://blog.jaeyoon.io/2024/04/newsletter.html" rel="alternate" type="text/html" title="뉴스레터 추천 - 내가 구독한 세 개의 보석같은 뉴스레터" /><published>2024-04-02T03:15:30+00:00</published><updated>2024-04-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/04/newsletter</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/04/newsletter.html">&lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;호박너구리&lt;/li&gt;
-  &lt;/ol&gt;
+  &lt;p&gt;[1] 호박너구리&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;호박너구리는 고등학교 친구가 운영하고 있는 뉴스 레터이다. 주로 창업, 스타트업, 자기계발 등에 대한 내용이 실려 있다. 떠오르고 있는 기업과 산업에 대해 알기 쉽게 설명해주는 글도 있어서 정말 흥미롭다. 나도 경영학과 학부 수업을 들으면서 산업 분석 글을 써보았기 때문에 그 과정에 많은 자료조사가 필요하고, 글을 정리하는데도 많은 시간과 정성이 필요하다는 것을 알고 있다. 무엇보다도 뉴스 레터를 받아볼 때마다, 이런 정성스러운 글을 꾸준히 발간하는 친구의 열정이 자극이 되어 나까지 열심히 살게 되는 것 같다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;HOW TO 1000 LABS&lt;/li&gt;
-  &lt;/ol&gt;
+  &lt;p&gt;[2] HOW TO 1000 LABS&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;학부 때 경영학을 배우면서 아쉬웠던 점 한 가지는 콜드 스타트(Cold Start)를 해결하는 방법에 대한 논의가 적다는 점이었다. 나는 그간 다양한 프로젝트를 해왔는데, 그중 많은 프로젝트는 초기에 유저를 확보하지 못하고 critical mass를 달성하지 못해 실패로 돌아갔다. 인스타그램 창립자 Kevin Systrom이 다음과 같은 말을 한 적이 있다. “Do not worry about when 50,000 people use your product. Because you will be happy that you have that problem when you get there.” 마찬가지로 개발을 할 때나 기획을 할 때 많은 사람들이 저지르는 실수는 프로젝트의 규모가 커진 뒤에 고민해도 늦지 않은 문제들에 너무 많은 시간을 소모한다는 사실이다. 그에 비해 초기 유저 확보 문제에 대해서는 너무 적은 시간과 비용을 투자하곤 한다.&lt;/p&gt;
@@ -29,12 +25,10 @@
 &lt;p&gt;그 만큼 초기 유저 확보는 중요하고도 어려운 문제이다. HOW TO 1000 LABS 뉴스레터는 이 주제에 관한 뉴스레터를 매주 발행하고 있다. 다양한 초기 유저 유치 방법을 소개하고 있어서 이에 관심 있는 사람이라면 재미있게 읽을 수 있다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;노마드 코더&lt;/li&gt;
-  &lt;/ol&gt;
+  &lt;p&gt;[3] 노마드 코더&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;노마드 코더는 내가 가장 오랜 기간 구독해 왔는데, 정말 깔끔하고 정성이 가득 담긴 뉴스 레터이다. 개발 관련된 내용이 주를 이루고, 노마드 코더 커뮤니티에 올라오는 사이드 프로젝트를 소개하는 코너도 있다. AI 관련된 주요 소식은 연구실 슬랙 같이 연구 관련된 채널을 통해 가장 먼저 접하는데, 그외 개발 툴이나 라이브러리/프레임워크 관련 소식은 노마드 코더 뉴스 레터로 가장 먼저 접한다. 그 만큼 꼼꼼히 정리되어 있고 여러 모로 유용한 정보가 많아서 추천한다.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="뉴스레터" /><category term="구독" /><category term="published" /><summary type="html">&gt; 1. 호박너구리 호박너구리는 고등학교 친구가 운영하고 있는 뉴스 레터이다. 주로 창업, 스타트업, 자기계발 등에 대한 내용이 실려 있다. 떠오르고 있는 기업과 산업에 대해 알기 쉽게 설명해주는 글도 있어서 정말 흥미롭다. 나도 경영학과 학부 수업을 들으면서 산업 분</summary></entry><entry><title type="html">논문은 과학이지만 리뷰는 비과학이다</title><link href="http://blog.jaeyoon.io/2024/04/reviews.html" rel="alternate" type="text/html" title="논문은 과학이지만 리뷰는 비과학이다" /><published>2024-04-02T03:15:30+00:00</published><updated>2024-04-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/04/reviews</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/04/reviews.html">&lt;p&gt;논문은 과학이지만 리뷰는 비과학이다.&lt;/p&gt;
+&lt;p&gt;노마드 코더는 내가 가장 오랜 기간 구독해 왔는데, 정말 깔끔하고 정성이 가득 담긴 뉴스 레터이다. 개발 관련된 내용이 주를 이루고, 노마드 코더 커뮤니티에 올라오는 사이드 프로젝트를 소개하는 코너도 있다. AI 관련된 주요 소식은 연구실 슬랙 같이 연구 관련된 채널을 통해 가장 먼저 접하는데, 그외 개발 툴이나 라이브러리/프레임워크 관련 소식은 노마드 코더 뉴스 레터로 가장 먼저 접한다. 그 만큼 꼼꼼히 정리되어 있고 여러 모로 유용한 정보가 많아서 추천한다.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="뉴스레터" /><category term="구독" /><category term="published" /><summary type="html">&gt; [1] 호박너구리 호박너구리는 고등학교 친구가 운영하고 있는 뉴스 레터이다. 주로 창업, 스타트업, 자기계발 등에 대한 내용이 실려 있다. 떠오르고 있는 기업과 산업에 대해 알기 쉽게 설명해주는 글도 있어서 정말 흥미롭다. 나도 경영학과 학부 수업을 들으면서 산업</summary></entry><entry><title type="html">논문은 과학이지만 리뷰는 비과학이다</title><link href="http://blog.jaeyoon.io/2024/04/reviews.html" rel="alternate" type="text/html" title="논문은 과학이지만 리뷰는 비과학이다" /><published>2024-04-02T03:15:30+00:00</published><updated>2024-04-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/04/reviews</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/04/reviews.html">&lt;p&gt;논문은 과학이지만 리뷰는 비과학이다.&lt;/p&gt;
 
 &lt;p&gt;논문의 억셉 여부는 결국 리뷰어 서너 명의 의견에 의해 결정되곤 한다. 리뷰어가 agreeable 한 사람이 배정되면 운 좋게 억셉될 수도, nitpicking 하는 사람이 배정되면 운 나쁘게 리젝될 수도 있다.&lt;/p&gt;
 

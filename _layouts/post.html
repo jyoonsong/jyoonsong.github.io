@@ -1,0 +1,112 @@
+---
+layout: default
+---
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3&appId=301590963578753&autoLogAppEvents=1"></script>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <div class="post-meta">
+        {% for category in page.categories %}
+        <a href="/{{ category }}">{{category}}</a>{% if forloop.first == true %} /{% endif %}
+        {% endfor %}
+        &nbsp;|&nbsp;
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% assign date_format = site.jyoon.date_format | default: "%Y. %m. %d" %}
+          {{ page.date | date: date_format }}
+        </time>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      <div class="post-share">
+        <div class="post-share-content hidden-tablet">
+          <h4><strong>글 정보</strong></h4>
+          <div class="post-subtitle">{{ page.title | escape }} - {{ page.subtitle | escape }}</div>
+          <div class="post-meta">{{ page.date | date: date_format }}</div>
+        </div>
+        <div class="post-share-content">
+          <h4><strong>태그</strong></h4>
+          {% for tag in page.tags %}
+          {% if tag == "published" %} {% break %} {% endif %}
+          <div class="tag">{{ tag }}</div>
+          {% endfor %}
+        </div>
+        <div class="post-share-content">
+          <h4><strong>공유하기</strong></h4>
+          <div class="fb-like" style="line-height: 0.8" data-href="{{ site.url }}{{ page.url }}"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+          </div> &nbsp;
+          <div class="post-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook">
+              <i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter">
+              <i class="fa fa-2x fa-twitter-square"></i>
+            </a>
+
+            <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Google+">
+              <i class="fa fa-2x fa-google-plus-square"></i>
+            </a>
+
+            <a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Pinterest">
+              <i class="fa fa-2x fa-pinterest-square"></i>
+            </a>
+
+            <!--
+            <a  href="http://www.tumblr.com/share/link?url={{ site.url }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Tumblr" >
+                <i class="fa fa-2x fa-tumblr-square"></i>
+            </a>
+    -->
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on LinkedIn">
+              <i class="fa fa-2x fa-linkedin-square"></i>
+            </a>
+
+            <!--
+            <a  href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{ site.url }}{{ page.url }}"
+                title="Share via Email" >
+                <i class="fa fa-2x fa-envelope"></i>
+            </a>
+    -->
+          </div>
+        </div>
+      </div>
+      <div class="post-comment">
+        <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </main>
+
+</article>

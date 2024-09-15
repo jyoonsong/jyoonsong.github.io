@@ -1,0 +1,27 @@
+version: 2.1
+jobs:
+  deploy:
+    docker:
+      - image: circleci/ruby:2.6-node-browsers-legacy
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "16:07:c4:ba:98:f8:72:6c:5e:cc:84:ee:eb:24:bf:95"
+      - run: gem install bundler -v 2.4.22
+      - run: bundle install
+      - run: bundle exec jekyll build
+      - deploy:
+          name: Deploy Release to GitHub
+          command: |
+            if [ $CIRCLE_BRANCH == 'jekyll' ]; then
+              bash .circleci/deploy.sh
+            fi
+workflows:
+  build:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - jekyll

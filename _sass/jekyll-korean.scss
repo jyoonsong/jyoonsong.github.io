@@ -1,0 +1,63 @@
+@charset "utf-8";
+//@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+// Define defaults for each variable.
+
+$base-font-family: 'Spoqa Han Sans', '나눔고딕', NanumGothic, '맑은 고딕', Malgun Gothic, '애플 SD 산돌고딕 Neo', Apple SD Gothic Neo, Helvetica, sans-serif !default;
+$code-font-family:  Menlo, Monaco, 'Courier New', monospace !important;
+$base-font-size:   14.4px !default;
+$mobile-font-size: 15px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.85 !default;
+$base-line-height: 1.6 !default;
+$content-line-height: 2.2 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #343a40 !default;
+$background-color: #fff !default;
+
+$primary-color:    #363F69 !default;
+$secondary-color:  #FF746F !default;
+$tertiary-color:   #FFD3AE !default;
+
+$grey-color:       #868e96 !default;
+$grey-color-light: #f8f9fa !default;
+$grey-color-dark:  #495057 !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    960px !default;
+
+$on-palm:          575px !default;
+$on-tablet:        767px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "korean/fonts",
+  "korean/base",
+  "korean/layout",
+  "korean/loader",
+  "korean/search",
+  "korean/zoom",
+  "korean/syntax-highlighting",
+  "korean/table"
+;

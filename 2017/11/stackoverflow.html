@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="송재윤, HCI, CSCW, 연구, 유학, 웹, UI/UX, 인터랙티브, 개발, 스타트업, 서울대, 경영학">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>StackOverFlow에 Example Code를 첨부해야하는 또다른 이유 | 재윤 블로그</title>
+<meta name="generator" content="Jekyll v3.6.3" />
+<meta property="og:title" content="StackOverFlow에 Example Code를 첨부해야하는 또다른 이유" />
+<meta name="author" content="jaeyoon" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="Safari에서 animation-play-state 버그 디버깅하기 StackOverFlow에 질문을 할 때, Preview 코드를 첨부하지 않으면 -1를 받기 십상이다. 반드시 StackOverFlow에 있는 [Example Code 작성법 포스팅](http" />
+<meta property="og:description" content="Safari에서 animation-play-state 버그 디버깅하기 StackOverFlow에 질문을 할 때, Preview 코드를 첨부하지 않으면 -1를 받기 십상이다. 반드시 StackOverFlow에 있는 [Example Code 작성법 포스팅](http" />
+<link rel="canonical" href="http://blog.jaeyoon.io/2017/11/stackoverflow.html" />
+<meta property="og:url" content="http://blog.jaeyoon.io/2017/11/stackoverflow.html" />
+<meta property="og:site_name" content="재윤 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-11-21T12:15:30+00:00" />
+<script type="application/ld+json">
+{"description":"Safari에서 animation-play-state 버그 디버깅하기 StackOverFlow에 질문을 할 때, Preview 코드를 첨부하지 않으면 -1를 받기 십상이다. 반드시 StackOverFlow에 있는 [Example Code 작성법 포스팅](http","@type":"BlogPosting","headline":"StackOverFlow에 Example Code를 첨부해야하는 또다른 이유","url":"http://blog.jaeyoon.io/2017/11/stackoverflow.html","dateModified":"2017-11-21T12:15:30+00:00","datePublished":"2017-11-21T12:15:30+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.jaeyoon.io/2017/11/stackoverflow.html"},"author":{"@type":"Person","name":"jaeyoon"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#000">
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="301590963578753" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate" type="application/rss+xml" title="재윤 블로그" href="/feed.xml">
+  
+  <script src="https://use.fontawesome.com/1382182da2.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!--    <a class="site-title" href="/">재윤 블로그</a>-->
+    <div class="col">
+      <a class="site-title" href="/">
+        <img src='/assets/img/logo.png' alt="logo" />
+      </a>
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+          </span>
+        </label>
+
+        <div class="trigger">
+          <section>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/연구">연구</a>
+              <ul class="dropdown">
+                <li><a href="/정리">정리</a></li>
+                <li><a href="/유학">유학</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/배움">배움</a>
+              <ul class="dropdown">
+                <li><a href="/개발">개발</a></li>
+                <li><a href="/경영학">경영학</a></li>
+                <li><a href="/기타">기타</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/기록">기록</a>
+              <ul class="dropdown">
+                <li><a href="/생각">생각</a></li>
+                <li><a href="/경험">경험</a></li>
+              </ul>
+            </div>
+            <a class="util-link" href="http://jaeyoon.io">
+              <u>about</u>
+            </a>
+            <a class="util-link" href="/search">
+              <u class="hidden-desktop">검색</u>
+              <img src='/assets/img/search.svg' width="15" alt="search" />
+            </a>
+          </section>
+          <section class="nav-footer hidden-desktop">
+            <div class="post-subtitle">
+              <strong>재윤 블로그</strong>
+              <div>
+                <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+                <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>&nbsp;
+                <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+                <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+                <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+          </section>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3&appId=301590963578753&autoLogAppEvents=1"></script>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title" itemprop="name headline">StackOverFlow에 Example Code를 첨부해야하는 또다른 이유</h1>
+      <div class="post-meta">
+        
+        <a href="/기록">기록</a> /
+        
+        <a href="/생각">생각</a>
+        
+        &nbsp;|&nbsp;
+        <time datetime="2017-11-21T12:15:30+00:00" itemprop="datePublished">
+          
+          2017.11.21
+        </time>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        <p><strong>Safari에서 animation-play-state 버그 디버깅하기</strong></p>
+
+<p>StackOverFlow에 질문을 할 때, Preview 코드를 첨부하지 않으면 -1를 받기 십상이다. 반드시 StackOverFlow에 있는 <a href="https://stackoverflow.com/help/mcve">Example Code 작성법 포스팅</a>을 참고하여 Minimal, Complete, and Verifiable Example, 소위 MCVE를 함께 첨부하고, 사전에 리서치를 충분히 했다는 인상을 확실히 남겨주어야 한다.
+가장 큰 이유는 이런 노력을 통해 Reputation 점수를 확보하지 않으면 이용할 수 있는 기능이 굉장히 제한되기 때문이다. 특히 인상깊었던 제한 정책 중 하나는 StackOverFlow가 질문글에 달 수 있는 태그까지 Reputation 점수에 따라 차별화시킨다는 것. 더 구체적이고 전문적인 태그를 달수록 질 좋은 답변이 달릴 확률이 높아지기 때문에, 논리적으로 충분히 차별화 포인트가 된다.</p>
+
+<figure>
+  <img data-action="zoom" src="https://cdn-images-1.medium.com/max/1600/1*ZkkpjuqrWTVNPxGqRR-CHQ.png" alt="StackOverFlow 질문의 Reputation 점수와 Example Code 예시" />
+  <figcaption> StackOverFlow 질문의 Reputation 점수와 Example Code 예시 </figcaption>
+</figure>
+
+<p>하지만 내가 이 글에서 말하고자 하는 바는 Reputation 외에도 Example Code가 유용한 또다른 이유이다. 바로 Full Code를 StackOverFlow에서 요구하는 대로 Minimal, Complete, and Verifiable하게 바꾸는 과정에서 답을 찾기가 쉽기 때문. 즉 <strong>질문을 올리기 전에 질문을 쓰는 과정에서 답을 스스로 찾게 되는 것</strong>이다. 필요 없다고 생각이 드는 부분을 하나씩 지워나가면서 코드 리뷰를 하게 되고 그 과정에서 문제를 일으키는 부분이 눈에 들어올 때가 많다.</p>
+
+<p>나의 경우 포트폴리오 웹을 만들면서 Three.js 없이 CSS3 3d Transform만으로 3d animation을 구현하려 이것저것 시도를 많이 했는데, IE는 당연하지만 유난히 Safari에서 알 수 없는 에러가 굉장히 많았다. JS로 한 요소의 transform 값을 바꾸니 자꾸만 괴상한 자리로 가는 것이다. 심지어 Inspector조차 element를 선택하면 올바른 자리에 있다고 말하고, 콘솔에서 <code class="highlighter-rouge">getComputedStyle</code> 을 이용해봐도 올바른 값을 가지고 있다고 이야기해 도저히 디버깅을 할 수가 없었다.</p>
+
+<p>그래서 StackOverFlow에 질문글을 올리기로 결심했고, 방대한 양의 코드를 전부 첨부할 수는 없으니 질문의 핵심이 되는 코드만 남겨두고 다른 코드를 하나씩 정리하기 시작했다. 그런데 웬걸, <code class="highlighter-rouge">animation-play-state: paused</code> 가 있던 줄을 삭제하니 완벽하게 워킹하는 것이다. 처음에는 SCSS 컴파일러를 없앤 타이밍에 제대로 작동하기 시작해서 SCSS 컴파일러 문제인 줄 알았다. 하지만 조금 더 코드를 살펴보니 Safari에서는 <code class="highlighter-rouge">transform: rotateY()</code> 값과 <code class="highlighter-rouge">animation-play-state: paused</code> 가 conflict를 일으키는 모양이다. 또 <code class="highlighter-rouge">.getComputedStyle</code> 과 <code class="highlighter-rouge">.getPropertyValue</code> 로 리턴되는 transform matrix가 keyframes animation으로 바뀐 transform 값이 아닌 element에 적용된 본래의 transform 값이다. 이때문에 결국 safari에선 animation이 smooth하지 않지만 (하려면 할 수 있겠으나 코드를 더럽히기도 싫고 귀찮다…) 어찌 됐든 전혀 다른 position을 가지게 되던 큰 문제는 해결되었다.</p>
+
+<figure>
+  <img data-action="zoom" src="/assets/img/171121/bug1.png" alt="Safari Animation-play-state 버그" />
+  <img data-action="zoom" src="/assets/img/171121/bug2.png" alt="Safari Animation-play-state 버그 - 콘솔" />
+  <figcaption> Safari에서 발생하는 Animation-play-state 버그 (Console에 뜨는 위치값과 브라우저 상에 렌더링되는 위치가 전혀 다른 것을 확인할 수 있다.) </figcaption>
+</figure>
+
+<p>이런 브라우저 호환성 이슈들은 참 태클하기 싫은 어려운 문제다. 아래 깃헙 스크린샷을 보면 Mobile Compatibility 테스팅하다가 분노에 휩싸인 나의 커밋 메시지를 볼 수 있다. 특히 크롬에서 완벽하게 작동하는 것을 확인한 채 뿌듯한 마음으로 모바일 브라우저를 켰을 때 괴상한 광경을 목격한 순간의 감정은 말로 표현할 수 없다. 아래는 내가 당시 느낀 그 감정을 듬뿍 담아 작성했던 커밋 메시지 내역이다.</p>
+
+<figure>
+  <img data-action="zoom" src="/assets/img/171121/commit.png" alt="분노의 Commit 내역" />
+  <figcaption> 분노의 Commit 내역 </figcaption>
+</figure>
+
+<p>그럼에도 불구하고 디버깅이 즐거운 것은, 이 모든 에러를 해결하고 나면 극도의 쾌감을 맛볼 수 있기 때문이다. 더 많은 분노를 일으킨 버그였을 수록 해결되었을 때 더 높은 쾌감을 선사한다. 뭐 개발이 아니라 그 어떤 일도 마찬가지이로 시행착오가 있을 때, 일을 마무리짓고 나면 결과물에 대한 애정과 보람이 더 크지 않나 싶다. 아무튼 내 포트폴리오 웹은 이런 식으로 완성이 되었다. 결과적으로 돌이켜보면 고집부리지 말고 유료 플러그인이나 three.js 같은 라이브러리 가져다 쓰는 게 현명했던 것 같기도 하지만, 어찌되었든 다양한 고민을 안겨준 즐거운 시간이었다.</p>
+
+      </div>
+
+      <div class="post-share">
+        <div class="post-share-content hidden-tablet">
+          <h4><strong>글 정보</strong></h4>
+          <div class="post-subtitle">StackOverFlow에 Example Code를 첨부해야하는 또다른 이유 - Safari에서 animation-play-state 버그 디버깅하기</div>
+          <div class="post-meta">2017.11.21</div>
+        </div>
+        <div class="post-share-content">
+          <h4><strong>태그</strong></h4>
+          
+          
+          <div class="tag">StackOverFlow</div>
+          
+          
+          <div class="tag">커뮤니티</div>
+          
+          
+          <div class="tag">브라우저호환성</div>
+          
+           
+        </div>
+        <div class="post-share-content">
+          <h4><strong>공유하기</strong></h4>
+          <div class="fb-like" style="line-height: 0.8" data-href="http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+          </div> &nbsp;
+          <div class="post-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook">
+              <i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?text=StackOverFlow에 Example Code를 첨부해야하는 또다른 이유&url=http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter">
+              <i class="fa fa-2x fa-twitter-square"></i>
+            </a>
+
+            <a href="https://plus.google.com/share?url=http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Google+">
+              <i class="fa fa-2x fa-google-plus-square"></i>
+            </a>
+
+            <a href="http://pinterest.com/pin/create/button/?url=http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Pinterest">
+              <i class="fa fa-2x fa-pinterest-square"></i>
+            </a>
+
+            <!--
+            <a  href="http://www.tumblr.com/share/link?url=http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Tumblr" >
+                <i class="fa fa-2x fa-tumblr-square"></i>
+            </a>
+    -->
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://blog.jaeyoon.io/2017/11/stackoverflow.html&title=StackOverFlow에 Example Code를 첨부해야하는 또다른 이유&summary=&source=재윤 블로그"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on LinkedIn">
+              <i class="fa fa-2x fa-linkedin-square"></i>
+            </a>
+
+            <!--
+            <a  href="mailto:?subject=StackOverFlow에 Example Code를 첨부해야하는 또다른 이유&amp;body=Check out this site http://blog.jaeyoon.io/2017/11/stackoverflow.html"
+                title="Share via Email" >
+                <i class="fa fa-2x fa-envelope"></i>
+            </a>
+    -->
+          </div>
+        </div>
+      </div>
+      <div class="post-comment">
+        <div class="fb-comments" data-href="http://blog.jaeyoon.io/2017/11/stackoverflow.html" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </main>
+
+</article>
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="post-subtitle">
+      <strong>재윤 블로그</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></div>-->
+    </div>
+    <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+
+  </div>
+
+</footer>
+
+
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-2"></script>
+<!-- google ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9532825530305256"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113321077-2');
+</script>
+  </body>
+</html>

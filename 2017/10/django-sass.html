@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="송재윤, HCI, CSCW, 연구, 유학, 웹, UI/UX, 인터랙티브, 개발, 스타트업, 서울대, 경영학">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>장고 프로젝트에서 SASS/SCSS 사용하기 | 재윤 블로그</title>
+<meta name="generator" content="Jekyll v3.6.3" />
+<meta property="og:title" content="장고 프로젝트에서 SASS/SCSS 사용하기" />
+<meta name="author" content="jaeyoon" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="CSS 프리프로세서에 대하여 SASS/SCSS는 스타일시트 언어인 CSS를 조금이나마 프로그래밍 언어처럼 사용할 수 있게 도와주는 CSS 프리프로세서(preprocessor)이다. SASS 말고도 Bootstrap이 v3까지 쓰던 LESS 또는 문법을 극도로" />
+<meta property="og:description" content="CSS 프리프로세서에 대하여 SASS/SCSS는 스타일시트 언어인 CSS를 조금이나마 프로그래밍 언어처럼 사용할 수 있게 도와주는 CSS 프리프로세서(preprocessor)이다. SASS 말고도 Bootstrap이 v3까지 쓰던 LESS 또는 문법을 극도로" />
+<link rel="canonical" href="http://blog.jaeyoon.io/2017/10/django-sass.html" />
+<meta property="og:url" content="http://blog.jaeyoon.io/2017/10/django-sass.html" />
+<meta property="og:site_name" content="재윤 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-08T03:15:30+00:00" />
+<script type="application/ld+json">
+{"description":"CSS 프리프로세서에 대하여 SASS/SCSS는 스타일시트 언어인 CSS를 조금이나마 프로그래밍 언어처럼 사용할 수 있게 도와주는 CSS 프리프로세서(preprocessor)이다. SASS 말고도 Bootstrap이 v3까지 쓰던 LESS 또는 문법을 극도로","@type":"BlogPosting","headline":"장고 프로젝트에서 SASS/SCSS 사용하기","url":"http://blog.jaeyoon.io/2017/10/django-sass.html","dateModified":"2017-10-08T03:15:30+00:00","datePublished":"2017-10-08T03:15:30+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.jaeyoon.io/2017/10/django-sass.html"},"author":{"@type":"Person","name":"jaeyoon"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#000">
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="301590963578753" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate" type="application/rss+xml" title="재윤 블로그" href="/feed.xml">
+  
+  <script src="https://use.fontawesome.com/1382182da2.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!--    <a class="site-title" href="/">재윤 블로그</a>-->
+    <div class="col">
+      <a class="site-title" href="/">
+        <img src='/assets/img/logo.png' alt="logo" />
+      </a>
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+          </span>
+        </label>
+
+        <div class="trigger">
+          <section>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/연구">연구</a>
+              <ul class="dropdown">
+                <li><a href="/정리">정리</a></li>
+                <li><a href="/유학">유학</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/배움">배움</a>
+              <ul class="dropdown">
+                <li><a href="/개발">개발</a></li>
+                <li><a href="/경영학">경영학</a></li>
+                <li><a href="/기타">기타</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/기록">기록</a>
+              <ul class="dropdown">
+                <li><a href="/생각">생각</a></li>
+                <li><a href="/경험">경험</a></li>
+              </ul>
+            </div>
+            <a class="util-link" href="http://jaeyoon.io">
+              <u>about</u>
+            </a>
+            <a class="util-link" href="/search">
+              <u class="hidden-desktop">검색</u>
+              <img src='/assets/img/search.svg' width="15" alt="search" />
+            </a>
+          </section>
+          <section class="nav-footer hidden-desktop">
+            <div class="post-subtitle">
+              <strong>재윤 블로그</strong>
+              <div>
+                <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+                <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>&nbsp;
+                <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+                <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+                <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+          </section>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3&appId=301590963578753&autoLogAppEvents=1"></script>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title" itemprop="name headline">장고 프로젝트에서 SASS/SCSS 사용하기</h1>
+      <div class="post-meta">
+        
+        <a href="/배움">배움</a> /
+        
+        <a href="/개발">개발</a>
+        
+        &nbsp;|&nbsp;
+        <time datetime="2017-10-08T03:15:30+00:00" itemprop="datePublished">
+          
+          2017.10.08
+        </time>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        <h4 id="css-프리프로세서에-대하여">CSS 프리프로세서에 대하여</h4>
+
+<p>SASS/SCSS는 스타일시트 언어인 CSS를 조금이나마 프로그래밍 언어처럼 사용할 수 있게 도와주는 CSS 프리프로세서(preprocessor)이다. SASS 말고도 Bootstrap이 v3까지 쓰던 LESS 또는 문법을 극도로 간소화한 Stylus라는 녀석들도 CSS 프리프로세서이다. 하지만 브라우저가 이해하는 언어는 CSS이지, SCSS, LESS 등이 아니기 때문에 이를 다시 CSS로 컴파일해줄 프로세서(processor)가 필요하다.</p>
+
+<figure>
+
+​	<img data-action="zoom" src="https://image.slidesharecdn.com/preprocessor-100427070152-phpapp02/95/preprocessor-3-728.jpg?cb=1319966096" alt="프리프로세서의 개념" />
+
+​	<figcaption>프리프로세서의 개념</figcaption>
+
+</figure>
+
+<p><br /></p>
+
+<h4 id="장고-프로젝트와-scss">장고 프로젝트와 SCSS</h4>
+
+<p>SCSS를 컴파일할 방법은 굉장히 많은데, 각 에디터별로 SASS 플러그인을 설치하면 쉽게 컴파일할 수 있곤 하다. 또 Ruby On Rails를 사용하면, 따로 플러그인을 설치하지 않아도 자동으로  <code class="highlighter-rouge">폴더명.scss</code> 파일이 스캐폴딩되어 Asset Pipeline을 통해 하나의 CSS 파일로 합쳐진다. SASS 자체가 Ruby로 코딩되었기 때문에 레일즈와는 죽이 참 잘 맞는 모양이다. Node.js에서는 <code class="highlighter-rouge">gulp-sass</code> 이라는 걸프 플러그인을 설치하여 <code class="highlighter-rouge">gulp</code> 가 sass/scss로부터 css파일을 만들어내도록 한다.</p>
+
+<p>그렇다면 이제 이 글의 주인공 장고는 어떨까? 사실 별 거 없다. 그냥 <a href="https://github.com/jrief/django-sass-processor">django-sass-processor</a> 라는 플러그인을 붙여주면 된다. 그런데 환경 설정이 레일즈나 노드JS에서보다는 할 게 좀더 많아서 살짝만 정리해보기로 한다.</p>
+
+<p><br /></p>
+
+<h4 id="설치">설치</h4>
+
+<p>아래처럼 <code class="highlighter-rouge">pip</code> 로 세 가지를 설치해준다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install libsass django-compressor django-sass-processor
+</code></pre></div></div>
+
+<p>잠깐 딴소리긴 하지만 명령어에 <code class="highlighter-rouge">freeze &gt; requirements.txt</code> 를 추가해주면 requirements.txt 파일에도 추가되어 다른 팀원들도 문제 없이 컴파일을 진행할 수 있게 된다. <code class="highlighter-rouge">pip-save</code> 라는 패키지도 있다고는 하는데, 나는 그냥 npm이랑 비슷하게 <code class="highlighter-rouge">-s</code> 를 치면 <code class="highlighter-rouge">freeze &gt; requirements.txt</code> 를 실행하도록 설정해두었다. 자세한 것은 <a href="http://blog.abhiomkar.in/2015/11/12/pip-save-npm-like-behaviour-to-pip/">여기</a>를 참고하면 좋다.</p>
+
+<p><br /></p>
+
+<h4 id="환경-설정">환경 설정</h4>
+
+<p><code class="highlighter-rouge">settings.py</code>에서 다음과 같은 설정을 해주어야 작동한다.</p>
+
+<ul>
+  <li>
+    <p><strong>필수 사항</strong></p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="s">'sass_processor'</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+<span class="n">SASS_PROCESSOR_ENABLED</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">SASS_PROCESSOR_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="err">폴더명</span><span class="p">(</span><span class="err">있을</span> <span class="err">경우</span><span class="p">),</span> <span class="s">'static'</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p><code class="highlighter-rouge">SASS_PROCESSOR_ROOT</code> 의 경우 설정해주지 않으면 <code class="highlighter-rouge">STATIC_ROOT</code> 를 디폴트 값으로 가진다. 다른 경로 설정을 살펴보고 만약 <code class="highlighter-rouge">STATIC_ROOT</code> 로 설정되어도 맞다면 굳이 작성해줄 필요 없다.</p>
+  </li>
+  <li>
+    <p><strong>추천 옵션 사항</strong></p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SASS_OUTPUT_STYLE</span> <span class="o">=</span> <span class="s">'compact'</span>
+</code></pre></div>    </div>
+
+    <p><code class="highlighter-rouge">expanded </code>, <code class="highlighter-rouge">nested</code> , <code class="highlighter-rouge">compact</code> , <code class="highlighter-rouge">compressed</code> 의 네 가지 값을 가질 수 있는데, 뒤로 갈수록 더 촘촘히 많이 압축된다고 보면 된다. 디폴트는 <code class="highlighter-rouge">DEBUG</code>가 True인 경우에는 <code class="highlighter-rouge">nested</code>, False인 경우에는 <code class="highlighter-rouge">compressed</code> 이다.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SASS_PRECISION</span> <span class="o">=</span> <span class="mi">8</span>
+</code></pre></div>    </div>
+
+    <p><code class="highlighter-rouge">bootstrap-sass</code> 를 사용하는 경우 위와 같은 설정을 해주어야 한다.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="사용-방법">사용 방법</h4>
+
+<p>장고 템플릿 안에서 아래와 같이 사용하면 된다. 원래 쓰던  <code class="highlighter-rouge">{% block css }</code>  대신이라고 보면 된다. 엔딩 태그는 없다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% load sass_tags %}
+
+&lt;link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" /&gt;
+</code></pre></div></div>
+
+<p>위에 명시해준 경로 앞에 아까 환경설정에서 정의한 <code class="highlighter-rouge">SASS_PROCESSOR_ROOT</code> 가 붙는다고 생각하면 된다. 예컨대 <code class="highlighter-rouge">SASS_PROCESSOR_ROOT</code> 를 <code class="highlighter-rouge">myapp/static</code> 으로 설정해 놨으면 렌더링되는 HTML은 다음과 같다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/myapp/static/css/main.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>기타 더 자세한 사용법은 <a href="https://github.com/jrief/django-sass-processor/blob/master/README.md">프로젝트 README 파일</a>을 참고하기 바란다.</p>
+
+<p><br /></p>
+
+<h4 id="ref">Ref</h4>
+
+<p>https://github.com/jrief/django-sass-processor/blob/master/README.md</p>
+
+      </div>
+
+      <div class="post-share">
+        <div class="post-share-content hidden-tablet">
+          <h4><strong>글 정보</strong></h4>
+          <div class="post-subtitle">장고 프로젝트에서 SASS/SCSS 사용하기 - django-sass-processor을 설치해보자</div>
+          <div class="post-meta">2017.10.08</div>
+        </div>
+        <div class="post-share-content">
+          <h4><strong>태그</strong></h4>
+          
+          
+          <div class="tag">django</div>
+          
+          
+          <div class="tag">sass/scss</div>
+          
+           
+        </div>
+        <div class="post-share-content">
+          <h4><strong>공유하기</strong></h4>
+          <div class="fb-like" style="line-height: 0.8" data-href="http://blog.jaeyoon.io/2017/10/django-sass.html"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+          </div> &nbsp;
+          <div class="post-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.jaeyoon.io/2017/10/django-sass.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook">
+              <i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?text=장고 프로젝트에서 SASS/SCSS 사용하기&url=http://blog.jaeyoon.io/2017/10/django-sass.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter">
+              <i class="fa fa-2x fa-twitter-square"></i>
+            </a>
+
+            <a href="https://plus.google.com/share?url=http://blog.jaeyoon.io/2017/10/django-sass.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Google+">
+              <i class="fa fa-2x fa-google-plus-square"></i>
+            </a>
+
+            <a href="http://pinterest.com/pin/create/button/?url=http://blog.jaeyoon.io/2017/10/django-sass.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Pinterest">
+              <i class="fa fa-2x fa-pinterest-square"></i>
+            </a>
+
+            <!--
+            <a  href="http://www.tumblr.com/share/link?url=http://blog.jaeyoon.io/2017/10/django-sass.html"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Tumblr" >
+                <i class="fa fa-2x fa-tumblr-square"></i>
+            </a>
+    -->
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://blog.jaeyoon.io/2017/10/django-sass.html&title=장고 프로젝트에서 SASS/SCSS 사용하기&summary=&source=재윤 블로그"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on LinkedIn">
+              <i class="fa fa-2x fa-linkedin-square"></i>
+            </a>
+
+            <!--
+            <a  href="mailto:?subject=장고 프로젝트에서 SASS/SCSS 사용하기&amp;body=Check out this site http://blog.jaeyoon.io/2017/10/django-sass.html"
+                title="Share via Email" >
+                <i class="fa fa-2x fa-envelope"></i>
+            </a>
+    -->
+          </div>
+        </div>
+      </div>
+      <div class="post-comment">
+        <div class="fb-comments" data-href="http://blog.jaeyoon.io/2017/10/django-sass.html" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </main>
+
+</article>
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="post-subtitle">
+      <strong>재윤 블로그</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></div>-->
+    </div>
+    <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+
+  </div>
+
+</footer>
+
+
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-2"></script>
+<!-- google ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9532825530305256"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113321077-2');
+</script>
+  </body>
+</html>

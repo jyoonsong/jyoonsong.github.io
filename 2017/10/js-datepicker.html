@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="송재윤, HCI, CSCW, 연구, 유학, 웹, UI/UX, 인터랙티브, 개발, 스타트업, 서울대, 경영학">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Date Picker로 Date 값 저장하기 | 재윤 블로그</title>
+<meta name="generator" content="Jekyll v3.6.3" />
+<meta property="og:title" content="Date Picker로 Date 값 저장하기" />
+<meta name="author" content="jaeyoon" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="데이트피커 사용 시 Date 타입 형식에 맞게 String 저장하는 방법 예쁜 date picker 플러그인들은 대부분 인풋을 클릭하면 드랍다운이 보여지면서 그 안에 table요소 달력을 띄워놓는 형식이다. 이때 input[type=’date’]에는 브라우저 디" />
+<meta property="og:description" content="데이트피커 사용 시 Date 타입 형식에 맞게 String 저장하는 방법 예쁜 date picker 플러그인들은 대부분 인풋을 클릭하면 드랍다운이 보여지면서 그 안에 table요소 달력을 띄워놓는 형식이다. 이때 input[type=’date’]에는 브라우저 디" />
+<link rel="canonical" href="http://blog.jaeyoon.io/2017/10/js-datepicker.html" />
+<meta property="og:url" content="http://blog.jaeyoon.io/2017/10/js-datepicker.html" />
+<meta property="og:site_name" content="재윤 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-04T03:15:30+00:00" />
+<script type="application/ld+json">
+{"description":"데이트피커 사용 시 Date 타입 형식에 맞게 String 저장하는 방법 예쁜 date picker 플러그인들은 대부분 인풋을 클릭하면 드랍다운이 보여지면서 그 안에 table요소 달력을 띄워놓는 형식이다. 이때 input[type=’date’]에는 브라우저 디","@type":"BlogPosting","headline":"Date Picker로 Date 값 저장하기","url":"http://blog.jaeyoon.io/2017/10/js-datepicker.html","dateModified":"2017-10-04T03:15:30+00:00","datePublished":"2017-10-04T03:15:30+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.jaeyoon.io/2017/10/js-datepicker.html"},"author":{"@type":"Person","name":"jaeyoon"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#000">
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="301590963578753" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate" type="application/rss+xml" title="재윤 블로그" href="/feed.xml">
+  
+  <script src="https://use.fontawesome.com/1382182da2.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!--    <a class="site-title" href="/">재윤 블로그</a>-->
+    <div class="col">
+      <a class="site-title" href="/">
+        <img src='/assets/img/logo.png' alt="logo" />
+      </a>
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+          </span>
+        </label>
+
+        <div class="trigger">
+          <section>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/연구">연구</a>
+              <ul class="dropdown">
+                <li><a href="/정리">정리</a></li>
+                <li><a href="/유학">유학</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/배움">배움</a>
+              <ul class="dropdown">
+                <li><a href="/개발">개발</a></li>
+                <li><a href="/경영학">경영학</a></li>
+                <li><a href="/기타">기타</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/기록">기록</a>
+              <ul class="dropdown">
+                <li><a href="/생각">생각</a></li>
+                <li><a href="/경험">경험</a></li>
+              </ul>
+            </div>
+            <a class="util-link" href="http://jaeyoon.io">
+              <u>about</u>
+            </a>
+            <a class="util-link" href="/search">
+              <u class="hidden-desktop">검색</u>
+              <img src='/assets/img/search.svg' width="15" alt="search" />
+            </a>
+          </section>
+          <section class="nav-footer hidden-desktop">
+            <div class="post-subtitle">
+              <strong>재윤 블로그</strong>
+              <div>
+                <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+                <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>&nbsp;
+                <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+                <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+                <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+          </section>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3&appId=301590963578753&autoLogAppEvents=1"></script>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title" itemprop="name headline">Date Picker로 Date 값 저장하기</h1>
+      <div class="post-meta">
+        
+        <a href="/배움">배움</a> /
+        
+        <a href="/개발">개발</a>
+        
+        &nbsp;|&nbsp;
+        <time datetime="2017-10-04T03:15:30+00:00" itemprop="datePublished">
+          
+          2017.10.04
+        </time>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        <p><strong>데이트피커 사용 시 Date 타입 형식에 맞게 String 저장하는 방법</strong></p>
+
+<p>예쁜 date picker 플러그인들은 대부분 인풋을 클릭하면 드랍다운이 보여지면서 그 안에 table요소 달력을 띄워놓는 형식이다. 이때 input[type=’date’]에는 브라우저 디폴트 date picker가 달려 있기 때문에 대부분 input[type=’text’]를 대신 사용한다. 그러고 나서 JS로든 서버 측에서든 date 변수로 바꿔주는 것이다.</p>
+
+<p>하지만 그럴 필요 없이 간단한 작업을 통해 input[type=’date’]를 그대로 사용하는 것이 가능하다. 물론 어떤 datepicker 라이브러리를 사용하느냐에 따라 다르겠으나, date format을 조작할 수 있는 옵션이 딸려 있다면 더욱 쉽다. 나의 경우 vanilla js 버전 <a href="https://github.com/dbushell/Pikaday">Pikaday</a>를 기준으로 아래 코드를 썼다. 자주 쓰이는 jQuery datepicker도 유사한 방식으로 가능하다.</p>
+
+<p><br /></p>
+
+<p><strong>1. HTML</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"datepicker"</span> <span class="na">type=</span><span class="s">"date"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>위에서 말했듯이 date type으로 input을 만들어준다.</p>
+
+<p><br /></p>
+
+<p><strong>2. CSS</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"date"</span><span class="o">]</span><span class="nd">::-webkit-calendar-picker-indicator</span><span class="o">,</span>
+ <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"date"</span><span class="o">]</span><span class="nd">::-webkit-inner-spin-button</span> <span class="p">{</span>
+     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+     <span class="nl">appearance</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<p>첫번째 가상선택자 ::webkit-calendar-picker-indicator 는 역삼각형 모양의 datepicker 드롭다운 시키는 버튼 선택자이고,</p>
+
+<p>두번째 가상선택자 ::webkit-inner-spin-button은 1일씩 올리거나 내리는 위아래 버튼 선택자이다.</p>
+
+<p>둘다 뵈기 싫은 느낌이 다분하니 <code class="highlighter-rouge">display: none</code> 시켜주도록 하자. <code class="highlighter-rouge">appearance: none</code> 도 platform-native 스타일링을 제거해주기 위해 넣는 편이 좋다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">input</span><span class="err">[</span><span class="na">type</span><span class="err">="</span><span class="na">date</span><span class="err">"]</span><span class="p">:</span><span class="o">:-</span><span class="n">webkit-calendar-picker-indicator</span> <span class="p">{</span>
+   <span class="nl">color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="p">);</span> <span class="c1">//숨긴다
+</span>   <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+   <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+   <span class="nl">background</span><span class="p">:</span> <span class="sx">url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png)</span> <span class="nb">no-repeat</span><span class="p">;</span> <span class="c1">// 대체할 아이콘
+</span>   <span class="nl">width</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+   <span class="nl">height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+   <span class="nl">border-width</span><span class="p">:</span> <span class="nb">thin</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>참고로 그냥 브라우저 디폴트 datepicker을 사용하되, 아이콘을 바꾸고 싶은 경우에는 위와 같이 버튼을 숨기고 아이콘을 넣어줄 수 있다.</p>
+
+<p><br /></p>
+
+<p><strong>3. JS</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">picker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pikaday</span><span class="p">({</span> 
+ <span class="na">field</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'datepicker'</span><span class="p">),</span>
+ <span class="na">format</span><span class="p">:</span> <span class="s1">'yyyy-MM-dd'</span><span class="p">,</span>
+ <span class="nx">toString</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">format</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">let</span> <span class="nx">day</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"0"</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()).</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+   <span class="kd">let</span> <span class="nx">month</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"0"</span> <span class="o">+</span> <span class="p">(</span><span class="nx">date</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)).</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+   <span class="kd">let</span> <span class="nx">year</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
+   <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="nx">year</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">month</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">day</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>datepicker 라이브러리에 따라 다르지만, 이 코드의 핵심은 5~8번째 줄이다. 
+string 타입으로 리턴을 해주는데, 이를 date type input이 인식할 수 있는 string 형태로 변환해주기만 하면 된다.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">format: 'yyyy-MM-dd'</code></li>
+</ul>
+
+<p>내가 사용한 Pikaday 같은 경우에는 아무 설정도 하지않으면, <code class="highlighter-rouge">11 August, 2018</code> 형태로 반환이 된다.  포맷을 설정해주면 이제 <code class="highlighter-rouge">2018-8-11</code> 형태로 반환되기 시작된다.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">( "0" + date.getDate() ).slice(-2);</code></li>
+</ul>
+
+<p>그러나 Pickaday 옵션에 포맷을 설정해주어도 한 자리 수 앞에 0이 삽입되지 않아 오류가 발생한다. 이는 위와 같은 코드로 커스터마이즈할 수 있다. 입력값을 <code class="highlighter-rouge">date</code>라는 변수로 받아 js 내장함수 <code class="highlighter-rouge">getDate()</code>로 <code class="highlighter-rouge">date</code>에서 일자 부분을 빼온다. 이 일자 앞에 무조건 <code class="highlighter-rouge">"0"</code>을 붙이고 <code class="highlighter-rouge">slice(-2)</code>로 뒤 두 자리만 남기는 것이다.</p>
+
+<p>위 코드를 모두 작성하고 나면 다음과 같은 결과를 얻을 수 있다.</p>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="ddXwVb" data-default-tab="js,result" data-user="jyoonsong" data-embed-version="2" data-pen-title="datepicker with date type input - disabling default datepicker" class="codepen">See the Pen <a href="https://codepen.io/jyoonsong/pen/ddXwVb/">datepicker with date type input - disabling default datepicker</a> by JaeYoon Song (<a href="https://codepen.io/jyoonsong">@jyoonsong</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><br /></p>
+<h4 id="ref">Ref</h4>
+
+<p>https://css-tricks.com/almanac/properties/a/appearance/</p>
+
+<p>https://stackoverflow.com/questions/29436074/change-date-input-triangle-to-a-calendar-icon</p>
+
+<p>https://stackoverflow.com/questions/11320615/disable-native-datepicker-in-google-chrome</p>
+
+      </div>
+
+      <div class="post-share">
+        <div class="post-share-content hidden-tablet">
+          <h4><strong>글 정보</strong></h4>
+          <div class="post-subtitle">Date Picker로 Date 값 저장하기 - 데이트피커 사용 시 Date 타입 형식에 맞게 String 저장하는 방법</div>
+          <div class="post-meta">2017.10.04</div>
+        </div>
+        <div class="post-share-content">
+          <h4><strong>태그</strong></h4>
+          
+          
+          <div class="tag">javascript</div>
+          
+          
+          <div class="tag">regex</div>
+          
+           
+        </div>
+        <div class="post-share-content">
+          <h4><strong>공유하기</strong></h4>
+          <div class="fb-like" style="line-height: 0.8" data-href="http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+          </div> &nbsp;
+          <div class="post-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook">
+              <i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?text=Date Picker로 Date 값 저장하기&url=http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter">
+              <i class="fa fa-2x fa-twitter-square"></i>
+            </a>
+
+            <a href="https://plus.google.com/share?url=http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Google+">
+              <i class="fa fa-2x fa-google-plus-square"></i>
+            </a>
+
+            <a href="http://pinterest.com/pin/create/button/?url=http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Pinterest">
+              <i class="fa fa-2x fa-pinterest-square"></i>
+            </a>
+
+            <!--
+            <a  href="http://www.tumblr.com/share/link?url=http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Tumblr" >
+                <i class="fa fa-2x fa-tumblr-square"></i>
+            </a>
+    -->
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://blog.jaeyoon.io/2017/10/js-datepicker.html&title=Date Picker로 Date 값 저장하기&summary=&source=재윤 블로그"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on LinkedIn">
+              <i class="fa fa-2x fa-linkedin-square"></i>
+            </a>
+
+            <!--
+            <a  href="mailto:?subject=Date Picker로 Date 값 저장하기&amp;body=Check out this site http://blog.jaeyoon.io/2017/10/js-datepicker.html"
+                title="Share via Email" >
+                <i class="fa fa-2x fa-envelope"></i>
+            </a>
+    -->
+          </div>
+        </div>
+      </div>
+      <div class="post-comment">
+        <div class="fb-comments" data-href="http://blog.jaeyoon.io/2017/10/js-datepicker.html" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </main>
+
+</article>
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="post-subtitle">
+      <strong>재윤 블로그</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></div>-->
+    </div>
+    <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+
+  </div>
+
+</footer>
+
+
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-2"></script>
+<!-- google ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9532825530305256"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113321077-2');
+</script>
+  </body>
+</html>

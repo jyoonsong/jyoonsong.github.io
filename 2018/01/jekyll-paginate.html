@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="송재윤, HCI, CSCW, 연구, 유학, 웹, UI/UX, 인터랙티브, 개발, 스타트업, 서울대, 경영학">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Jekyll Pagination 젬을 통해 무한 스크롤 만들기 | 재윤 블로그</title>
+<meta name="generator" content="Jekyll v3.6.3" />
+<meta property="og:title" content="Jekyll Pagination 젬을 통해 무한 스크롤 만들기" />
+<meta name="author" content="jaeyoon" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="jekyll-pagination-v2 젬을 이용하여 블로그를 페이징해보자 Jekyll은 버전 2에서 버전 3으로 대대적인 업데이트를 했는데, 호환에 신경을 안 썼는지 기존 플러그인들 중 무용지물이 된 것이 수두룩하다. (Hexo가 인기를 끌고 있는 이유 중 하나" />
+<meta property="og:description" content="jekyll-pagination-v2 젬을 이용하여 블로그를 페이징해보자 Jekyll은 버전 2에서 버전 3으로 대대적인 업데이트를 했는데, 호환에 신경을 안 썼는지 기존 플러그인들 중 무용지물이 된 것이 수두룩하다. (Hexo가 인기를 끌고 있는 이유 중 하나" />
+<link rel="canonical" href="http://blog.jaeyoon.io/2018/01/jekyll-paginate.html" />
+<meta property="og:url" content="http://blog.jaeyoon.io/2018/01/jekyll-paginate.html" />
+<meta property="og:site_name" content="재윤 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-04T03:15:30+00:00" />
+<script type="application/ld+json">
+{"description":"jekyll-pagination-v2 젬을 이용하여 블로그를 페이징해보자 Jekyll은 버전 2에서 버전 3으로 대대적인 업데이트를 했는데, 호환에 신경을 안 썼는지 기존 플러그인들 중 무용지물이 된 것이 수두룩하다. (Hexo가 인기를 끌고 있는 이유 중 하나","@type":"BlogPosting","headline":"Jekyll Pagination 젬을 통해 무한 스크롤 만들기","url":"http://blog.jaeyoon.io/2018/01/jekyll-paginate.html","dateModified":"2018-01-04T03:15:30+00:00","datePublished":"2018-01-04T03:15:30+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"},"author":{"@type":"Person","name":"jaeyoon"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#000">
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="301590963578753" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate" type="application/rss+xml" title="재윤 블로그" href="/feed.xml">
+  
+  <script src="https://use.fontawesome.com/1382182da2.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!--    <a class="site-title" href="/">재윤 블로그</a>-->
+    <div class="col">
+      <a class="site-title" href="/">
+        <img src='/assets/img/logo.png' alt="logo" />
+      </a>
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+          </span>
+        </label>
+
+        <div class="trigger">
+          <section>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/연구">연구</a>
+              <ul class="dropdown">
+                <li><a href="/정리">정리</a></li>
+                <li><a href="/유학">유학</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/배움">배움</a>
+              <ul class="dropdown">
+                <li><a href="/개발">개발</a></li>
+                <li><a href="/경영학">경영학</a></li>
+                <li><a href="/기타">기타</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/기록">기록</a>
+              <ul class="dropdown">
+                <li><a href="/생각">생각</a></li>
+                <li><a href="/경험">경험</a></li>
+              </ul>
+            </div>
+            <a class="util-link" href="http://jaeyoon.io">
+              <u>about</u>
+            </a>
+            <a class="util-link" href="/search">
+              <u class="hidden-desktop">검색</u>
+              <img src='/assets/img/search.svg' width="15" alt="search" />
+            </a>
+          </section>
+          <section class="nav-footer hidden-desktop">
+            <div class="post-subtitle">
+              <strong>재윤 블로그</strong>
+              <div>
+                <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+                <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>&nbsp;
+                <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+                <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+                <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+          </section>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3&appId=301590963578753&autoLogAppEvents=1"></script>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title" itemprop="name headline">Jekyll Pagination 젬을 통해 무한 스크롤 만들기</h1>
+      <div class="post-meta">
+        
+        <a href="/배움">배움</a> /
+        
+        <a href="/개발">개발</a>
+        
+        &nbsp;|&nbsp;
+        <time datetime="2018-01-04T03:15:30+00:00" itemprop="datePublished">
+          
+          2018.01.04
+        </time>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        <p><strong>jekyll-pagination-v2 젬을 이용하여 블로그를 페이징해보자</strong></p>
+
+<p>Jekyll은 버전 2에서 버전 3으로 대대적인 업데이트를 했는데, 호환에 신경을 안 썼는지 기존 플러그인들 중 무용지물이 된 것이 수두룩하다. (Hexo가 인기를 끌고 있는 이유 중 하나이기도 하다.)</p>
+
+<p>같은 이유로 <a href="https://github.com/jekyll/jekyll-paginate">jekyll-pagination 젬</a>도 버전 3과 호환이 되기는 하지만 더이상 업데이트하지 않겠다고 선언하여 여러 가지 문제점이 많다. 레포지토리 description에 <code class="highlighter-rouge">NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll</code> 라고 써있고, 최근 이슈들에도 대부분 ‘이제 얜 버렸다’는 답변이 달려 있다.</p>
+
+<p>더 이상 업데이트가 안 되는 대신, <a href="https://github.com/sverrirs/jekyll-paginate-v2">jekyll-pagination-v2 젬</a>이 새로이 나왔는데, 문제는 이 녀석이 <a href="https://github.com/github/pages-gem">github-pages 젬</a>과 호환이 안된다는 점이다. 그래서 <a href="https://travis-ci.org">Travis CI</a>를 적용해줘야 하는데, 여간 골치아픈 일이 아니었다. Hexo로 갈아탈까 몇 번이고 생각했지만 테마 직접 만들어야 성에 차는 내 성격상 새로 파는 일이 더 귀찮았다. 아무튼 이 글에서는 우선 <code class="highlighter-rouge">jekyll-pagination-v2</code> 젬 및 infinite scroll 적용 방법을 알아보고, 다음 글에서 <code class="highlighter-rouge">travis CI</code>를 통해 디플로이 시키는 방법을 알아보도록 하겠다.</p>
+
+<p><br /></p>
+
+<p><strong>1. 기본 페이지네이션</strong></p>
+
+<p>규정상 가장 흔한 비밀번호 조건은 영어소문자, 숫자 포함 8자 이상의 비밀번호.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># GEMFILE</span>
+<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-paginate-v2"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># _config.yml</span>
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate-v2</span>
+<span class="na">pagination</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">per_page</span><span class="pi">:</span> <span class="s">9</span>
+  <span class="na">sort_reverse</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># 안 해주면 오래된 것부터 나옴</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p><strong>2. 카테고리 페이지네이션</strong></p>
+
+<p>여러 가지 구조로 만들 수 있지만, 나는 <code class="highlighter-rouge">_posts</code> 디렉토리 하나에 포스팅 몰아 넣는 걸 좋아해서 이 방식대로 만들었다. 우선 <code class="highlighter-rouge">categories</code>라는 폴더를 만들고, 그 안에 카테고리별로  페이지를 만들어둔다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 디렉토리 구조</span>
+<span class="nx">categories</span>
+<span class="err">ㄴ</span> <span class="err">관심사</span><span class="p">.</span><span class="nx">md</span>
+<span class="err">ㄴ</span> <span class="err">카테고리</span><span class="p">.</span><span class="nx">md</span>
+</code></pre></div></div>
+<p>해당 페이지 안에는 이렇게 작성해준다. 아래처럼 설정해두면 페이징된 경로는 <code class="highlighter-rouge">카테고리명/번호</code> 가 될 것이다.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># categories/카테고리.md</span>
+<span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">home</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">관심사"</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">IT/테크,</span><span class="nv"> </span><span class="s">실리콘밸리,</span><span class="nv"> </span><span class="s">추천</span><span class="nv"> </span><span class="s">툴</span><span class="nv"> </span><span class="s">등"</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/관심사"</span>
+<span class="na">pagination</span><span class="pi">:</span> 
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">category</span><span class="pi">:</span> <span class="s2">"</span><span class="s">관심사"</span>
+  <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:num/</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">jekyll-paginate-v2</code>를 만든 sverrirs는 페이지네이터에게 혼란이 오지 않도록 아래처럼 url 양식 명시하는 것을 추천한다.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># _config.yml</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:year/:month/:title.html</span>
+</code></pre></div></div>
+
+<p>다 했으면 이제 기본 템플릿 <code class="highlighter-rouge">_layouts/home.html</code> 에서 아마 <code class="highlighter-rouge">site.posts</code> 였던 것을 <code class="highlighter-rouge">paginator.posts</code>로 바꿔준다. 그 아래에는 페이지네이터 네비게이션도 추가해주면 일단 완성이다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- _layouts/home.html --&gt;</span>
+{% for post in paginator.posts %}
+	<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url | relative_url }}"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>{{ post.title | escape }}<span class="nt">&lt;/strong&gt;</span>
+	<span class="nt">&lt;/a&gt;</span>
+{% endfor %}
+{% if paginator.total_pages &gt; 1 %}
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pager"</span><span class="nt">&gt;</span>
+    {% if paginator.previous_page %}
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"previous"</span> <span class="na">href=</span><span class="s">"{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span><span class="ni">&amp;larr;</span> 이전<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    {% endif %}
+    {% if paginator.next_page %}
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next"</span> <span class="na">href=</span><span class="s">"{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span>다음 <span class="ni">&amp;rarr;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    {% endif %}
+  <span class="nt">&lt;/ul&gt;</span>
+{% endif %}
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><strong>2.1. v1과의 차이점</strong></p>
+
+<p>페이지네이션 v2 젬은 v1과 비교했을 때, 네비게이션을 1,2,3,4,5 형식으로 여러 숫자가 뜨도록 하고자 할 때 <code class="highlighter-rouge">trail</code> 옵션을 통해 아주 간단하게 추가할 수 있어 훨씬 편리하다. 무엇보다도 <a href="https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md">Readme.md</a> 와 <a href="https://github.com/sverrirs/jekyll-paginate-v2/tree/master/examples">examples</a> 정리가 너무 잘 되어 있다. 또한 더 복잡한 카테고리/태그를 자동 생성할 수 있는 <a href="https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-AUTOPAGES.md">autopages</a>도 함께 딸려오는데 지킬 쓰다보면 자연스럽게 필요를 느끼는 아주아주 유용한 기능이니 참고하길 바란다.</p>
+
+<p><br /></p>
+
+<p><strong>3. 무한 스크롤 (Infinite Scroll)</strong></p>
+
+<p>일단 무한 스크롤은 페이지네이션이 적용되어 있어야 사용 가능하다. 왜냐하면 ajax 처리할 <em>다음 페이지</em> 가 어떻게든 존재해야하기 때문.</p>
+
+<p>나는 핀트러스트로 유명한 <a href="https://masonry.desandro.com/">Masonry</a> 레이아웃을 쓰고 있기 때문에, 같은 저자가 만든 <a href="https://infinite-scroll.com/">Infinite-scroll</a> 플러그인을 활용했다. vanilla javascript 버전도 있고 jQuery 버전도 있다. 다음과 같은 js 코드를 추가해주면 간단히 적용 가능하다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.pager'</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">infScroll</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">InfiniteScroll</span><span class="p">(</span> <span class="nx">grid</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="s1">'.next'</span><span class="p">,</span>
+    <span class="na">append</span><span class="p">:</span> <span class="s1">'.grid-item'</span><span class="p">,</span>
+    <span class="na">outlayer</span><span class="p">:</span> <span class="nx">msnry</span><span class="p">,</span>
+    <span class="na">status</span><span class="p">:</span> <span class="s1">'.page-load-status'</span><span class="p">,</span>
+    <span class="na">hideNav</span><span class="p">:</span> <span class="s1">'.pager'</span><span class="p">,</span>
+    <span class="na">scrollThreshold</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">responseType</span><span class="p">:</span> <span class="s1">'document'</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>물론 html도 상응해서 마크업을 해줘야 한다. 나같은 경우는 불러올 포스팅 하나하나가 <code class="highlighter-rouge">.grid-item</code> 으로 마크업 되어 있고, 그걸 감싼 컨테이너를 <code class="highlighter-rouge">grid</code>라는 변수로 넣어줬다. 나머지 클래스명들은 위 페이지네이션 네비게이션 마크업과 일치한다.</p>
+
+<p><br /></p>
+
+<h4 id="ref">Ref</h4>
+
+<p>https://github.com/sverrirs/jekyll-paginate-v2/tree/master/examples<br />
+https://infinite-scroll.com/api.html</p>
+
+      </div>
+
+      <div class="post-share">
+        <div class="post-share-content hidden-tablet">
+          <h4><strong>글 정보</strong></h4>
+          <div class="post-subtitle">Jekyll Pagination 젬을 통해 무한 스크롤 만들기 - jekyll-pagination-v2 젬을 이용하여 블로그를 페이징해보자</div>
+          <div class="post-meta">2018.01.04</div>
+        </div>
+        <div class="post-share-content">
+          <h4><strong>태그</strong></h4>
+          
+          
+          <div class="tag">jekyll</div>
+          
+           
+        </div>
+        <div class="post-share-content">
+          <h4><strong>공유하기</strong></h4>
+          <div class="fb-like" style="line-height: 0.8" data-href="http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+          </div> &nbsp;
+          <div class="post-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook">
+              <i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?text=Jekyll Pagination 젬을 통해 무한 스크롤 만들기&url=http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter">
+              <i class="fa fa-2x fa-twitter-square"></i>
+            </a>
+
+            <a href="https://plus.google.com/share?url=http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Google+">
+              <i class="fa fa-2x fa-google-plus-square"></i>
+            </a>
+
+            <a href="http://pinterest.com/pin/create/button/?url=http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Pinterest">
+              <i class="fa fa-2x fa-pinterest-square"></i>
+            </a>
+
+            <!--
+            <a  href="http://www.tumblr.com/share/link?url=http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Tumblr" >
+                <i class="fa fa-2x fa-tumblr-square"></i>
+            </a>
+    -->
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://blog.jaeyoon.io/2018/01/jekyll-paginate.html&title=Jekyll Pagination 젬을 통해 무한 스크롤 만들기&summary=&source=재윤 블로그"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on LinkedIn">
+              <i class="fa fa-2x fa-linkedin-square"></i>
+            </a>
+
+            <!--
+            <a  href="mailto:?subject=Jekyll Pagination 젬을 통해 무한 스크롤 만들기&amp;body=Check out this site http://blog.jaeyoon.io/2018/01/jekyll-paginate.html"
+                title="Share via Email" >
+                <i class="fa fa-2x fa-envelope"></i>
+            </a>
+    -->
+          </div>
+        </div>
+      </div>
+      <div class="post-comment">
+        <div class="fb-comments" data-href="http://blog.jaeyoon.io/2018/01/jekyll-paginate.html" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </main>
+
+</article>
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="post-subtitle">
+      <strong>재윤 블로그</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></div>-->
+    </div>
+    <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+
+  </div>
+
+</footer>
+
+
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-2"></script>
+<!-- google ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9532825530305256"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113321077-2');
+</script>
+  </body>
+</html>

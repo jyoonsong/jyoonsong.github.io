@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="송재윤, HCI, CSCW, 연구, 유학, 웹, UI/UX, 인터랙티브, 개발, 스타트업, 서울대, 경영학">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to auto import and delete assignment comments on Canvas | 재윤 블로그</title>
+<meta name="generator" content="Jekyll v3.6.3" />
+<meta property="og:title" content="How to auto import and delete assignment comments on Canvas" />
+<meta name="author" content="jaeyoon" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="Canvas does have a built-in feature to import numeric grades from a csv file, but [it does not yet support importing the textual comments]([https://com" />
+<meta property="og:description" content="Canvas does have a built-in feature to import numeric grades from a csv file, but [it does not yet support importing the textual comments]([https://com" />
+<link rel="canonical" href="http://blog.jaeyoon.io/2022/09/canvas.html" />
+<meta property="og:url" content="http://blog.jaeyoon.io/2022/09/canvas.html" />
+<meta property="og:site_name" content="재윤 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-26T03:15:30+00:00" />
+<script type="application/ld+json">
+{"description":"Canvas does have a built-in feature to import numeric grades from a csv file, but [it does not yet support importing the textual comments]([https://com","@type":"BlogPosting","headline":"How to auto import and delete assignment comments on Canvas","url":"http://blog.jaeyoon.io/2022/09/canvas.html","dateModified":"2022-09-26T03:15:30+00:00","datePublished":"2022-09-26T03:15:30+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.jaeyoon.io/2022/09/canvas.html"},"author":{"@type":"Person","name":"jaeyoon"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#000">
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="301590963578753" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate" type="application/rss+xml" title="재윤 블로그" href="/feed.xml">
+  
+  <script src="https://use.fontawesome.com/1382182da2.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!--    <a class="site-title" href="/">재윤 블로그</a>-->
+    <div class="col">
+      <a class="site-title" href="/">
+        <img src='/assets/img/logo.png' alt="logo" />
+      </a>
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+          </span>
+        </label>
+
+        <div class="trigger">
+          <section>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/연구">연구</a>
+              <ul class="dropdown">
+                <li><a href="/정리">정리</a></li>
+                <li><a href="/유학">유학</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/배움">배움</a>
+              <ul class="dropdown">
+                <li><a href="/개발">개발</a></li>
+                <li><a href="/경영학">경영학</a></li>
+                <li><a href="/기타">기타</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-wrapper">
+              <a class="page-link" href="/기록">기록</a>
+              <ul class="dropdown">
+                <li><a href="/생각">생각</a></li>
+                <li><a href="/경험">경험</a></li>
+              </ul>
+            </div>
+            <a class="util-link" href="http://jaeyoon.io">
+              <u>about</u>
+            </a>
+            <a class="util-link" href="/search">
+              <u class="hidden-desktop">검색</u>
+              <img src='/assets/img/search.svg' width="15" alt="search" />
+            </a>
+          </section>
+          <section class="nav-footer hidden-desktop">
+            <div class="post-subtitle">
+              <strong>재윤 블로그</strong>
+              <div>
+                <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+                <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>&nbsp;
+                <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+                <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+                <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+          </section>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.3&appId=301590963578753&autoLogAppEvents=1"></script>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="page-heading">
+    <div class="wrapper">
+      <h1 class="page-title" itemprop="name headline">How to auto import and delete assignment comments on Canvas</h1>
+      <div class="post-meta">
+        
+        <a href="/배움">배움</a> /
+        
+        <a href="/개발">개발</a>
+        
+        &nbsp;|&nbsp;
+        <time datetime="2022-09-26T03:15:30+00:00" itemprop="datePublished">
+          
+          2022.09.26
+        </time>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="post-content" itemprop="articleBody">
+        <p>Canvas does have a built-in feature to import numeric grades from a csv file, but <a href="[https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7#comments](https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7?fbclid=IwAR1NE57lo_2uUJ5KgCH4OCSI0mR1G4joaZiKqyeOOkbebohkPfXhVOx3AD4#comments)">it does not yet support importing the textual comments</a>. This is one of the common difficulties that TAs and instructors face when using Canvas to report the grades.</p>
+
+<p>Still, there is a workaround to use the <a href="https://canvas.instructure.com/doc/api/index.html">Canvas API</a> to avoid manually copy-and-pasting the comments. In this post, I’ll walk you through this workaround.</p>
+
+<h3 id="importing-comments">Importing comments</h3>
+
+<h4 id="step-1-you-should-prepare-a-csv-file-that-has-the-following-format">Step 1. You should prepare a CSV file that has the following format</h4>
+
+<figure><img data-action="zoom" src="/assets/img/220926/example.png" /><figcaption> Example CSV File </figcaption></figure>
+
+<ul>
+  <li>The very first column needs to be the “ID” column which contains the SIS User ID that is unique for each student. The column name should exactly be “ID” or it will cause an error.</li>
+  <li>Then include the assignment column that contains the comments. The name of the assignment column has to be in the format of <code class="highlighter-rouge">Assignment Name (Assignment ID)</code>.</li>
+</ul>
+
+<p>An easy way to come up with this file is to use the exported gradebook.</p>
+
+<ol>
+  <li>On Canvas gradebook page, press [Actions] - <strong>[Export Entire Gradebook]</strong></li>
+  <li>Delete all columns except for the <strong>ID column and assignment column</strong> that you wish to post comments for</li>
+  <li><strong>Delete any filler rows</strong> between the header row and the list of students (e.g., the “Points Possible” row)</li>
+  <li>Replace the scores listed with the <strong>comments</strong> you wish to post. If the scores on Canvas will remain safe, so no worries. If you leave the cell blank, there will be no comment created.</li>
+</ol>
+
+<h4 id="step-2-install-tampermonkey">Step 2. Install TamperMonkey</h4>
+
+<p><a href="https://www.tampermonkey.net/">TamperMonkey</a> is a browser extension that allows you to run userscripts in certain web pages. It is available for Chrome and Firefox.</p>
+
+<p>You can <strong>install</strong> it at <a href="https://www.tampermonkey.net/">https://www.tampermonkey.net</a></p>
+
+<h4 id="step-3-create-a-new-script-with-tampermonkey">Step 3. Create a new script with TamperMonkey</h4>
+
+<p>Click on the TamperMonkey icon on the top bar of your browser and press [<strong>Create a new script</strong>].</p>
+
+<p>You’ll see an editor where you can write codes. There, please paste the following codes.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ==UserScript==</span>
+<span class="c1">// @name         Comments Importer</span>
+<span class="c1">// @namespace    https://github.com/UCBoulder</span>
+<span class="c1">// @description  Bulk import assignment comments into the Canvas gradebook.</span>
+<span class="c1">// @match        https://*/courses/*/gradebook</span>
+<span class="c1">// @grant        none</span>
+<span class="c1">// @require      https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js</span>
+<span class="c1">// @run-at       document-idle</span>
+<span class="c1">// @version      1.1.4</span>
+<span class="c1">// ==/UserScript==</span>
+
+<span class="cm">/* globals $ Papa */</span>
+
+<span class="c1">// wait until the window jQuery is loaded</span>
+<span class="kd">function</span> <span class="nx">defer</span><span class="p">(</span><span class="nx">method</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">$</span> <span class="o">!==</span> <span class="s1">'undefined'</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">$</span><span class="p">().</span><span class="nx">dialog</span> <span class="o">!==</span> <span class="s1">'undefined'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">method</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">defer</span><span class="p">(</span><span class="nx">method</span><span class="p">);</span> <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">defer</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="s1">'use strict'</span><span class="p">;</span>
+
+    <span class="c1">// utility function for downloading an error report</span>
+    <span class="kd">var</span> <span class="nx">saveText</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"a"</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+        <span class="nx">a</span><span class="p">.</span><span class="nx">style</span> <span class="o">=</span> <span class="s2">"display: none"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">textArray</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">(</span><span class="nx">textArray</span><span class="p">,</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="s2">"text"</span><span class="p">}),</span>
+                <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+            <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+            <span class="nx">a</span><span class="p">.</span><span class="nx">download</span> <span class="o">=</span> <span class="nx">fileName</span><span class="p">;</span>
+            <span class="nx">a</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">revokeObjectURL</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+        <span class="p">};</span>
+    <span class="p">}());</span>
+
+    <span class="c1">// prep jquery info dialog</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id="comments_dialog" title="Import Comments"&gt;&lt;/div&gt;'</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_dialog"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span> <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="kd">function</span> <span class="nx">popUp</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_dialog"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">`&lt;p&gt;</span><span class="p">${</span><span class="nx">text</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_dialog"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'open'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// prep jquery confirm dialog</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id="comments_modal" title="Import Comments"&gt;&lt;/div&gt;'</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span> <span class="na">modal</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="kd">function</span> <span class="nx">confirm</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">`&lt;p&gt;</span><span class="p">${</span><span class="nx">text</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span>
+            <span class="na">buttons</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"Confirm"</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"close"</span><span class="p">);</span>
+                    <span class="nx">callback</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+                <span class="p">},</span>
+                <span class="s2">"Cancel"</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"close"</span><span class="p">);</span>
+                    <span class="nx">callback</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'open'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// prep jquery progress dialog</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id="comments_progress" title="Import Comments"&gt;&lt;p&gt;Importing comments. Do not navigate from this page.&lt;/p&gt;&lt;div id="comments_bar"&gt;&lt;/div&gt;&lt;/div&gt;'</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_progress"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span> <span class="na">buttons</span><span class="p">:</span> <span class="p">{},</span> <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="kd">function</span> <span class="nx">showProgress</span><span class="p">(</span><span class="nx">amount</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">amount</span> <span class="o">===</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_progress"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"close"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_bar"</span><span class="p">).</span><span class="nx">progressbar</span><span class="p">({</span> <span class="na">value</span><span class="p">:</span> <span class="nx">amount</span> <span class="p">});</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_progress"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"open"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// add choose file button to gradebook</span>
+    <span class="kd">var</span> <span class="nx">importDiv</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">`&lt;div style="padding-top:10px"&gt;
+&lt;label for="comments_file"&gt;Import comments: &lt;/label&gt;
+&lt;input type="file" id="comments_file"/&gt;
+&lt;/div&gt;`</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"div.gradebook-menus"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">importDiv</span><span class="p">);</span>
+
+    <span class="c1">// handle when file is selected</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#comments_file'</span><span class="p">).</span><span class="nx">change</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="c1">// parse CSV</span>
+        <span class="nx">Papa</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">{</span>
+            <span class="na">header</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="na">dynamicTyping</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="na">complete</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">referral</span> <span class="o">=</span> <span class="s1">' Visit &lt;a href="https://oit.colorado.edu/services/teaching-learning-applications/canvas/enhancements-integrations/enhancements#oit" target="_blank"&gt;Canvas - Enhancements&lt;/a&gt; for formatting guidelines.'</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">popUp</span><span class="p">(</span><span class="s2">"ERROR: File should contain a header row and at least one data row."</span> <span class="o">+</span> <span class="nx">referral</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">includes</span><span class="p">(</span><span class="s2">"ID"</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nx">popUp</span><span class="p">(</span><span class="s2">"ERROR: No 'ID' column found."</span> <span class="o">+</span> <span class="nx">referral</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">popUp</span><span class="p">(</span><span class="s2">"ERROR: Header row should have a 'ID' column and at least one assignment column."</span> <span class="o">+</span> <span class="nx">referral</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="c1">// build requests</span>
+                <span class="kd">var</span> <span class="nx">requests</span> <span class="o">=</span> <span class="p">[];</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">row</span> <span class="k">of</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="s2">"ID"</span><span class="p">];</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">assignment</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">row</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">assignment</span> <span class="o">===</span> <span class="s2">"ID"</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="k">continue</span><span class="p">;</span>
+                        <span class="p">}</span>
+                        <span class="c1">// extract assignment id from assignment header</span>
+                        <span class="kd">var</span> <span class="nx">idWithParens</span> <span class="o">=</span> <span class="nx">assignment</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/</span><span class="se">\(\d</span><span class="sr">+</span><span class="se">\)</span><span class="sr">$/</span><span class="p">);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">idWithParens</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="nx">popUp</span><span class="p">(</span><span class="s2">`ERROR: "</span><span class="p">${</span><span class="nx">assignment</span><span class="p">}</span><span class="s2">" is not a properly formatted assignment name.`</span> <span class="o">+</span> <span class="nx">referral</span><span class="p">);</span>
+                            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                            <span class="k">return</span><span class="p">;</span>
+                        <span class="p">}</span>
+                        <span class="kd">var</span> <span class="nx">assignId</span> <span class="o">=</span> <span class="nx">idWithParens</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">match</span><span class="p">(</span><span class="sr">/</span><span class="se">\d</span><span class="sr">+/</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+                        <span class="kd">var</span> <span class="nx">comment</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">assignment</span><span class="p">];</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">comment</span> <span class="o">||</span> <span class="o">!</span><span class="nx">comment</span><span class="p">.</span><span class="nx">trim</span><span class="p">())</span> <span class="p">{</span>
+                            <span class="k">continue</span><span class="p">;</span>
+                        <span class="p">}</span>
+                        <span class="c1">// extract course id from url</span>
+                        <span class="kd">var</span> <span class="nx">courseId</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">4</span><span class="p">];</span>
+                        <span class="c1">// build api url</span>
+                        <span class="kd">var</span> <span class="nx">subUrl</span> <span class="o">=</span> <span class="s2">`/api/v1/courses/</span><span class="p">${</span><span class="nx">courseId</span><span class="p">}</span><span class="s2">/assignments/</span><span class="p">${</span><span class="nx">assignId</span><span class="p">}</span><span class="s2">/submissions/sis_user_id:</span><span class="p">${</span><span class="nx">student</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+                        <span class="c1">// build request and canned error message in case it fails</span>
+                        <span class="nx">requests</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+                            <span class="na">request</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="na">url</span><span class="p">:</span> <span class="nx">subUrl</span><span class="p">,</span>
+                                <span class="na">type</span><span class="p">:</span> <span class="s2">"PUT"</span><span class="p">,</span>
+                                <span class="na">data</span><span class="p">:</span> <span class="p">{</span><span class="s2">"comment[text_comment]"</span><span class="p">:</span> <span class="nx">comment</span><span class="p">},</span>
+                                <span class="na">dataType</span><span class="p">:</span> <span class="s2">"text"</span> <span class="p">},</span>
+                            <span class="na">error</span><span class="p">:</span> <span class="s2">`Failed to post comment for student </span><span class="p">${</span><span class="nx">student</span><span class="p">}</span><span class="s2"> and assignment </span><span class="p">${</span><span class="nx">assignment</span><span class="p">}</span><span class="s2"> using endpoint </span><span class="p">${</span><span class="nx">subUrl</span><span class="p">}</span><span class="s2">. Response: `</span>
+                        <span class="p">});</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="c1">// confirm before proceeding</span>
+                <span class="nx">confirm</span><span class="p">(</span>
+                    <span class="s2">`You are about to post </span><span class="p">${</span><span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">}</span><span class="s2"> new comments. This cannot be undone. Are you sure you wish to proceed?`</span><span class="p">,</span>
+                    <span class="kd">function</span><span class="p">(</span><span class="nx">confirmed</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">confirmed</span><span class="p">)</span> <span class="p">{</span>
+
+                            <span class="c1">// send requests in chunks of 10 every second to avoid rate-limiting</span>
+                            <span class="kd">var</span> <span class="nx">errors</span> <span class="o">=</span> <span class="p">[];</span>
+                            <span class="kd">var</span> <span class="nx">completed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                            <span class="kd">var</span> <span class="nx">chunkSize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+                            <span class="kd">function</span> <span class="nx">sendChunk</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">request</span> <span class="k">of</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="nx">chunkSize</span><span class="p">))</span> <span class="p">{</span>
+                                    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">request</span><span class="p">).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">,</span> <span class="nx">textStatus</span><span class="p">,</span> <span class="nx">errorThrown</span><span class="p">)</span> <span class="p">{</span>
+                                        <span class="nx">errors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">error</span><span class="p">}${</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">status</span><span class="p">}</span><span class="s2"> - </span><span class="p">${</span><span class="nx">errorThrown</span><span class="p">}</span><span class="s2">\n`</span><span class="p">);</span>
+                                    <span class="p">}).</span><span class="nx">always</span><span class="p">(</span><span class="nx">requestSent</span><span class="p">);</span>
+                                <span class="p">}</span>
+                                <span class="nx">showProgress</span><span class="p">(</span><span class="nx">i</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">chunkSize</span> <span class="o">&lt;</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                                    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">sendChunk</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="nx">chunkSize</span><span class="p">);</span>
+                                <span class="p">}</span>
+                            <span class="p">}</span>
+
+                            <span class="c1">// when each request finishes...</span>
+                            <span class="kd">function</span> <span class="nx">requestSent</span><span class="p">()</span> <span class="p">{</span>
+                                <span class="nx">completed</span><span class="o">++</span><span class="p">;</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="nx">completed</span> <span class="o">&gt;=</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                                    <span class="c1">// all finished</span>
+                                    <span class="nx">showProgress</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+                                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                                    <span class="k">if</span> <span class="p">(</span><span class="nx">errors</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                                        <span class="nx">popUp</span><span class="p">(</span><span class="s2">`Import complete. WARNING: </span><span class="p">${</span><span class="nx">errors</span><span class="p">.</span><span class="nx">length</span><span class="p">}</span><span class="s2"> comments failed to import. See errors.txt for details.
+`</span><span class="p">);</span>
+                                        <span class="nx">saveText</span><span class="p">(</span><span class="nx">errors</span><span class="p">,</span> <span class="s2">"errors.txt"</span><span class="p">);</span>
+                                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                                        <span class="nx">popUp</span><span class="p">(</span><span class="s2">"All comments imported successfully!"</span><span class="p">);</span>
+                                    <span class="p">}</span>
+                                <span class="p">}</span>
+                            <span class="p">}</span>
+                            <span class="c1">// actually starts the recursion</span>
+                            <span class="nx">sendChunk</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                            <span class="c1">// confirmation was dismissed</span>
+                            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_file"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                        <span class="p">}</span>
+                    <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+
+</code></pre></div></div>
+
+<h4 id="step-4-import-comments-on-canvas">Step 4. Import Comments on Canvas</h4>
+
+<p>Go to the Canvas gradebook page and you’ll see a <strong>file uploader button for importing comments</strong> as shown in the following screenshot. Click on it and import the CSV file you prepared in Step 1.</p>
+
+<p><img src="https://oit.colorado.edu/sites/default/files/images/commentsimporterimg.png" alt="" /></p>
+
+<h4 id="-common-error">💡 Common Error</h4>
+
+<p>If it does not work, one of the common reasons is because of the name of the ID column. Match the ID column name with the ones specified in the code above. For example, if your CSV file uses the column named “SIS User ID” as the identifier, replace the keyword “ID” in the code to “SIS User ID”.</p>
+
+<h3 id="deleting-existing-comments">Deleting existing comments</h3>
+
+<p>I’ll start by assuming that you have already finished installing <a href="https://www.tampermonkey.net/">TamperMonkey</a> (i.e., Step 2 in the previous section).</p>
+
+<h4 id="step-1-you-should-prepare-a-csv-file-that-has-the-following-format-1">Step 1. You should prepare a CSV file that has the following format</h4>
+
+<figure><img data-action="zoom" src="/assets/img/220926/example2.png" /><figcaption> Example CSV File </figcaption></figure>
+
+<ul>
+  <li>The very first column needs to be the “ID” column which contains the SIS User ID that is unique for each student whose comments should be deleted. The column name should exactly be “ID” or it will cause an error.</li>
+  <li>The name of the second column has to be in the format of <code class="highlighter-rouge">Assignment Name (Assignment ID)</code>, the assignment where comments should be deleted.</li>
+</ul>
+
+<h4 id="step-2-create-a-new-script-with-tampermonkey">Step 2. Create a new script with TamperMonkey</h4>
+
+<p>Click on the TamperMonkey icon on the top bar of your browser and press [<strong>Create a new script</strong>].</p>
+
+<p>You’ll see an editor where you can write codes. There, please paste the following codes.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ==UserScript==</span>
+<span class="c1">// @name         Comments Importer</span>
+<span class="c1">// @namespace    https://github.com/UCBoulder</span>
+<span class="c1">// @description  Bulk import assignment comments into the Canvas gradebook.</span>
+<span class="c1">// @match        https://*/courses/*/gradebook</span>
+<span class="c1">// @grant        none</span>
+<span class="c1">// @require      https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js</span>
+<span class="c1">// @run-at       document-idle</span>
+<span class="c1">// @version      1.1.4</span>
+<span class="c1">// ==/UserScript==</span>
+
+<span class="cm">/* globals $ Papa */</span>
+
+<span class="c1">// wait until the window jQuery is loaded</span>
+<span class="kd">function</span> <span class="nx">defer</span><span class="p">(</span><span class="nx">method</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">$</span> <span class="o">!==</span> <span class="s1">'undefined'</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">$</span><span class="p">().</span><span class="nx">dialog</span> <span class="o">!==</span> <span class="s1">'undefined'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">method</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">defer</span><span class="p">(</span><span class="nx">method</span><span class="p">);</span> <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">defer</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="s1">'use strict'</span><span class="p">;</span>
+
+    <span class="c1">// prep jquery info dialog</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id="comments_dialog" title="Delete Comments"&gt;&lt;/div&gt;'</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_dialog"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span> <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="kd">function</span> <span class="nx">popUp</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_dialog"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">`&lt;p&gt;</span><span class="p">${</span><span class="nx">text</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_dialog"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'open'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// prep jquery confirm dialog</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id="comments_modal" title="Delete Comments"&gt;&lt;/div&gt;'</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span> <span class="na">modal</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="kd">function</span> <span class="nx">confirm</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">`&lt;p&gt;</span><span class="p">${</span><span class="nx">text</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span>
+            <span class="na">buttons</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"Confirm"</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"close"</span><span class="p">);</span>
+                    <span class="nx">callback</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+                <span class="p">},</span>
+                <span class="s2">"Cancel"</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"close"</span><span class="p">);</span>
+                    <span class="nx">callback</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_modal"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'open'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// prep jquery progress dialog</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id="comments_progress" title="Delete Comments"&gt;&lt;p&gt;Deleting comments. Do not navigate from this page.&lt;/p&gt;&lt;div id="comments_bar"&gt;&lt;/div&gt;&lt;/div&gt;'</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_progress"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">({</span> <span class="na">buttons</span><span class="p">:</span> <span class="p">{},</span> <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="kd">function</span> <span class="nx">showProgress</span><span class="p">(</span><span class="nx">amount</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">amount</span> <span class="o">===</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_progress"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"close"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_bar"</span><span class="p">).</span><span class="nx">progressbar</span><span class="p">({</span> <span class="na">value</span><span class="p">:</span> <span class="nx">amount</span> <span class="p">});</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#comments_progress"</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s2">"open"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// add choose file button to gradebook</span>
+    <span class="kd">var</span> <span class="nx">importDiv</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">`&lt;div style="padding-top:10px"&gt;&lt;label for="deleteComments"&gt;Delete comments: &lt;/label&gt;&lt;input type="file" id="deleteComments"/&gt;&lt;/div&gt;`</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"div.gradebook-menus"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">importDiv</span><span class="p">);</span>
+
+    <span class="c1">// handle when file is selected</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#deleteComments'</span><span class="p">).</span><span class="nx">change</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="c1">// parse CSV</span>
+        <span class="nx">Papa</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">{</span>
+            <span class="na">header</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="na">dynamicTyping</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="na">complete</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">popUp</span><span class="p">(</span><span class="s2">"ERROR: File should contain a header row and at least one data row."</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">includes</span><span class="p">(</span><span class="s2">"ID"</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nx">popUp</span><span class="p">(</span><span class="s2">"ERROR: No 'ID' column found."</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">popUp</span><span class="p">(</span><span class="s2">"ERROR: Header row should have a 'ID' column and at least one assignment column."</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="kd">function</span> <span class="nx">httpGet</span><span class="p">(</span><span class="nx">theUrl</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nx">xmlHttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+                    <span class="nx">xmlHttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span> <span class="s2">"GET"</span><span class="p">,</span> <span class="nx">theUrl</span><span class="p">,</span> <span class="kc">false</span> <span class="p">);</span> <span class="c1">// false for synchronous request</span>
+                    <span class="nx">xmlHttp</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span> <span class="kc">null</span> <span class="p">);</span>
+                    <span class="k">return</span> <span class="nx">xmlHttp</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="kd">var</span> <span class="nx">studentIds</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">d</span> <span class="o">=&gt;</span> <span class="nx">d</span><span class="p">.</span><span class="nx">ID</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">idWithParens</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">1</span><span class="p">].</span><span class="nx">match</span><span class="p">(</span><span class="sr">/</span><span class="se">\(\d</span><span class="sr">+</span><span class="se">\)</span><span class="sr">$/</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">assignId</span> <span class="o">=</span> <span class="nx">idWithParens</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">match</span><span class="p">(</span><span class="sr">/</span><span class="se">\d</span><span class="sr">+/</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+                <span class="kd">var</span> <span class="nx">courseId</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">4</span><span class="p">];</span>
+
+                <span class="c1">// build requests</span>
+                <span class="kd">var</span> <span class="nx">requests</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">studentId</span> <span class="k">of</span> <span class="nx">studentIds</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kd">let</span> <span class="nx">commentIds</span> <span class="o">=</span> <span class="p">[];</span>
+                    <span class="k">try</span> <span class="p">{</span>
+                        <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">httpGet</span><span class="p">(</span><span class="s2">`/api/v1/courses/</span><span class="p">${</span><span class="nx">courseId</span><span class="p">}</span><span class="s2">/assignments/</span><span class="p">${</span><span class="nx">assignId</span><span class="p">}</span><span class="s2">/submissions/</span><span class="p">${</span><span class="nx">studentId</span><span class="p">}</span><span class="s2">?include=submission_comments`</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="s2">"submission_comments"</span> <span class="k">in</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span> <span class="p">{</span>
+                            <span class="nx">commentIds</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">result</span><span class="p">)[</span><span class="s2">"submission_comments"</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+                    <span class="p">}</span>
+
+                    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">commentId</span> <span class="k">of</span> <span class="nx">commentIds</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// build api url</span>
+                        <span class="kd">var</span> <span class="nx">subUrl</span> <span class="o">=</span> <span class="s2">`/api/v1/courses/</span><span class="p">${</span><span class="nx">courseId</span><span class="p">}</span><span class="s2">/assignments/</span><span class="p">${</span><span class="nx">assignId</span><span class="p">}</span><span class="s2">/submissions/</span><span class="p">${</span><span class="nx">studentId</span><span class="p">}</span><span class="s2">/comments/</span><span class="p">${</span><span class="nx">commentId</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+
+                        <span class="c1">// build request and canned error message in case it fails</span>
+                        <span class="nx">requests</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+                            <span class="na">request</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="na">url</span><span class="p">:</span> <span class="nx">subUrl</span><span class="p">,</span>
+                                <span class="na">type</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span> <span class="c1">// DELETE /api/v1/courses/:course_id/assignments/:assignment_id/submissions/:user_id/comments/:id</span>
+                                <span class="na">data</span><span class="p">:</span> <span class="p">{},</span>
+                                <span class="na">dataType</span><span class="p">:</span> <span class="s2">"text"</span>
+                            <span class="p">},</span>
+                            <span class="na">error</span><span class="p">:</span> <span class="s2">`Failed to delete comment </span><span class="p">${</span><span class="nx">commentId</span><span class="p">}</span><span class="s2"> for student </span><span class="p">${</span><span class="nx">studentId</span><span class="p">}</span><span class="s2"> and assignment </span><span class="p">${</span><span class="nx">assignId</span><span class="p">}</span><span class="s2"> using endpoint </span><span class="p">${</span><span class="nx">subUrl</span><span class="p">}</span><span class="s2">. Response: `</span>
+                        <span class="p">});</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="c1">// confirm before proceeding</span>
+                <span class="nx">confirm</span><span class="p">(</span>
+                    <span class="s2">`You are about to delete </span><span class="p">${</span><span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">}</span><span class="s2"> existing comments. This cannot be undone. Are you sure you wish to proceed?`</span><span class="p">,</span>
+                    <span class="kd">function</span><span class="p">(</span><span class="nx">confirmed</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">confirmed</span><span class="p">)</span> <span class="p">{</span>
+
+                            <span class="c1">// send requests in chunks of 10 every second to avoid rate-limiting</span>
+                            <span class="kd">var</span> <span class="nx">errors</span> <span class="o">=</span> <span class="p">[];</span>
+                            <span class="kd">var</span> <span class="nx">completed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                            <span class="kd">var</span> <span class="nx">chunkSize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+                            <span class="kd">function</span> <span class="nx">sendChunk</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">request</span> <span class="k">of</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="nx">chunkSize</span><span class="p">))</span> <span class="p">{</span>
+                                    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">request</span><span class="p">).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">,</span> <span class="nx">textStatus</span><span class="p">,</span> <span class="nx">errorThrown</span><span class="p">)</span> <span class="p">{</span>
+                                        <span class="nx">errors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">error</span><span class="p">}${</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">status</span><span class="p">}</span><span class="s2"> - </span><span class="p">${</span><span class="nx">errorThrown</span><span class="p">}</span><span class="s2">\n`</span><span class="p">);</span>
+                                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+                                    <span class="p">}).</span><span class="nx">always</span><span class="p">(</span><span class="nx">requestSent</span><span class="p">);</span>
+                                <span class="p">}</span>
+                                <span class="nx">showProgress</span><span class="p">(</span><span class="nx">i</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">chunkSize</span> <span class="o">&lt;</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                                    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">sendChunk</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="nx">chunkSize</span><span class="p">);</span>
+                                <span class="p">}</span>
+                            <span class="p">}</span>
+
+                            <span class="c1">// when each request finishes...</span>
+                            <span class="kd">function</span> <span class="nx">requestSent</span><span class="p">()</span> <span class="p">{</span>
+                                <span class="nx">completed</span><span class="o">++</span><span class="p">;</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="nx">completed</span> <span class="o">&gt;=</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                                    <span class="c1">// all finished</span>
+                                    <span class="nx">showProgress</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+                                    <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                                    <span class="k">if</span> <span class="p">(</span><span class="nx">errors</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                                        <span class="nx">popUp</span><span class="p">(</span><span class="s2">`Deletion complete. WARNING: </span><span class="p">${</span><span class="nx">errors</span><span class="p">.</span><span class="nx">length</span><span class="p">}</span><span class="s2"> comments failed to delete.`</span><span class="p">);</span>
+                                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                                        <span class="nx">popUp</span><span class="p">(</span><span class="s2">"All comments deleted successfully!"</span><span class="p">);</span>
+                                    <span class="p">}</span>
+                                <span class="p">}</span>
+                            <span class="p">}</span>
+                            <span class="c1">// actually starts the recursion</span>
+                            <span class="nx">sendChunk</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                            <span class="c1">// confirmation was dismissed</span>
+                            <span class="nx">$</span><span class="p">(</span><span class="s2">"#deleteComments"</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+                        <span class="p">}</span>
+                    <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h4 id="step-3-delete-comments-on-canvas">Step 3. Delete Comments on Canvas</h4>
+
+<p>Go to the Canvas gradebook page and you’ll see a <strong>file uploader button for deleting comments</strong>. Click on it and upload the CSV file you prepared in Step 1. Then all the comments for the specified students and assignment will be deleted.</p>
+
+<h3 id="references">References</h3>
+
+<p>Canvas Userscripts by UCBoulder <a href="https://github.com/UCBoulder/canvas-userscripts">https://github.com/UCBoulder/canvas-userscripts</a></p>
+
+<p>Canvas API documentation <a href="https://canvas.instructure.com/doc/api/index.html">https://canvas.instructure.com/doc/api/index.html</a></p>
+
+      </div>
+
+      <div class="post-share">
+        <div class="post-share-content hidden-tablet">
+          <h4><strong>글 정보</strong></h4>
+          <div class="post-subtitle">How to auto import and delete assignment comments on Canvas - Tips for TAs and instructors using Canvas</div>
+          <div class="post-meta">2022.09.26</div>
+        </div>
+        <div class="post-share-content">
+          <h4><strong>태그</strong></h4>
+          
+          
+          <div class="tag">canvas</div>
+          
+          
+          <div class="tag">TA</div>
+          
+           
+        </div>
+        <div class="post-share-content">
+          <h4><strong>공유하기</strong></h4>
+          <div class="fb-like" style="line-height: 0.8" data-href="http://blog.jaeyoon.io/2022/09/canvas.html"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+          </div> &nbsp;
+          <div class="post-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.jaeyoon.io/2022/09/canvas.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Facebook">
+              <i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?text=How to auto import and delete assignment comments on Canvas&url=http://blog.jaeyoon.io/2022/09/canvas.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter">
+              <i class="fa fa-2x fa-twitter-square"></i>
+            </a>
+
+            <a href="https://plus.google.com/share?url=http://blog.jaeyoon.io/2022/09/canvas.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Google+">
+              <i class="fa fa-2x fa-google-plus-square"></i>
+            </a>
+
+            <a href="http://pinterest.com/pin/create/button/?url=http://blog.jaeyoon.io/2022/09/canvas.html"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Pinterest">
+              <i class="fa fa-2x fa-pinterest-square"></i>
+            </a>
+
+            <!--
+            <a  href="http://www.tumblr.com/share/link?url=http://blog.jaeyoon.io/2022/09/canvas.html"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Tumblr" >
+                <i class="fa fa-2x fa-tumblr-square"></i>
+            </a>
+    -->
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://blog.jaeyoon.io/2022/09/canvas.html&title=How to auto import and delete assignment comments on Canvas&summary=&source=재윤 블로그"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on LinkedIn">
+              <i class="fa fa-2x fa-linkedin-square"></i>
+            </a>
+
+            <!--
+            <a  href="mailto:?subject=How to auto import and delete assignment comments on Canvas&amp;body=Check out this site http://blog.jaeyoon.io/2022/09/canvas.html"
+                title="Share via Email" >
+                <i class="fa fa-2x fa-envelope"></i>
+            </a>
+    -->
+          </div>
+        </div>
+      </div>
+      <div class="post-comment">
+        <div class="fb-comments" data-href="http://blog.jaeyoon.io/2022/09/canvas.html" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </main>
+
+</article>
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="post-subtitle">
+      <strong>재윤 블로그</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></div>-->
+    </div>
+    <div class="post-meta">다양한 생각과 경험을 기록하고 정리하는 공간입니다.</div>
+
+  </div>
+
+</footer>
+
+
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-2"></script>
+<!-- google ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9532825530305256"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113321077-2');
+</script>
+  </body>
+</html>

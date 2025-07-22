@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://blog.jaeyoon.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.jaeyoon.io/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2024-04-04T04:31:07+00:00</updated><id>http://blog.jaeyoon.io/feed.xml</id><title type="html">재윤 블로그</title><subtitle>다양한 생각과 경험을 기록하고 정리하는 공간입니다.</subtitle><author><name>Jaeyoon Song</name></author><entry><title type="html">개발자가 영어를 잘 해야 하는 이유</title><link href="http://blog.jaeyoon.io/2024/04/english.html" rel="alternate" type="text/html" title="개발자가 영어를 잘 해야 하는 이유" /><published>2024-04-02T03:15:30+00:00</published><updated>2024-04-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/04/english</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/04/english.html">&lt;p&gt;프레임워크, 라이브러리, API, OS 등 기존 소프트웨어의 힘을 전혀 빌리지 않는 개발자는 없다. 현존하는 소프트웨어를 이용하지 않는 것은 자랑스러운 것이 아니라 바보같은 짓이라고 생각한다. 물론 때로는 기존 소프트웨어를 사용하는 것보다 직접 만드는 것이 효과적인 경우가 있다. 예컨대 거대한 라이브러리의 일부분만 필요한데 모든 것을 import 해야만 할 때, 차라리 일부분에 해당하는 코딩을 직접 하는 것이 나을 수 있다. 하지만 현존하는 소프트웨어의 힘을 빌리는 것이 효율적일 때도 많다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 현존하는 소프트웨어를 사용할 때 가장 필수적인 리소스는 무엇일까? 챗GPT? StackOverFlow? 개발 블로그? 나는 가장 기본이 되는 것은 무엇보다도 해당 소프트웨어를 만든 사람이 직접 작성한 공식 문서라고 생각한다. 예를 들어 React Native 개발환경을 설치할 때 어떤 자료를 참고해야 할까? 챗GPT나 StackOverflow, 또는 개발 블로그 글을 참고할 수도 있다. 하지만 이런 자료들은 원본이 아니라 다른 사람에 의해 한 번 processing 된 가공식품과도 같다. React Native 공식 홈페이지 문서는 반드시 확인해야 하는 기본적인 “원재료”이다. 원재료를 알지 못하면 요리가 실패할 확률이 높다.&lt;/p&gt;
+
+&lt;p&gt;블로그 글과 같은 “가공식품”의 단점은 두 가지가 있다. 첫째로는 가공 당시의 환경에 크게 영향을 받는다는 것이다. 예컨대 블로그 글이 작성되던 시점에 사용된 여러 dependencies의 버전이 현재 시점에는 outdated 되었을 수 있다. 하지만 공식적인 documentation은 해당 소프트웨어를 만든 사람이 직접 관리하기 때문에 꾸준히 업데이트 된 경우가 많다. 둘째로는 가공자의 취향이 반영되어 있다는 점이다. React Native 개발환경을 세팅하는 과정에는 각 단계마다 여러 가지 선택지가 있다. 예컨대 가장 첫 단계에서는 Expo를 선택할지 React Native CLI 를 선택할지 고민해야 한다. 그런데 블로그 글에는 블로그 주인이 선호하는 선택지가 전부인 양 쓰여 있을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;물론 가공된 글에도 장점이 있다. 공식 documentation에는 아주 세부적인 것들까지 불필요하게 작성되어 있는 경우가 잦다. 가공된 문서가 공식 문서에 비해 더 짧고 단순한 편이다. 그럼에도 불구하고 위에서 언급한 단점들로 인해 가공된 문서에 중독되는 것보다는 “원재료”인 공식 문서를 빠르게 skim 할 수 있는 능력을 기르는 것이 더 바람직하다고 본다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 이 글의 제목은 왜 뜬끔없이 “개발자가 영어를 잘 해야 하는 이유”일까? 이는 원재료에 해당하는 공식 documentation 들이 대부분 영어로 작성되어 있기 때문이다. 사실 원재료 뿐만 아니라 가공된 컨텐츠도 마찬가지이다. 챗GPT도 영어로 쓸 때 더 양질의 정보를 제공한다. StackOverFlow와 블로그 글도 영어로 된 컨텐츠의 양이 한글로 된 컨텐츠의 양을 훌쩍 뛰어넘는다. 따라서 영어를 잘 하면 개발을 할 때 굉장한 메리트가 있다.&lt;/p&gt;
+
+&lt;p&gt;사실 개발 뿐만 아니라 다른 영역에서도 비슷한 것을 느끼곤 한다. &lt;strong&gt;남이 가꾸어 놓은 가공된 정보를 소비하는 것은 편하고 효율적이지만 때로는 한계에 부딪힌다. 이러한 한계를 뛰어넘으려면 언제든 필요할 때마다 원본 자료를 직접 습득하고 스스로 가공할 수 있는 능력을 길러 놓아야 한다&lt;/strong&gt;. 그리고 그 원본에 해당하는 자료는 많은 경우 영어로 되어 있다는 사실. 영어 공부 열심히 하자!&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="영어" /><category term="개발자" /><category term="published" /><summary type="html">프레임워크, 라이브러리, API, OS 등 기존 소프트웨어의 힘을 전혀 빌리지 않는 개발자는 없다. 현존하는 소프트웨어를 이용하지 않는 것은 자랑스러운 것이 아니라 바보같은 짓이라고 생각한다. 물론 때로는 기존 소프트웨어를 사용하는 것보다 직접 만드는 것이 효과적인 경우</summary></entry><entry><title type="html">을 읽고</title><link href="http://blog.jaeyoon.io/2024/03/politics.html" rel="alternate" type="text/html" title="&lt;좌우파 사전&gt;을 읽고" /><published>2024-03-11T03:15:30+00:00</published><updated>2024-03-11T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/03/politics</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/03/politics.html">&lt;blockquote&gt;
+  &lt;p&gt;좌파와 우파를 가르는 가장 심층의 기준은 역시 평등과 불평등에 대한 태도에 있음을 알 수 있다. - &amp;lt;좌우파 사전&amp;gt; 중&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;lt;좌우파 사전&amp;gt;은 스물 두 가지의 주제에 대한 좌파와 우파의 입장을 정리한 책이다. 서로 다른 시각을 단지 대립 관계로만 보는 것에서 벗어나 다른 시각을 갖게 된 역사적 배경과 차이의 근원이 되는 가치에 대한 담론을 담고 있다.&lt;/p&gt;
+
+&lt;p&gt;나는 나 자신을 무슨무슨 주의자로 정의하는 것을 피하려고 하는 편이다. 이전에 작성한 &lt;a href=&quot;/2024/02/dialectic.html&quot;&gt;나의 가치관과 변증법적 사고에 대한 글&lt;/a&gt;과도 상통되는 부분인데, 어느 한 편으로 나를 정의하고 나면 치우친 사고를 하기 쉽기 때문이다. 따라서 어느 한 편을 먼저 택하고 사안에 대한 찬반을 연역적으로 결정하지 않기 위해 노력한다.&lt;/p&gt;
+
+&lt;p&gt;그럼에도 불구하고 각각의 사안에 대한 나의 의견을 독립적으로 정리한 뒤, &lt;b&gt;귀납적으로&lt;/b&gt; 보았을 때 내가 어느 편에 가까운지 살피는 것은 흥미로운 일이다. 결론은 나는 개인의 관점에서는 우파일 때가, 사회의 관점에서는 좌파일 때가 많다는 결과가 나왔다. 이렇게 개인과 사회의 관점을 구분하는 이유는 &lt;b&gt;개인의 성장과 사회의 성장을 동일시하면 안된다고 생각하기 때문이다.&lt;/b&gt; 의대에서 생명과 직결된 과가 인기 없고 성적 좋은 학생들은 성형외과로 몰리는 행태를 예로 들어보자. 사회의 관점에서는 이런 양상을 야기한 사회 구조를 비판적으로 본다. 그러나 개인의 관점에서는 나 또한 특정한 욕구에 지배당하는 한 인간에 불과한데 내가 그들의 선택을 비판할 권리가 있나 싶다. 사회 구조를 비판할 수는 있더라도, 의대생 개인의 선택을 비판할 권리는 누구에게도 없다는 결론이다. 이처럼 다른 현상에 대해서도 개인과 사회를 분리하여 생각하려고 노력하곤 한다. 사실 나의 성장을 위해 사회의 성장에 반하는 선택을 한 나 스스로의 모순을 합리화하기 위한 태도일 수 있기에 언제든 나의 의견을 바꿀 의향이 있다. 하지만 아직까지는 개인과 사회를 분리하는 사고가 자본주의 사회를 살아가기 위한 최선의 선택이라고 생각한다.&lt;/p&gt;
+
+&lt;p&gt;정치적 견해라 함은 사회의 관점에서 생각해야 한다고 본다. 다양한 사람들의 의견을 듣다 보면, 본인의 정치적 견해를 한 쪽으로 단정짓는 이유가 사회가 아닌 개인의 관점일 때가 많다. 예컨대 “이토록 잘난 내가 세금을 덜 내기 위해” 라든지 “내 사업에 대한 규제가 풀려야 하므로” 라든지 모두 개인적인 이유다. 이런 이유로 특정 후보에게 표를 던진다면 이는 볼품없는 우월감에서 비롯된 부끄럽기 짝이 없는 투표권이라고 생각한다. 정치적 입장을 고민할 땐 나 자신을 넘어 사회 전체를 바라봐야 한다. 모든 인간이 이기적 유전자를 가지고 태어났다지만, 내 밥그릇 외의 것들에 관심을 가져야 정치를 논할 자격이 있다. 잘 들여다보면 그 관심조차도 이기심에서 비롯된 것일지라도 말이다. 무지의 베일 뒤에서 사회계약 체결 후 어떤 계층에 속할지 알 수 없는 상태를 고려해보는 것이 좋은 예이다.&lt;/p&gt;
+
+&lt;p&gt;한국에서는 운동권을 추하게 여기며 자신을 우파로 정의하던 친구가 미국에 유학을 와서는 돌연 자신의 출세가도에 유리한 민주당을 지지하는 모습을 본 적이 있다. 솔직히 실망스러웠다. 약자와 소수자의 반대 극단에 선 강자의 입장에서도 여전히 약자의 눈높이에서 사회를 바라볼 줄 아는 것이 진정한 엘리트 집단이라고 생각한다. 각 사안에 대한 입장은 다를 수 있어도, 개인의 관점과 사회의 관점을 혼동해서는 안된다. 예컨대 나는 &amp;lt;좌우파 사전&amp;gt; 17장에 나오는 소수자 인권에 대해서는 나는 동성애를 사회가 인정하고 받아들여야 한다는 좌파의 의견에 동의한다. 하지만 &amp;lt;좌우파 사전&amp;gt; 20장에 나오는 대중 지성과 전문가 권위에 대해서는 우파의 의견에 더 동의한다. 집단 지성을 존중하려는 좌파의 견해에도 일리가 있지만, 집단사고(groupthink)와 같이 다수결의 원칙이 더 큰 문제를 야기할 때도 있다고 생각하기 때문이다. 이와 같이 각 사안을 독립적으로 바라보고 좌파와 우파 사이를 오가는 것은 일관성을 배반하지 않는다고 생각한다. 하지만 &lt;b&gt;분석의 단위(level of analysis)는 개인이 아닌 사회에 머물러야 일관적&lt;/b&gt;이다.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="좌우파사전" /><category term="독후감" /><category term="published" /><summary type="html">&gt; 좌파와 우파를 가르는 가장 심층의 기준은 역시 평등과 불평등에 대한 태도에 있음을 알 수 있다. - \ 중 \은 스물 두 가지의 주제에 대한 좌파와 우파의 입장을 정리한 책이다. 서로 다른 시각을 단지 대립 관계로만 보는 것에서 벗어</summary></entry><entry><title type="html">변증법적 사고</title><link href="http://blog.jaeyoon.io/2024/02/dialectic.html" rel="alternate" type="text/html" title="변증법적 사고" /><published>2024-02-25T03:15:30+00:00</published><updated>2024-02-25T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/02/dialectic</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/02/dialectic.html">&lt;blockquote&gt;
+  &lt;p&gt;눈에 띄는 적의와 무관심으로 점점 더 추워지는 잿빛의 세상에서,
+눈에 보이지 않는 사랑을 무기로 승리를 바라는 것이 가끔은 터무니없는 일로 느껴질 때도 있다.
+하지만 직접 겪어본 바로 미움은 기세가 좋은 순간에서조차 늘 혼자다.
+반면에 도망치고 부서지고 저물어가면서도 사랑은 지독히 함께다.
+사랑에게는 충분히 승산이 있다. - Love Wins All 소개글&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;나의 가치관에 있어 가장 중심이 되는 것이 있다면 바로 &lt;strong&gt;변증법적 사고&lt;/strong&gt;이다.
+변증법적 사고란 이성적 주장을 통해 진리를 확립하고자 하는, 주제에 대해 서로 다른 견해를 가진 두 명 이상의 사람들 사이의 담론으로 정의된다.
+다른 말로는 인간사의 다면적이고 입체적인 성질을 염두에 두고 다각도에서 현상을 바라보고자 하는 태도를 가리킨다.&lt;/p&gt;
+
+&lt;p&gt;변증법적 사고의 예를 들어보자. 법정스님의 &lt;무소유&gt;는 많은 이들에게 위로가 되어 인기를 끌었다. 그러나 한편으로는 위로를 상업화한 유소유에 가깝다는 비판을 받은 바 있다.
+이에 대해 만약 &quot;법정스님의 무소유는 잘못되었다&quot;고 결론을 내린다면 법정스님을 &quot;나쁜 편&quot;으로 분류하게 된다.
+반대로 &quot;법정스님의 무소유는 모순이 전혀 없다&quot;고 생각한다면 법정스님을 비판하는 사람들을 &quot;나쁜 편&quot;으로 분류하게 된다.
+하지만 &quot;법정스님의 무소유는 모순된 부분도 있지만 전체적으로는 긍정적인 메시지를 전달하고 있다&quot;고 변증법적으로 생각하면 누구도 &quot;나쁜 편&quot;으로 분류할 필요가 없다. 애초에 편을 가를 필요가 없는 것이다. 자본주의 사회에 살다보면 누구나 이 정도의 모순은 가지게 된다며 법정스님을 이해하는 것과 심심한 위로의 말을 눈속임으로 느꼈을 수 있다며 비판론자들을 이해하는 것이 꼭 서로 상충되는 것은 아니다.&lt;/무소유&gt;&lt;/p&gt;
+
+&lt;p&gt;이처럼 인간이 개입된 세상사에는 여러 가지 면이 공존하는 다면적이고 입체적인 성질이 있음을 인지하고 나면, 모든 것을 이분법적으로 바라보지 않을 수 있다.
+이분법적 사고를 멀리하고 변증법적 사고를 선택하면 무언가가 단편적으로 “싫다”는 부정적인 감정이나 혐오가 생기는 일이 적어진다.&lt;/p&gt;
+
+&lt;p&gt;누군가는 지금을 대혐오의 시대라 한다. 과거 설리에게 악플을 남기고도 자신이 악플러임을 인지하지 못하고 설리의 죽음을 애도하는 사람의 이야기를 본 적이 있다.
+이를 보고 굉장히 마음이 아팠다. 그녀를 잃게 되었음에 슬퍼하는 것을 보면 분명 공감 능력이 있는 인간임에도 왜 혐오를 표출했던 자기자신을 돌아보지 못한 것일까?
+세상 사람들이 변증법적 사고를 실천한다면 더 따뜻한 세상이 되지 않을까 싶다.&lt;/p&gt;
+
+&lt;p&gt;종종 인터넷 세상의 글들을 보다보면 누군가에게 상처가 되겠다 싶어 안타까울 때가 많다. 익명의 탈을 쓰고 작성하는 날이 선 말들에 피로함을 느끼곤 한다. 그래서 애초에 잘 안 보게 되는 것 같다.
+그런데 직접 유튜브와 블로그를 운영하기 시작하면서 가끔 나에 대해서도 부정적인 말을 서슴없이 남기고 가는 사람들이 있었다.
+이들이 아주 못된 “나쁜 사람”이기 때문에 부정적인 시선을 보냈다고 생각하지 않는다.
+나도 종종 부정적인 에너지를 발산하고 싶어지거나 열등감을 느낄 때가 있는 인간이기는 마찬가지다.
+그들의 말에 전혀 일리가 없는 것도 아니다. 머릿속에서는 누구나 짓궂은 생각을 하지 않는가.
+다만 변증법적 사고, 아니, 꼭 변증법이 아니더라도 잠깐이나마 말을 내뱉기 전에 다른 누군가의 마음을 살필 여유를 가진 사람이 많아진다면 더 평화로운 세상이 되지 않을까 싶다.&lt;/p&gt;
+
+&lt;p&gt;물론 삶이 각박하고 힘들 때는 이런 여유를 가지기 쉽지 않다.
+왜 영화 &lt;기생충&gt;에서 충숙이 &quot;나도 돈 있으면 더 착해질 수 있어!&quot;라고 외치지 않았는가.
+그럼에도 불구하고, 만만히 보여지고 상처 받는 사람이 될지언정, 상처 주는 사람이 되고 싶지는 않다는 소신을 지키며 살고자 한다.
+누구나 조금씩은 부족하다. 완벽한 사람은 세상에 없다. &lt;b&gt;그 어떤 불완전성에도 불구하고 마음의 여유를 가지고자 하는 작은 분투에서 따스함이 시작된다고 생각한다.&lt;/b&gt;
+사랑에게는 충분히 승산이 있다.&lt;/기생충&gt;&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="생각" /><category term="가치관" /><category term="published" /><summary type="html">&gt; 눈에 띄는 적의와 무관심으로 점점 더 추워지는 잿빛의 세상에서, &gt; 눈에 보이지 않는 사랑을 무기로 승리를 바라는 것이 가끔은 터무니없는 일로 느껴질 때도 있다. &gt; 하지만 직접 겪어본 바로 미움은 기세가 좋은 순간에서조차 늘 혼자다. &gt; 반면에 도망치고 부서지고 저</summary></entry><entry><title type="html">연구의 목적은 무엇일까?</title><link href="http://blog.jaeyoon.io/2024/02/science.html" rel="alternate" type="text/html" title="연구의 목적은 무엇일까?" /><published>2024-02-14T03:15:30+00:00</published><updated>2024-02-14T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2024/02/science</id><content type="html" xml:base="http://blog.jaeyoon.io/2024/02/science.html">&lt;p&gt;이번 학기에 듣는 Behavioral Science 세미나에서 수업에 대한 Reflection으로 제출한 글인데, 재미있는 주제인 것 같아서 블로그에도 공유한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The second class was very inspiring and it made me reflect on what science is and why I am doing research. To be honest, my reasons for choosing research as my career are not that ambitious. I always admire other researchers who are very committed to expanding the knowledge and helping advance science, because my motivation for research is very personal and selfish compared to theirs. I found Angie’s joke that “science is there to give scientists a job” funny, but deep inside I honestly think this joke is somewhat true.&lt;/p&gt;
+
+&lt;p&gt;The first reason I chose research is because I am interested in the topic of human-AI interaction. I was inspired a lot by human-AI interaction researchers and their work including the book Superminds. I believe people nowadays care too much about machines substituting humans when I believe what is more important is machines augmenting humans. So I wanted to pursue a job related to my interests, and I figured out that researcher is the most relevant job. Because I chose my interests first and then chose research as a means to pursue my interests, I did not have much chance to think about the objective of research and science overall, outside the topic of human-AI interaction.&lt;/p&gt;
+
+&lt;p&gt;The second reason is that research jobs give you a lot of autonomy. In my undergrad, I used to interview people with different jobs. Surprisingly, most of the middle-aged people told me that they do not sincerely enjoy their job and they just do it for money. Maybe this is a biased finding, but from my interviews, I found that one of the happiest jobs is a professor. Many professors said they are very busy, but they still truly love their work. I think one of the reasons for this difference in how they perceive their work is autonomy. Many jobs tend to do something their boss wants them to do. Researchers tend to have more autonomy. It is not that researchers do not have obligations, but their obligations also mostly fall under what they are interested in.&lt;/p&gt;
+
+&lt;p&gt;Since these are the two main reasons I chose research as my career, I lack a vision for general social science. This is why the second lecture was extra inspiring to me. In class, I said that although I think the world is subjective, there still is a clear difference between truth and non-truth as a realist views the world. However, sometimes science, not only social science but also computer science and natural science, is subjective even when verifying truth. A lot of papers turn out to be not replicable or generalizable [1, 2]. In the end, whether a research paper gets accepted as true knowledge or not depends on the subjective opinions of a few reviewers. I also have reviewed full papers for CHI 2024. Although I was reviewer 4 — I’m assuming that reviewer 4 is the least experienced among the four reviewers — it is still surprising that I am eligible as a reviewer since I consider myself a novice researcher. I tried hard to maintain a neutral stance and be objective as much as possible, but I still cannot assert that my review was completely objective. In fact, sometimes reviews are not only subjective but objectively wrong. For instance, one of the reviews that rejected my paper in the past pointed out that “standard deviations cannot be larger than means for strictly positive data,” which is clearly false. Even after a paper is published, one of the common criteria used to sort out a good paper is the number of citations. This metric is also subjective because whether to cite a paper or not is a subjective decision to make. I do not think this is necessarily problematic, because I believe this is just how the world works in general. A judge’s verdict is inevitably subjective. A doctor’s prescription is equally subjective. Therefore, I choose the perspectives of anti-realism and anti-positivism, regarding the social world as being essentially relativistic.&lt;/p&gt;
+
+&lt;p&gt;So what is the goal of science? It is somewhat embarrassing and selfish, but I’ll have to admit that I am persuaded by Angie’s joke that “science is there to give scientists a job.” In fact, I believe this is true for every other job that exists in the world. When I was young, I used to think of doctors as people who save lives. However, my friend who went to medical school told me that most neurosurgeons in South Korea choose to be neurosurgeons because their grades were not as good to become a plastic surgeon. Some people might think that scientists are special and virtuous, and thus should be distinguished from other jobs by adding a meaning to science. Nevertheless, a scientist is just another job like any other job in the world in my opinion. Then, why am I doing science? To make money, like the people who I interviewed in my undergrad? I think my reasons are at least somewhat more meaningful than just money, but they’re also not too ambitious like what I originally said in class — adding new knowledge about the social world. I think it is difficult and vague to talk about meanings when it’s about general social science. I would prefer to narrow the scope down to the topic of human-AI interaction. Then my objective of doing research specifically on this topic is to let people care more about the “human” component when using or developing AI and pursue human-AI collaboration as the future of AI rather than competing humans against AI. Still, I am open to changing my thoughts on the goal of science because I do not think there is one correct answer to this question. I do think highly of researchers who are much more ambitious than I am. They seem to truly pursue learning more about the social world and believe in the meaning of truthful science. Maybe I am not the type of person who should be doing science. Or maybe all researchers are like me deep inside their minds. Who knows?&lt;/p&gt;
+
+&lt;p&gt;[1] Yarkoni, T. (2022). The generalizability crisis. Behavioral and Brain Sciences, 45, e1.&lt;/p&gt;
+
+&lt;p&gt;[2] Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T. H., Huber, J., Johannesson, M., … &amp;amp; Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. Nature human behaviour, 2(9), 637-644.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="생각" /><category term="수업" /><category term="published" /><summary type="html">이번 학기에 듣는 Behavioral Science 세미나에서 수업에 대한 Reflection으로 제출한 글인데, 재미있는 주제인 것 같아서 블로그에도 공유한다. --- The second class was very inspiring and it made me ref</summary></entry><entry><title type="html">올해 한 생각들</title><link href="http://blog.jaeyoon.io/2023/10/random-thoughts.html" rel="alternate" type="text/html" title="올해 한 생각들" /><published>2023-10-08T03:15:30+00:00</published><updated>2023-10-08T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2023/10/random-thoughts</id><content type="html" xml:base="http://blog.jaeyoon.io/2023/10/random-thoughts.html">&lt;p&gt;간편한 오해와 지난한 이해.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;누군가를 온전히 이해하는 일은 쉽지가 않다. 일단은 판단을 유보해야 하고, 풍문의 진위를 주체적으로 가려야 하며, 타인을 매도하는 은밀한 쾌락도 포기해야 한다. 이것은 꽤 귀찮고 피곤한 일이다. 반면에 오해는 얼마나 간편하고 쾌적한가. 우리는 가장 부정적이고 공격적인 결론에 끌린다. 그러니 언론만 탓할 일도 아닌 것이다. 이 글을 쓰고 있는 사람까지 포함해서, 우리 모두가 늘 하고 있는 일이니까. 타인은 단순하게 나쁜 사람이고 자신은 복잡하게 좋은 사람이라고 믿으면서 우리는 자주 위로 받는다.&lt;/p&gt;
+
+  &lt;p&gt;타인은 단순하게 나쁜 사람이고 나는 복잡하게 좋은 사람인 것이 아니라 우리 모두가 대체로 복잡하게 나쁜 사람이라는 것을. (출처: 정확한 사랑의 실험, 지원이 블로그, 우리가 본 바다)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;그러나 종종 이해하려 노력하는 것이 힘겨울 때는 간편한 오해를 택하곤 한다. 선뜻 나의 약점을 보였을 때 지레 겁을 먹고 나를 멀리한 사람들이 있는가 하면 나를 걱정하며 곁에 남아준 사람들이 있다. 아쉽게도 내가 그릇이 큰 사람이 아니라 후자에 대한 감사로 전자에 대한 원망을 덮는 것이 쉽지 않다. 원망이 좀처럼 가시지 않을 때는 그들을 그냥 나쁜 사람으로 오해해버린다. 내가 준 상처는 고려하지 않고 내가 받은 상처만 생각하는 이기적인 선택이지만 멀어진 사람들까지 이해할 마음의 여유는 없는 것 같다. 때로는 지난한 이해보다 단순한 오해가 나의 마음을 편하게 해준다.&lt;/p&gt;
+
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;p&gt;고등학교 때 한밤중에 큰 태풍이 와서 기숙사가 난리법석인데도 그냥 세상 모르게 자고 있었을 정도로 어떤 면에서는 이상할 정도로 둔감해서 내가 둔한 사람이라고 생각해왔다. 그런데 &amp;lt;매우 예민한 사람들을 위한 책&amp;gt;을 읽고 보니 나는 또 다른 측면에서는 오히려 예민한 사람에 가깝다는 생각이 들었다. 예민함의 동의어로 줄곧 피곤함을 떠올리던 나에게 이는 살짝 불편한 사실이지만 예민한 나의 모습도 사랑하려 노력해야겠다. 스물일곱 먹어서야 내가 어떤 사람인지 차츰 알아가는 중이다.&lt;/p&gt;
+
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;p&gt;독립적인 인간이라 할지라도 어쨌든 가까운 사람들에게 정서적 지지를 좀 받으면서 살아가야하는 것은 분명하다. 그런 지지기반이 전혀 없으면 그 어떤 독립성도 무너지기 마련이다.&lt;/p&gt;
+
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Remembering that I’ll be dead soon is the most important tool I’ve ever encountered to help me make the big choices in life - Steve Jobs&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;무언가에 대한 선망이 건강한 동경심 내지는 일상적인 부러움을 넘어서 과한 열등감이 될 때, 죽음을 떠올리면 손쉽게 다시 적절한 수준으로 돌아올 수 있다. 중대한 의사결정도 죽음을 떠올리면 장기적인 관점에서 좀더 쉽게 결론이 난다. 극심한 후회로 이불킥하며 혼잡했던 마음도 죽음을 생각하면 별일 아니라는듯 편안해진다. 현명하고 건강하게 사는 데 가장 극단적인 어둠이 유용하다는 모순적인 인생의 작동 원리가 새삼 위로가 되는 것 같다. 순도 높게 밝은 사람 말고 어딘가 어둡게 얼룩진 사람도 얼마든지 행복할 수 있다는 뜻이니깐.&lt;/p&gt;
+
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;p&gt;이상형이 매일마다 바뀌는 나지만 지금 이 시각 가장 중요한 기준은 허영심인 것 같다. 타고나길 관종으로 태어난 나의 어찌할 수 없는 허영심을 상쇄해주는 실속 있는 사람이 좋다. 나의 남자친구는 허영심이 0에 수렴하는 인간으로서 나의 이상형이다!&lt;/p&gt;
+
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;p&gt;나는 생각이 너무 많다. 생각을 멈추고 할 일을 하라.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="생각" /><category term="근황" /><category term="published" /><summary type="html">간편한 오해와 지난한 이해. &gt; 누군가를 온전히 이해하는 일은 쉽지가 않다. 일단은 판단을 유보해야 하고, 풍문의 진위를 주체적으로 가려야 하며, 타인을 매도하는 은밀한 쾌락도 포기해야 한다. 이것은 꽤 귀찮고 피곤한 일이다. 반면에 오해는 얼마나 간편하고 쾌적한가.</summary></entry><entry><title type="html">보스턴 캠브릿지 지역 필라테스 및 요가 스튜디오 정리</title><link href="http://blog.jaeyoon.io/2022/10/pilates.html" rel="alternate" type="text/html" title="보스턴 캠브릿지 지역 필라테스 및 요가 스튜디오 정리" /><published>2022-10-28T22:15:30+00:00</published><updated>2022-10-28T22:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/10/pilates</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/10/pilates.html">&lt;p&gt;보스턴/캠브릿지에서 산지 어느새 1년이 넘었다. 그동안 다양한 운동을 시도해봤는데 그중 괜찮았던 것들을 여기에 정리해보려 한다. 모두 내가 갔을 때 기준이고 작년에 간 곳도 많아서 outdated된 정보가 있을 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;mind-body-online&quot;&gt;Mind Body Online&lt;/h3&gt;
+
+&lt;p&gt;들어가기에 앞서 &lt;a href=&quot;https://www.mindbodyonline.com/&quot;&gt;Mind Body Online&lt;/a&gt; 이라는 웹사이트를 추천하고 싶다. 각종 헬스장 및 스튜디오의 수업권을 모아놓은 플랫폼인데, 보스턴 지역의 운동 시설은 대부분 등록되어 있다. B2C 운동 검색 플랫폼이기도 하지만 B2B로 예약 시스템도 판매하는 모양인지, 자체 홈페이지가 Mind Body Online와 연동되어 있는 곳이 꽤 있었다. 그래서 여러 모로 가입해두면 편리한 사이트이다. 지금 내가 다니고 있는 필라테스 스튜디오에 정착하기 전까지는 이 사이트에서 그때그때 구미가 당기는 수업을 예약해서 들었다.&lt;/p&gt;
+
+&lt;h3 id=&quot;필라테스&quot;&gt;필라테스&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Boston Body Pilates Newbury Street&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;17 Arlington Street First Floor, Boston, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;나는 매번 리포머룸에서 수업을 들었다. 구글에 등록된 사진상으로는 캐딜락과 체어도 있는 것 같은데 리포머룸만 가서 잘 모르겠다. 사진은 이사하기 전 사진인 것 같긴 하다. 그래도 체어 그룹 수업이 열리는 걸 봐서는 다른 기구들도 어딘가 있는 모양. 리포머룸에는 리포머만 6개 있었다. 수강생 수는 시간대에 따라 다른 것 같은데 가장 많았을 때가 5명이었고, 가장 적었을 때가 2명이었다. 여느 필라테스 수업이 그렇듯 복부를 가만히 두지 않는 수업이다. 땀이 조금 나는 정도로 엄청 고되지는 않은 편이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★★&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★★☆&lt;/li&gt;
+  &lt;li&gt;가격 ★☆☆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fitlab Pilates&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1305 Cambridge Street, Cambridge, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;그동안 Mind Body Online에 올라오는 다양한 1회 수업권을 이용하다가, 최근에 이곳 Fitlab Pilates 스튜디오에 정착했다.&lt;/p&gt;
+
+&lt;p&gt;조금 특이한 점은 1:1 수업을 4번 들어야 그룹 수업을 들을 자격이 생긴다는 점이다. 필수로 요구되는 4번의 1:1 수업은 New Client Intro (1회)와 Great Start Private (3회) 으로 이루어져있다. 즉 New Client Intro =&amp;gt; Great Start Private =&amp;gt; 그룹 수업 순서로 수강해야 한다. New Client Intro 때는 필라테스의 역사 얘기를 좀 들어야 하고 운동 강도가 약하다. Great Start Private 부터는 운동 위주의 수업이고 강도도 높아진다. 선생님은 총 세 분 계시는데, 스타일이 다 다르셔서 세 분 다 들어보는 것을 추천한다. 리포머는 여러 개 있고 캐딜락, 체어나 다른 기구는 하나라 그룹 수업은 리포머를 이용한다.&lt;/p&gt;
+
+&lt;p&gt;유일한 단점이라면 위치가 좀 애매하다. 근처까지 가는 버스가 있긴 한데, 배차간격이 길고 매번 딜레이가 있다. 구글맵은 15분이면 간다고 알려주지만 30분 전에 나가도 지각할 때가 있다. 그래서 갈 때는 좀 걷더라도 T를 이용하고, 올 때만 버스를 타게 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★★&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★★☆&lt;/li&gt;
+  &lt;li&gt;가격 ★★☆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;btone Fitness Back Bay&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;30 Newbury Street, Boston, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이곳은 리포머만 잔뜩 있는 스튜디오이다. 10개 넘는 리포머가 거울 앞에 일렬로 쭉 배치되어있다. 선생님께서 마이크를 차고 힘차게 수업하시는데 약간 방송 듣는 느낌이다. 약간 어려웠던 점은 선생님께서 동작 시범을 보이는 경우가 드물고, 말씀하시는 걸 귀기울여 들어서 따라해야 한다. 다들 못알아듣는 것 같으면 그때서야 시범을 보여주신다. 운동 강도가 높다. 특히 플랭크를 굉장히 다양한 방식으로 했던 게 기억에 남는다. 갈 때마다 복부가 엄청 아프다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★★★&lt;/li&gt;
+  &lt;li&gt;가격 ★☆☆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Solidcore&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;106 Beverly Street Space S2, Boston, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;여기는 바로 위에서 소개한 btone fitness와 굉장히 비슷하다. 이곳도 리포머만 잔뜩 있는 스튜디오이다. 양면이 거울인 어두운 방에 리포머가 두 줄로 정렬되어 있다. btone과 마찬가지로 선생님께서 마이크 차고 방송하듯이 말씀하시는데 오디오가 비는 순간이 없다. 인상깊었던 건 수강생 이름을 모두 기억하셔서 옆에서 이름을 부르면서 힘을 북돋아주신다. 운동 강도가 굉장히 높다! 힘이 많이 들어가는 동작이 많아서 자꾸 중간에 쉬게 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★★★&lt;/li&gt;
+  &lt;li&gt;가격 ★☆☆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Vim Fitness&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;579 Massachusetts Avenue, Cambridge, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;사실 내가 들은 수업은 VIM이라는 헬스장에서 제공하는 Group Exercise (GX) 수업 중 필라테스 수업이었다. 헬스장 내부의 GX룸에서 수업이 이루어진다. 기구가 없어서 맨몸운동 위주이다. 공이나 링같은 소도구를 사용할 때가 종종 있다.&lt;/p&gt;
+
+&lt;p&gt;홈페이지를 보면 기구가 구비된 필라테스 스튜디오도 딸려 있는 모양이다. 기구를 이용하는 private/semi-private 수업을 제공하던데 mindbodyonline에는 GX만 올라와서 시도해보지 못했다. 저녁 시간엔 사람이 무지 많다. 그리고 위에서 소개한 세 곳에서는 한 번도 남자 수강생을 본 적이 없는데, Vim의 GX 수업엔 꽤 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★☆☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★☆☆&lt;/li&gt;
+  &lt;li&gt;가격 ★★★&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;table-wrapper&quot;&gt;
+  &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;스튜디오명&lt;/th&gt;
+&lt;th&gt;그룹수업 1회권 가격&lt;/th&gt;
+&lt;th&gt;프라이빗 1회권 가격&lt;/th&gt;
+&lt;th&gt;운동 강도&lt;/th&gt;
+&lt;th&gt;그룹수업 인원&lt;/th&gt;
+&lt;th&gt;기구&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Boston Body Pilates Newbury Street&lt;/td&gt;
+&lt;td&gt;$50&lt;/td&gt;
+&lt;td&gt;$125&lt;/td&gt;
+&lt;td&gt;★★☆&lt;/td&gt;
+&lt;td&gt;2-5&lt;/td&gt;
+&lt;td&gt;리포머, 캐딜락, 체어 등&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fitlab Pilates&lt;/td&gt;
+&lt;td&gt;$36-40&lt;/td&gt;
+&lt;td&gt;$60-70&lt;/td&gt;
+&lt;td&gt;★★☆&lt;/td&gt;
+&lt;td&gt;2-5&lt;/td&gt;
+&lt;td&gt;리포머, 캐딜락(1), 체어(1) 등&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;btone FITNESS Back Bay&lt;/td&gt;
+&lt;td&gt;$38&lt;/td&gt;
+&lt;td&gt;$120&lt;/td&gt;
+&lt;td&gt;★★★&lt;/td&gt;
+&lt;td&gt;8+&lt;/td&gt;
+&lt;td&gt;리포머&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Solidcore&lt;/td&gt;
+&lt;td&gt;$39&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;★★★&lt;/td&gt;
+&lt;td&gt;8+&lt;/td&gt;
+&lt;td&gt;리포머&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Vim Pilates&lt;/td&gt;
+&lt;td&gt;$18&lt;/td&gt;
+&lt;td&gt;$95&lt;/td&gt;
+&lt;td&gt;★☆☆&lt;/td&gt;
+&lt;td&gt;8+&lt;/td&gt;
+&lt;td&gt;없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;요가&quot;&gt;요가&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Down Under School of Yoga&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;여기는 요가 스튜디오이기는 한데 필라테스 수업도 한다. 다만 기구는 없고 하더라도 mat pilates로 진행한다. 방을 뜨겁게 하는 핫요가 수업도 들어봤는데 너무너무 힘들다. 땀이 무지막지하게 나고 어지러워서 나랑은 안 맞다고 판단했다.&lt;/p&gt;
+
+&lt;p&gt;이벤트가 있어서 처음 갈 때는 Newcomer special로 30일 이용권을 저렴하게 구매했다. 이후에는 $25 하는 1회권을 구매했다.&lt;/p&gt;
+
+&lt;p&gt;보스턴/캠브릿지 지역에 여러 지점이 있다. 내가 가본 곳만 세 군데인데, Porter Square, Harvard Square, South End 를 가보았다. 세 군데 모두 괜찮았고 시설이 깔끔하다. 인기가 많은지 갈 때마다 사람은 많았다. 자리가 좁을 때도 종종 있었다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★★☆&lt;/li&gt;
+  &lt;li&gt;가격 ★★☆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Boston Yoga Union&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1112 Boylston St, Boston, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이곳은 재야의 고수 느낌 나는 회원들이 많다. 선생님에 따라 수업 스타일이 굉장히 다른데, Luis라는 선생님 수업은 굉장히 어려웠고, 다른 수업들은 운동 강도가 비교적 약하다고 느꼈다. Down Under School과 마찬가지로 1회 수업권은 $25이었다.&lt;/p&gt;
+
+&lt;p&gt;참고로 매트를 안 가져가면 3불인가 내고 빌려야 하니 반드시 개인 매트를 가져가야 한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★☆☆ (Luis 선생님 수업은 ★★★)&lt;/li&gt;
+  &lt;li&gt;가격 ★★☆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;그외&quot;&gt;그외&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cambridge Athletic Club&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;600 Technology Square, Cambridge, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;여기는 헬스장인데 이곳의 BodyPump라는 GX가 한동안 나의 최애 수업이었다! 위치도 아주 완벽하다. 우리집에서 5~10분이면 걸어가는 Technology Square에 위치해있다. 그리고 가격이 정말 착하다. MindBodyOnline에서 로그인하면 10불에 1회 수업권을 구매할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;BodyPump는 덤벨을 가지고 신나는 음악에 맞춰서 근력운동을 하는 수업인데, 종종 스텝박스 등을 활용한 유산소 운동도 동반된다. 나는 Sue라는 선생님을 너무너무 좋아했다. 그러나 어느 순간부터인가 Sue 선생님 수업이 사라져버렸고, 그 이후로는 잘 안 가게 된다. 나이가 지긋하신 여자선생님이신데, 근육이 장난 아니시다. 너무 멋있고 친절해서 팬이었는데 아쉽다. ㅠㅠ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★★☆&lt;/li&gt;
+  &lt;li&gt;가격 ★★★&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;MIT Group Exercise&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;32 Vassar St, Cambridge, MA&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;MIT Wang center에서 하는 GX도 몇 번 들었다. MIT 학생은 한 달에 35불이면 Nonlimited Pass를 끊을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;운동 강도가 대체로 너무너무 약하다. Strictly Strength는 근력운동인 줄 알고 들었는데 에어로빅 비슷한 유산소 위주의 수업이었다. Abs는 수업시간이 30분밖에 안되어서 너무 짧고 자극이 잘 안온다. Bootcamp는 신나는 음악에 맞춰서 스텝박스 밟는 유산소 운동이다. Zumba, BollyX 수업은 괜찮다고 들었다. 유산소 운동을 하고 싶은 사람에게 적절한 듯하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시설 ★★☆&lt;/li&gt;
+  &lt;li&gt;운동 강도 ★☆☆&lt;/li&gt;
+  &lt;li&gt;가격 ★★★&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaeyoon</name></author><category term="필라테스" /><category term="요가" /><category term="운동" /><category term="published" /><summary type="html">보스턴/캠브릿지에서 산지 어느새 1년이 넘었다. 그동안 다양한 운동을 시도해봤는데 그중 괜찮았던 것들을 여기에 정리해보려 한다. 모두 내가 갔을 때 기준이고 작년에 간 곳도 많아서 outdated된 정보가 있을 수 있다. ### Mind Body Online 들어</summary></entry><entry><title type="html">How to auto import and delete assignment comments on Canvas</title><link href="http://blog.jaeyoon.io/2022/09/canvas.html" rel="alternate" type="text/html" title="How to auto import and delete assignment comments on Canvas" /><published>2022-09-26T03:15:30+00:00</published><updated>2022-09-26T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/09/canvas</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/09/canvas.html">&lt;p&gt;Canvas does have a built-in feature to import numeric grades from a csv file, but &lt;a href=&quot;[https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7#comments](https://community.canvaslms.com/t5/Idea-Conversations/Import-Grade-Comments/idi-p/370021/page/7?fbclid=IwAR1NE57lo_2uUJ5KgCH4OCSI0mR1G4joaZiKqyeOOkbebohkPfXhVOx3AD4#comments)&quot;&gt;it does not yet support importing the textual comments&lt;/a&gt;. This is one of the common difficulties that TAs and instructors face when using Canvas to report the grades.&lt;/p&gt;
+
+&lt;p&gt;Still, there is a workaround to use the &lt;a href=&quot;https://canvas.instructure.com/doc/api/index.html&quot;&gt;Canvas API&lt;/a&gt; to avoid manually copy-and-pasting the comments. In this post, I’ll walk you through this workaround.&lt;/p&gt;
+
+&lt;h3 id=&quot;importing-comments&quot;&gt;Importing comments&lt;/h3&gt;
+
+&lt;h4 id=&quot;step-1-you-should-prepare-a-csv-file-that-has-the-following-format&quot;&gt;Step 1. You should prepare a CSV file that has the following format&lt;/h4&gt;
+
+&lt;figure&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/img/220926/example.png&quot; /&gt;&lt;figcaption&gt; Example CSV File &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The very first column needs to be the “ID” column which contains the SIS User ID that is unique for each student. The column name should exactly be “ID” or it will cause an error.&lt;/li&gt;
+  &lt;li&gt;Then include the assignment column that contains the comments. The name of the assignment column has to be in the format of &lt;code class=&quot;highlighter-rouge&quot;&gt;Assignment Name (Assignment ID)&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An easy way to come up with this file is to use the exported gradebook.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;On Canvas gradebook page, press [Actions] - &lt;strong&gt;[Export Entire Gradebook]&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Delete all columns except for the &lt;strong&gt;ID column and assignment column&lt;/strong&gt; that you wish to post comments for&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Delete any filler rows&lt;/strong&gt; between the header row and the list of students (e.g., the “Points Possible” row)&lt;/li&gt;
+  &lt;li&gt;Replace the scores listed with the &lt;strong&gt;comments&lt;/strong&gt; you wish to post. If the scores on Canvas will remain safe, so no worries. If you leave the cell blank, there will be no comment created.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;step-2-install-tampermonkey&quot;&gt;Step 2. Install TamperMonkey&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.tampermonkey.net/&quot;&gt;TamperMonkey&lt;/a&gt; is a browser extension that allows you to run userscripts in certain web pages. It is available for Chrome and Firefox.&lt;/p&gt;
+
+&lt;p&gt;You can &lt;strong&gt;install&lt;/strong&gt; it at &lt;a href=&quot;https://www.tampermonkey.net/&quot;&gt;https://www.tampermonkey.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3-create-a-new-script-with-tampermonkey&quot;&gt;Step 3. Create a new script with TamperMonkey&lt;/h4&gt;
+
+&lt;p&gt;Click on the TamperMonkey icon on the top bar of your browser and press [&lt;strong&gt;Create a new script&lt;/strong&gt;].&lt;/p&gt;
+
+&lt;p&gt;You’ll see an editor where you can write codes. There, please paste the following codes.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ==UserScript==&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @name         Comments Importer&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @namespace    https://github.com/UCBoulder&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @description  Bulk import assignment comments into the Canvas gradebook.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @match        https://*/courses/*/gradebook&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @grant        none&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @require      https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @run-at       document-idle&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @version      1.1.4&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ==/UserScript==&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* globals $ Papa */&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// wait until the window jQuery is loaded&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'undefined'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'undefined'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// utility function for downloading an error report&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;saveText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;display: none&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createObjectURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;revokeObjectURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}());&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// prep jquery info dialog&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;div id=&quot;comments_dialog&quot; title=&quot;Import Comments&quot;&amp;gt;&amp;lt;/div&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_dialog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_dialog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/p&amp;gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_dialog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'open'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// prep jquery confirm dialog&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;div id=&quot;comments_modal&quot; title=&quot;Import Comments&quot;&amp;gt;&amp;lt;/div&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;modal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/p&amp;gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;buttons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;s2&quot;&gt;&quot;Confirm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;close&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                &lt;span class=&quot;s2&quot;&gt;&quot;Cancel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;close&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'open'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// prep jquery progress dialog&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;div id=&quot;comments_progress&quot; title=&quot;Import Comments&quot;&amp;gt;&amp;lt;p&amp;gt;Importing comments. Do not navigate from this page.&amp;lt;/p&amp;gt;&amp;lt;div id=&quot;comments_bar&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_progress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;buttons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;showProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_progress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;close&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;progressbar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_progress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;open&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// add choose file button to gradebook&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;importDiv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&amp;lt;div style=&quot;padding-top:10px&quot;&amp;gt;
+&amp;lt;label for=&quot;comments_file&quot;&amp;gt;Import comments: &amp;lt;/label&amp;gt;
+&amp;lt;input type=&quot;file&quot; id=&quot;comments_file&quot;/&amp;gt;
+&amp;lt;/div&amp;gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;div.gradebook-menus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;importDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// handle when file is selected&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#comments_file'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// parse CSV&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;Papa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;dynamicTyping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;complete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;referral&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Visit &amp;lt;a href=&quot;https://oit.colorado.edu/services/teaching-learning-applications/canvas/enhancements-integrations/enhancements#oit&quot; target=&quot;_blank&quot;&amp;gt;Canvas - Enhancements&amp;lt;/a&amp;gt; for formatting guidelines.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ERROR: File should contain a header row and at least one data row.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;referral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ERROR: No 'ID' column found.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;referral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ERROR: Header row should have a 'ID' column and at least one assignment column.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;referral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;// build requests&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;assignment&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                        &lt;span class=&quot;c1&quot;&gt;// extract assignment id from assignment header&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idWithParens&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;assignment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(\d&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;idWithParens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`ERROR: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; is not a properly formatted assignment name.`&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;referral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;assignId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idWithParens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                        &lt;span class=&quot;c1&quot;&gt;// extract course id from url&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;courseId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                        &lt;span class=&quot;c1&quot;&gt;// build api url&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`/api/v1/courses/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;courseId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/assignments/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/submissions/sis_user_id:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                        &lt;span class=&quot;c1&quot;&gt;// build request and canned error message in case it fails&lt;/span&gt;
+                        &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+                            &lt;span class=&quot;na&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;PUT&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comment[text_comment]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;dataType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                            &lt;span class=&quot;na&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`Failed to post comment for student &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; and assignment &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; using endpoint &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;. Response: `&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;// confirm before proceeding&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                    &lt;span class=&quot;s2&quot;&gt;`You are about to post &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; new comments. This cannot be undone. Are you sure you wish to proceed?`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;confirmed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;confirmed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+                            &lt;span class=&quot;c1&quot;&gt;// send requests in chunks of 10 every second to avoid rate-limiting&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sendChunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jqXHR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;textStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;errorThrown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jqXHR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorThrown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\n`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;always&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;requestSent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                                &lt;span class=&quot;nx&quot;&gt;showProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sendChunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                            &lt;span class=&quot;c1&quot;&gt;// when each request finishes...&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requestSent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                &lt;span class=&quot;nx&quot;&gt;completed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;c1&quot;&gt;// all finished&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;showProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Import complete. WARNING: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; comments failed to import. See errors.txt for details.
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;saveText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;errors.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;All comments imported successfully!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;c1&quot;&gt;// actually starts the recursion&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;sendChunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;c1&quot;&gt;// confirmation was dismissed&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;step-4-import-comments-on-canvas&quot;&gt;Step 4. Import Comments on Canvas&lt;/h4&gt;
+
+&lt;p&gt;Go to the Canvas gradebook page and you’ll see a &lt;strong&gt;file uploader button for importing comments&lt;/strong&gt; as shown in the following screenshot. Click on it and import the CSV file you prepared in Step 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://oit.colorado.edu/sites/default/files/images/commentsimporterimg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;-common-error&quot;&gt;💡 Common Error&lt;/h4&gt;
+
+&lt;p&gt;If it does not work, one of the common reasons is because of the name of the ID column. Match the ID column name with the ones specified in the code above. For example, if your CSV file uses the column named “SIS User ID” as the identifier, replace the keyword “ID” in the code to “SIS User ID”.&lt;/p&gt;
+
+&lt;h3 id=&quot;deleting-existing-comments&quot;&gt;Deleting existing comments&lt;/h3&gt;
+
+&lt;p&gt;I’ll start by assuming that you have already finished installing &lt;a href=&quot;https://www.tampermonkey.net/&quot;&gt;TamperMonkey&lt;/a&gt; (i.e., Step 2 in the previous section).&lt;/p&gt;
+
+&lt;h4 id=&quot;step-1-you-should-prepare-a-csv-file-that-has-the-following-format-1&quot;&gt;Step 1. You should prepare a CSV file that has the following format&lt;/h4&gt;
+
+&lt;figure&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/img/220926/example2.png&quot; /&gt;&lt;figcaption&gt; Example CSV File &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The very first column needs to be the “ID” column which contains the SIS User ID that is unique for each student whose comments should be deleted. The column name should exactly be “ID” or it will cause an error.&lt;/li&gt;
+  &lt;li&gt;The name of the second column has to be in the format of &lt;code class=&quot;highlighter-rouge&quot;&gt;Assignment Name (Assignment ID)&lt;/code&gt;, the assignment where comments should be deleted.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;step-2-create-a-new-script-with-tampermonkey&quot;&gt;Step 2. Create a new script with TamperMonkey&lt;/h4&gt;
+
+&lt;p&gt;Click on the TamperMonkey icon on the top bar of your browser and press [&lt;strong&gt;Create a new script&lt;/strong&gt;].&lt;/p&gt;
+
+&lt;p&gt;You’ll see an editor where you can write codes. There, please paste the following codes.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ==UserScript==&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @name         Comments Importer&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @namespace    https://github.com/UCBoulder&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @description  Bulk import assignment comments into the Canvas gradebook.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @match        https://*/courses/*/gradebook&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @grant        none&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @require      https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @run-at       document-idle&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// @version      1.1.4&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ==/UserScript==&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* globals $ Papa */&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// wait until the window jQuery is loaded&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'undefined'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'undefined'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// prep jquery info dialog&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;div id=&quot;comments_dialog&quot; title=&quot;Delete Comments&quot;&amp;gt;&amp;lt;/div&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_dialog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_dialog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/p&amp;gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_dialog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'open'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// prep jquery confirm dialog&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;div id=&quot;comments_modal&quot; title=&quot;Delete Comments&quot;&amp;gt;&amp;lt;/div&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;modal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/p&amp;gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;buttons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;s2&quot;&gt;&quot;Confirm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;close&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                &lt;span class=&quot;s2&quot;&gt;&quot;Cancel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;close&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_modal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'open'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// prep jquery progress dialog&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;div id=&quot;comments_progress&quot; title=&quot;Delete Comments&quot;&amp;gt;&amp;lt;p&amp;gt;Deleting comments. Do not navigate from this page.&amp;lt;/p&amp;gt;&amp;lt;div id=&quot;comments_bar&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_progress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;buttons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;showProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_progress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;close&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;progressbar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#comments_progress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;open&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// add choose file button to gradebook&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;importDiv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&amp;lt;div style=&quot;padding-top:10px&quot;&amp;gt;&amp;lt;label for=&quot;deleteComments&quot;&amp;gt;Delete comments: &amp;lt;/label&amp;gt;&amp;lt;input type=&quot;file&quot; id=&quot;deleteComments&quot;/&amp;gt;&amp;lt;/div&amp;gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;div.gradebook-menus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;importDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// handle when file is selected&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#deleteComments'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// parse CSV&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;Papa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;dynamicTyping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;complete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ERROR: File should contain a header row and at least one data row.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ERROR: No 'ID' column found.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ERROR: Header row should have a 'ID' column and at least one assignment column.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;httpGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xmlHttp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;XMLHttpRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;xmlHttp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;theUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false for synchronous request&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;xmlHttp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xmlHttp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;responseText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;studentIds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idWithParens&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(\d&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;assignId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idWithParens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;courseId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;// build requests&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;studentId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;studentIds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;commentIds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;httpGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`/api/v1/courses/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;courseId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/assignments/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/submissions/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;studentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;?include=submission_comments`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;submission_comments&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;commentIds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;submission_comments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;commentId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;commentIds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;c1&quot;&gt;// build api url&lt;/span&gt;
+                        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`/api/v1/courses/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;courseId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/assignments/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/submissions/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;studentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/comments/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;commentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+                        &lt;span class=&quot;c1&quot;&gt;// build request and canned error message in case it fails&lt;/span&gt;
+                        &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+                            &lt;span class=&quot;na&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DELETE&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// DELETE /api/v1/courses/:course_id/assignments/:assignment_id/submissions/:user_id/comments/:id&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+                                &lt;span class=&quot;na&quot;&gt;dataType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;
+                            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                            &lt;span class=&quot;na&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`Failed to delete comment &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;commentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; for student &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;studentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; and assignment &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assignId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; using endpoint &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;. Response: `&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;// confirm before proceeding&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                    &lt;span class=&quot;s2&quot;&gt;`You are about to delete &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; existing comments. This cannot be undone. Are you sure you wish to proceed?`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;confirmed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;confirmed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+                            &lt;span class=&quot;c1&quot;&gt;// send requests in chunks of 10 every second to avoid rate-limiting&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sendChunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jqXHR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;textStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;errorThrown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jqXHR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorThrown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\n`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;always&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;requestSent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                                &lt;span class=&quot;nx&quot;&gt;showProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sendChunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunkSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                            &lt;span class=&quot;c1&quot;&gt;// when each request finishes...&lt;/span&gt;
+                            &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requestSent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                &lt;span class=&quot;nx&quot;&gt;completed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;c1&quot;&gt;// all finished&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;showProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Deletion complete. WARNING: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; comments failed to delete.`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                                        &lt;span class=&quot;nx&quot;&gt;popUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;All comments deleted successfully!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;c1&quot;&gt;// actually starts the recursion&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;sendChunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;c1&quot;&gt;// confirmation was dismissed&lt;/span&gt;
+                            &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#deleteComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;step-3-delete-comments-on-canvas&quot;&gt;Step 3. Delete Comments on Canvas&lt;/h4&gt;
+
+&lt;p&gt;Go to the Canvas gradebook page and you’ll see a &lt;strong&gt;file uploader button for deleting comments&lt;/strong&gt;. Click on it and upload the CSV file you prepared in Step 1. Then all the comments for the specified students and assignment will be deleted.&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Canvas Userscripts by UCBoulder &lt;a href=&quot;https://github.com/UCBoulder/canvas-userscripts&quot;&gt;https://github.com/UCBoulder/canvas-userscripts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Canvas API documentation &lt;a href=&quot;https://canvas.instructure.com/doc/api/index.html&quot;&gt;https://canvas.instructure.com/doc/api/index.html&lt;/a&gt;&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="canvas" /><category term="TA" /><category term="published" /><summary type="html">Canvas does have a built-in feature to import numeric grades from a csv file, but [it does not yet support importing the textual comments]([https://com</summary></entry><entry><title type="html">Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법</title><link href="http://blog.jaeyoon.io/2022/05/port.html" rel="alternate" type="text/html" title="Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법" /><published>2022-05-02T03:15:30+00:00</published><updated>2022-05-02T03:15:30+00:00</updated><id>http://blog.jaeyoon.io/2022/05/port</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/05/port.html">&lt;p&gt;&lt;strong&gt;Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] Error: listen EADDRINUSE: address already &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;use :::5000
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.setupListenHandle &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;as _listen2] &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1330:16&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at listenInCluster &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1378:12&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.listen &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;node:net:1465:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at READ_WRITE &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3215:23&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at new Promise &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&amp;lt;anonymous&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at Server.start &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-dev-server/lib/Server.js:3213:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/@webpack-cli/serve/lib/index.js:242:25&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Promise.all &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;index 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]     at async Command.&amp;lt;anonymous&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your_path/node_modules/webpack-cli/lib/webpack-cli.js:1672:7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   code: &lt;span class=&quot;s1&quot;&gt;'EADDRINUSE'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   errno: &lt;span class=&quot;nt&quot;&gt;-48&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   syscall: &lt;span class=&quot;s1&quot;&gt;'listen'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   address: &lt;span class=&quot;s1&quot;&gt;'::'&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]   port: 5000
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0] &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이때 포트를 사용중인 프로세스는 다음 커맨드로 확인 가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;lsof &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; :5000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;해당 프로세스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 PID&lt;/code&gt;로 제거하면 해결된다.&lt;/p&gt;
+
+&lt;p&gt;그런데 맥 Monterey OS에서는 Command Center 프로세스가 뜨는 경우가 있는데, 이 프로세스는 OS에 의해 계속해서 재시작된다.
+이는 &lt;strong&gt;System Preferences - Sharing - AirPlay Receiver 에서 On 체크를 지워주면 해결&lt;/strong&gt;된다.&lt;/p&gt;
+
+&lt;h4 id=&quot;ref&quot;&gt;Ref&lt;/h4&gt;
+
+&lt;p&gt;https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server&lt;/p&gt;
+
+&lt;p&gt;https://nono.ma/port-5000-used-by-control-center-in-macos-controlce&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="javascript" /><category term="regex" /><category term="published" /><summary type="html">**Mac Monterey OS에서 EADDRINUSE 에러 해결하는 법** 해당 포트(아래 예시는 5000)를 이미 다른 프로세스에 의해 사용중일 때 다음과 같은 에러가 난다. ```shell [0] Error: listen EADDRINUSE: address al</summary></entry><entry><title type="html">How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos</title><link href="http://blog.jaeyoon.io/2022/02/dance-en.html" rel="alternate" type="text/html" title="How to Mirror a YouTube Video - A Free Dance Practice Tool to Mirror and Slow Down the Dance Practice Videos" /><published>2022-02-09T20:11:20+00:00</published><updated>2022-02-09T20:11:20+00:00</updated><id>http://blog.jaeyoon.io/2022/02/dance-en</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/02/dance-en.html">&lt;p&gt;&lt;span class=&quot;search-keywords&quot;&gt;
+youtube mirrored video flip 
+Twice blackpink bts bangtan aespa jyp bigbang missa wonder girls 
+girl groups boy groups exo super junior
+dance practice kpop idol choreography cover tempo flip horizontally video youtube speed loop repeat mirror transform 
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;When learning a dance from YouTube videos, we often look for a mirrored video that has been horizontally flipped. However, even if the video itself is not flipped, there is a way to flip the videos automatically and easily on desktop devices. You can also slow down the speed of the video.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/dance-practice-toolkit-fo/odmglmjpojlhploiiaemcdohkeoapakf&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;https://github.com/jyoonsong/compare-stories/blob/main/dance/en_install.png?raw=true&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;First of all, download &lt;a href=&quot;https://chrome.google.com/webstore/detail/dance-practice-toolkit-fo/odmglmjpojlhploiiaemcdohkeoapakf&quot; target=&quot;_blank&quot;&gt;a free browser extension called &lt;b&gt;Mirror YouTube 4 Dance Practice&lt;/b&gt;&lt;/a&gt;. You can install it by clicking on the “Add to Chrome” button in the screenshot above. This app does not collect your browser history nor your private information. And it’s 100% free!&lt;/p&gt;
+
+&lt;video src=&quot;https://github.com/jyoonsong/compare-stories/blob/main/dance/en_demo.mp4?raw=true&quot; muted=&quot;&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
+
+&lt;p&gt;It’s very easy to use. As the video above suggests, you can first click on the extension icon on the right side of the address bar on your browser. Then you can simply turn on the switch or change the tempo value to change the video. The settings for each video are automatically remembered, so it’s always there even when you refresh the page.&lt;/p&gt;
+
+&lt;p&gt;Hope you find this useful and have fun dancing! Thank you.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="Dance practice" /><category term="Mirror mode" /><category term="Chrome extension" /><summary type="html">youtube mirrored video flip Twice blackpink bts bangtan aespa jyp bigbang missa wonder girls girl groups boy groups ex</summary></entry><entry><title type="html">안무 연습할 때 유튜브 동영상 거울 모드 및 속도 느리게 하는 방법 - 유용한 무료 댄스 툴</title><link href="http://blog.jaeyoon.io/2022/02/dance.html" rel="alternate" type="text/html" title="안무 연습할 때 유튜브 동영상 거울 모드 및 속도 느리게 하는 방법 - 유용한 무료 댄스 툴" /><published>2022-02-09T19:11:20+00:00</published><updated>2022-02-09T19:11:20+00:00</updated><id>http://blog.jaeyoon.io/2022/02/dance</id><content type="html" xml:base="http://blog.jaeyoon.io/2022/02/dance.html">&lt;p&gt;&lt;span class=&quot;search-keywords&quot;&gt;
+안무 춤 댄스 연습 유튜브 동영상 미러모드 거울모드 좌우반전 동영상반전 템포 속도 스피드 케이팝 아이돌 방송댄스 코리오그래피 커버 속도 느리게 0.5배속 아이돌 코리오그래피 따라추기  좌우 교체해서 보는 방법
+동영상 좌우반전 거울모드 만들기
+영상을 좌우 반전 시키기
+영상 좌우 반전해서 보는 방법
+안무 영상 거울모드, 속도 조절, 구간 반복 가능
+안무 거울모드 만들기
+소녀시대 거울모드 안무 연습하기
+거울모드란, 소녀시대처럼 여러 멤버가 나와서 군무를 추는 영상을 정확히 좌/우를 반대로 바꾼 영상을 말하죠
+동방신기 미로틱 안무 거울모드
+트와이스 블랙핑크 방탄소년단 BTS 에스파 JYP 빅뱅 미스에이 원더걸스 걸그룹 보이그룹 엑소 슈퍼주니어 
+dance practice kpop idol choreography cover tempo flip horizontally video youtube speed loop repeat mirror transform 
+동영상 거울모드 전환 앱
+유튜브 거울 모드 다운로드
+영상 거울모드 만들기
+유튜브 미러 사이트
+거울모드 뜻
+안무 거울모드 이유
+유튜브 좌우반전 이유
+동영상 좌우반전 사이트
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;케이팝이나 다른 안무를 연습할 때 유튜브 동영상을 많이 참고하곤 합니다. 이때 데스크톱에서 동영상의 속도를 느리게 하고 좌우를 반전시킨 거울 모드를 쉽게 켤 수 있는 방법이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/dance-practice-toolkit-fo/odmglmjpojlhploiiaemcdohkeoapakf&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;https://github.com/jyoonsong/compare-stories/blob/main/dance/ko_install.png?raw=true&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;우선 &lt;a href=&quot;https://chrome.google.com/webstore/detail/dance-practice-toolkit-fo/odmglmjpojlhploiiaemcdohkeoapakf&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Mirror YouTube 4 Dance Practice 거울모드 안무 연습&lt;/b&gt;&lt;/a&gt; 라는 무료 크롬 확장 프로그램을 추가합니다. 위 사진에 보이는 “Chrome에 추가” 버튼을 누르면 설치가 완료됩니다. 링크에 들어가보시면 브라우저 히스토리나 개인정보를 수집하지 않는 안전한 툴이라고 합니다.&lt;/p&gt;
+
+&lt;video width=&quot;100%&quot; src=&quot;https://github.com/jyoonsong/compare-stories/blob/main/dance/ko_demo.mp4?raw=true&quot; muted=&quot;&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
+
+&lt;p&gt;사용법은 아주 간단합니다. 위 영상처럼 주소창 오른쪽의 아이콘을 클릭하면 됩니다. 간단한 조작으로 춤 영상에 대해 미러 모드 혹은 느리게 설정을 하고, 각 영상에 대한 설정을 자동 기억할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 도움되었길 바라겠습니다! 감사합니다.&lt;/p&gt;</content><author><name>jaeyoon</name></author><category term="안무 연습" /><category term="미러 모드" /><category term="크롬 익스텐션" /><summary type="html">안무 춤 댄스 연습 유튜브 동영상 미러모드 거울모드 좌우반전 동영상반전 템포 속도 스피드 케이팝 아이돌 방송댄스 코리오그래피 커버 속도 느리게 0.5배속 아이돌 코리오그래피 따라추기 좌우 교체해서 보는 방법 동영상</summary></entry></feed>

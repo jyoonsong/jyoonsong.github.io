@@ -1,0 +1,98 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# accessed via {{ site.title }}, {{ site.email }}
+
+title: 재윤 블로그
+description: >- # this means to ignore newlines until "baseurl:"
+  다양한 생각과 경험을 기록하고 정리하는 공간입니다.
+url: "http://blog.jaeyoon.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+author: Jaeyoon Song
+lang: ko_KR
+email: jaeyoons@mit.edu
+
+twitter_username: song_jaeyoon
+github_username:  jyoonsong
+
+color-scheme: black
+
+# Set encoding to UTF-8
+encoding: utf-8
+
+# future post
+limit_posts         : 0
+future              : true
+unpublished         : false
+
+# Date format
+jyoon:
+  date_format: "%Y.%m.%d"
+  
+# Collections for Category
+# collections:
+#   category:
+#     output: true
+
+# Build settings
+markdown: kramdown
+#theme: jekyll-jyoon
+exclude: 
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - package.json
+  - LICENSE.txt
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-minifier
+  - jekyll-babel
+  - jekyll-algolia
+
+#sass:
+#  style: compressed
+permalink: /:year/:month/:title.html
+
+algolia:
+  application_id:      'B2K91HKW0L'
+  index_name:          'blog'
+  search_only_api_key: '23d5dd4c41b934b448e87e2799119301'
+  indexing_batch_size: 500
+  nodes_to_index:      'p,blockquote,li'
+  files_to_exclude:
+    - index.md
+    - about.md
+    - ./_posts/2017-10-24-java-basics
+    - ./2017/10/java-basics.html
+
+pagination:
+  enabled: true
+  per_page: 9
+  title: ':title'
+  permalink: '/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  tag: 'published'
+    
+# Add a default layout
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: category
+#     values:
+#       layout: "category"

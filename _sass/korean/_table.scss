@@ -1,0 +1,7 @@
+.table-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    th, td {
+        min-width: 120px;
+    }
+}
